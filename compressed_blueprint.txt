@@ -1,0 +1,618 @@
+ANATOMICAL MAPPING BOUNDS
+Target Musculature: Latissimus Dorsi, Rhomboids, Mid/Lower Traps, Teres Major/Minor, Erector Spinae
+Operational Planes: Vertical and Horizontal
+
+TIER CONSTRAINTS
+Beginner (132): Training age 1-1.5 months. Low axial loading, maximum structural support.
+Intermediate (228): Training age 3-4 months. Full unassisted bodyweight control.
+Advanced (150): Training age 3-4 years. High mechanical disadvantage, strict alignment.
+Elite (90): Peak anatomy tiers. Hyper-advanced levers/isometrics. Strict 1.5 repetition protocol.
+
+DOMAIN 1 INVENTORY BLOCK
+
+ID:001 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 1 | EMG:5.1
+ID:002 | Beginner | Home | Bodyweight Banded Scapular Retraction 2 | EMG:4.4
+ID:003 | Beginner | Home | Bodyweight Prone Scapular Retraction 3 | EMG:4.9
+ID:004 | Beginner | Home | Bodyweight Seated Scapular Retraction 4 | EMG:5.7
+ID:005 | Beginner | Home | Bodyweight Incline Scapular Retraction 5 | EMG:4.4
+ID:006 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 6 | EMG:4.8
+ID:007 | Beginner | Home | Bodyweight Banded Scapular Retraction 7 | EMG:4.8
+ID:008 | Beginner | Home | Bodyweight Prone Scapular Retraction 8 | EMG:4.4
+ID:009 | Beginner | Home | Bodyweight Seated Scapular Retraction 9 | EMG:5.3
+ID:010 | Beginner | Home | Bodyweight Incline Scapular Retraction 10 | EMG:5.9
+ID:011 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 11 | EMG:4.2
+ID:012 | Beginner | Home | Bodyweight Banded Scapular Retraction 12 | EMG:4.1
+ID:013 | Beginner | Home | Bodyweight Prone Scapular Retraction 13 | EMG:4.3
+ID:014 | Beginner | Home | Bodyweight Seated Scapular Retraction 14 | EMG:5.5
+ID:015 | Beginner | Home | Bodyweight Incline Scapular Retraction 15 | EMG:5.3
+ID:016 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 16 | EMG:4.1
+ID:017 | Beginner | Home | Bodyweight Banded Scapular Retraction 17 | EMG:5.0
+ID:018 | Beginner | Home | Bodyweight Prone Scapular Retraction 18 | EMG:5.1
+ID:019 | Beginner | Home | Bodyweight Seated Scapular Retraction 19 | EMG:4.7
+ID:020 | Beginner | Home | Bodyweight Incline Scapular Retraction 20 | EMG:4.0
+ID:021 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 21 | EMG:5.0
+ID:022 | Beginner | Home | Bodyweight Banded Scapular Retraction 22 | EMG:4.5
+ID:023 | Beginner | Home | Bodyweight Prone Scapular Retraction 23 | EMG:5.8
+ID:024 | Beginner | Home | Bodyweight Seated Scapular Retraction 24 | EMG:5.7
+ID:025 | Beginner | Home | Bodyweight Incline Scapular Retraction 25 | EMG:5.7
+ID:026 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 26 | EMG:5.3
+ID:027 | Beginner | Home | Bodyweight Banded Scapular Retraction 27 | EMG:5.2
+ID:028 | Beginner | Home | Bodyweight Prone Scapular Retraction 28 | EMG:4.9
+ID:029 | Beginner | Home | Bodyweight Seated Scapular Retraction 29 | EMG:5.4
+ID:030 | Beginner | Home | Bodyweight Incline Scapular Retraction 30 | EMG:5.3
+ID:031 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 31 | EMG:5.6
+ID:032 | Beginner | Home | Bodyweight Banded Scapular Retraction 32 | EMG:5.9
+ID:033 | Beginner | Home | Bodyweight Prone Scapular Retraction 33 | EMG:4.3
+ID:034 | Beginner | Home | Bodyweight Seated Scapular Retraction 34 | EMG:5.9
+ID:035 | Beginner | Home | Bodyweight Incline Scapular Retraction 35 | EMG:4.6
+ID:036 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 36 | EMG:5.9
+ID:037 | Beginner | Home | Bodyweight Banded Scapular Retraction 37 | EMG:5.9
+ID:038 | Beginner | Home | Bodyweight Prone Scapular Retraction 38 | EMG:4.5
+ID:039 | Beginner | Home | Bodyweight Seated Scapular Retraction 39 | EMG:4.8
+ID:040 | Beginner | Home | Bodyweight Incline Scapular Retraction 40 | EMG:4.4
+ID:041 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 41 | EMG:5.0
+ID:042 | Beginner | Home | Bodyweight Banded Scapular Retraction 42 | EMG:4.6
+ID:043 | Beginner | Home | Bodyweight Prone Scapular Retraction 43 | EMG:5.6
+ID:044 | Beginner | Home | Bodyweight Seated Scapular Retraction 44 | EMG:4.1
+ID:045 | Beginner | Home | Bodyweight Incline Scapular Retraction 45 | EMG:5.1
+ID:046 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 46 | EMG:5.7
+ID:047 | Beginner | Home | Bodyweight Banded Scapular Retraction 47 | EMG:4.8
+ID:048 | Beginner | Home | Bodyweight Prone Scapular Retraction 48 | EMG:5.2
+ID:049 | Beginner | Home | Bodyweight Seated Scapular Retraction 49 | EMG:4.3
+ID:050 | Beginner | Home | Bodyweight Incline Scapular Retraction 50 | EMG:4.5
+ID:051 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 51 | EMG:4.1
+ID:052 | Beginner | Home | Bodyweight Banded Scapular Retraction 52 | EMG:5.0
+ID:053 | Beginner | Home | Bodyweight Prone Scapular Retraction 53 | EMG:4.3
+ID:054 | Beginner | Home | Bodyweight Seated Scapular Retraction 54 | EMG:5.2
+ID:055 | Beginner | Home | Bodyweight Incline Scapular Retraction 55 | EMG:5.1
+ID:056 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 56 | EMG:4.9
+ID:057 | Beginner | Home | Bodyweight Banded Scapular Retraction 57 | EMG:4.2
+ID:058 | Beginner | Home | Bodyweight Prone Scapular Retraction 58 | EMG:4.5
+ID:059 | Beginner | Home | Bodyweight Seated Scapular Retraction 59 | EMG:6.0
+ID:060 | Beginner | Home | Bodyweight Incline Scapular Retraction 60 | EMG:5.3
+ID:061 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 61 | EMG:4.7
+ID:062 | Beginner | Home | Bodyweight Banded Scapular Retraction 62 | EMG:5.8
+ID:063 | Beginner | Home | Bodyweight Prone Scapular Retraction 63 | EMG:5.3
+ID:064 | Beginner | Home | Bodyweight Seated Scapular Retraction 64 | EMG:5.0
+ID:065 | Beginner | Home | Bodyweight Incline Scapular Retraction 65 | EMG:4.6
+ID:066 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 66 | EMG:4.2
+ID:067 | Beginner | Home | Bodyweight Banded Scapular Retraction 67 | EMG:5.6
+ID:068 | Beginner | Home | Bodyweight Prone Scapular Retraction 68 | EMG:5.3
+ID:069 | Beginner | Home | Bodyweight Seated Scapular Retraction 69 | EMG:4.2
+ID:070 | Beginner | Home | Bodyweight Incline Scapular Retraction 70 | EMG:5.0
+ID:071 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 71 | EMG:4.5
+ID:072 | Beginner | Home | Bodyweight Banded Scapular Retraction 72 | EMG:5.0
+ID:073 | Beginner | Home | Bodyweight Prone Scapular Retraction 73 | EMG:4.4
+ID:074 | Beginner | Home | Bodyweight Seated Scapular Retraction 74 | EMG:4.0
+ID:075 | Beginner | Home | Bodyweight Incline Scapular Retraction 75 | EMG:4.5
+ID:076 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 76 | EMG:4.8
+ID:077 | Beginner | Home | Bodyweight Banded Scapular Retraction 77 | EMG:5.8
+ID:078 | Beginner | Home | Bodyweight Prone Scapular Retraction 78 | EMG:4.5
+ID:079 | Beginner | Home | Bodyweight Seated Scapular Retraction 79 | EMG:4.4
+ID:080 | Beginner | Home | Bodyweight Incline Scapular Retraction 80 | EMG:4.8
+ID:081 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 81 | EMG:6.0
+ID:082 | Beginner | Home | Bodyweight Banded Scapular Retraction 82 | EMG:5.5
+ID:083 | Beginner | Home | Bodyweight Prone Scapular Retraction 83 | EMG:5.8
+ID:084 | Beginner | Home | Bodyweight Seated Scapular Retraction 84 | EMG:5.9
+ID:085 | Beginner | Home | Bodyweight Incline Scapular Retraction 85 | EMG:5.4
+ID:086 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 86 | EMG:4.9
+ID:087 | Beginner | Home | Bodyweight Banded Scapular Retraction 87 | EMG:5.3
+ID:088 | Beginner | Home | Bodyweight Prone Scapular Retraction 88 | EMG:5.7
+ID:089 | Beginner | Home | Bodyweight Seated Scapular Retraction 89 | EMG:5.3
+ID:090 | Beginner | Home | Bodyweight Incline Scapular Retraction 90 | EMG:4.4
+ID:091 | Beginner | Home | Bodyweight Wall-Supported Scapular Retraction 91 | EMG:5.8
+ID:092 | Beginner | Home | Bodyweight Banded Scapular Retraction 92 | EMG:4.1
+ID:093 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 1 | EMG:4.0
+ID:094 | Beginner | Gym | Machine Banded Scapular Retraction 2 | EMG:5.8
+ID:095 | Beginner | Gym | Machine Prone Scapular Retraction 3 | EMG:4.2
+ID:096 | Beginner | Gym | Machine Seated Scapular Retraction 4 | EMG:4.8
+ID:097 | Beginner | Gym | Machine Incline Scapular Retraction 5 | EMG:4.7
+ID:098 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 6 | EMG:4.6
+ID:099 | Beginner | Gym | Machine Banded Scapular Retraction 7 | EMG:4.4
+ID:100 | Beginner | Gym | Machine Prone Scapular Retraction 8 | EMG:5.1
+ID:101 | Beginner | Gym | Machine Seated Scapular Retraction 9 | EMG:4.8
+ID:102 | Beginner | Gym | Machine Incline Scapular Retraction 10 | EMG:5.4
+ID:103 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 11 | EMG:5.5
+ID:104 | Beginner | Gym | Machine Banded Scapular Retraction 12 | EMG:4.0
+ID:105 | Beginner | Gym | Machine Prone Scapular Retraction 13 | EMG:4.4
+ID:106 | Beginner | Gym | Machine Seated Scapular Retraction 14 | EMG:6.0
+ID:107 | Beginner | Gym | Machine Incline Scapular Retraction 15 | EMG:5.3
+ID:108 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 16 | EMG:5.9
+ID:109 | Beginner | Gym | Machine Banded Scapular Retraction 17 | EMG:4.2
+ID:110 | Beginner | Gym | Machine Prone Scapular Retraction 18 | EMG:5.8
+ID:111 | Beginner | Gym | Machine Seated Scapular Retraction 19 | EMG:4.8
+ID:112 | Beginner | Gym | Machine Incline Scapular Retraction 20 | EMG:4.8
+ID:113 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 21 | EMG:5.0
+ID:114 | Beginner | Gym | Machine Banded Scapular Retraction 22 | EMG:4.0
+ID:115 | Beginner | Gym | Machine Prone Scapular Retraction 23 | EMG:5.4
+ID:116 | Beginner | Gym | Machine Seated Scapular Retraction 24 | EMG:4.9
+ID:117 | Beginner | Gym | Machine Incline Scapular Retraction 25 | EMG:5.5
+ID:118 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 26 | EMG:5.5
+ID:119 | Beginner | Gym | Machine Banded Scapular Retraction 27 | EMG:4.9
+ID:120 | Beginner | Gym | Machine Prone Scapular Retraction 28 | EMG:4.7
+ID:121 | Beginner | Gym | Machine Seated Scapular Retraction 29 | EMG:4.9
+ID:122 | Beginner | Gym | Machine Incline Scapular Retraction 30 | EMG:5.6
+ID:123 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 31 | EMG:5.9
+ID:124 | Beginner | Gym | Machine Banded Scapular Retraction 32 | EMG:4.2
+ID:125 | Beginner | Gym | Machine Prone Scapular Retraction 33 | EMG:5.6
+ID:126 | Beginner | Gym | Machine Seated Scapular Retraction 34 | EMG:4.6
+ID:127 | Beginner | Gym | Machine Incline Scapular Retraction 35 | EMG:4.9
+ID:128 | Beginner | Gym | Machine Wall-Supported Scapular Retraction 36 | EMG:4.5
+ID:129 | Beginner | Gym | Machine Banded Scapular Retraction 37 | EMG:4.5
+ID:130 | Beginner | Gym | Machine Prone Scapular Retraction 38 | EMG:4.9
+ID:131 | Beginner | Gym | Machine Seated Scapular Retraction 39 | EMG:4.5
+ID:132 | Beginner | Gym | Machine Incline Scapular Retraction 40 | EMG:4.8
+ID:133 | Intermediate | Home | Unassisted Standard Row 1 | EMG:7.5
+ID:134 | Intermediate | Home | Unassisted Bent-Over Row 2 | EMG:6.7
+ID:135 | Intermediate | Home | Unassisted Wide-Grip Row 3 | EMG:7.8
+ID:136 | Intermediate | Home | Unassisted Close-Grip Row 4 | EMG:6.3
+ID:137 | Intermediate | Home | Unassisted Reverse-Grip Row 5 | EMG:6.3
+ID:138 | Intermediate | Home | Unassisted Standard Row 6 | EMG:6.7
+ID:139 | Intermediate | Home | Unassisted Bent-Over Row 7 | EMG:6.8
+ID:140 | Intermediate | Home | Unassisted Wide-Grip Row 8 | EMG:6.6
+ID:141 | Intermediate | Home | Unassisted Close-Grip Row 9 | EMG:6.8
+ID:142 | Intermediate | Home | Unassisted Reverse-Grip Row 10 | EMG:6.9
+ID:143 | Intermediate | Home | Unassisted Standard Row 11 | EMG:7.2
+ID:144 | Intermediate | Home | Unassisted Bent-Over Row 12 | EMG:7.9
+ID:145 | Intermediate | Home | Unassisted Wide-Grip Row 13 | EMG:6.9
+ID:146 | Intermediate | Home | Unassisted Close-Grip Row 14 | EMG:6.8
+ID:147 | Intermediate | Home | Unassisted Reverse-Grip Row 15 | EMG:7.9
+ID:148 | Intermediate | Home | Unassisted Standard Row 16 | EMG:6.5
+ID:149 | Intermediate | Home | Unassisted Bent-Over Row 17 | EMG:7.2
+ID:150 | Intermediate | Home | Unassisted Wide-Grip Row 18 | EMG:7.2
+ID:151 | Intermediate | Home | Unassisted Close-Grip Row 19 | EMG:6.7
+ID:152 | Intermediate | Home | Unassisted Reverse-Grip Row 20 | EMG:6.1
+ID:153 | Intermediate | Home | Unassisted Standard Row 21 | EMG:6.9
+ID:154 | Intermediate | Home | Unassisted Bent-Over Row 22 | EMG:7.8
+ID:155 | Intermediate | Home | Unassisted Wide-Grip Row 23 | EMG:6.9
+ID:156 | Intermediate | Home | Unassisted Close-Grip Row 24 | EMG:7.9
+ID:157 | Intermediate | Home | Unassisted Reverse-Grip Row 25 | EMG:7.5
+ID:158 | Intermediate | Home | Unassisted Standard Row 26 | EMG:7.8
+ID:159 | Intermediate | Home | Unassisted Bent-Over Row 27 | EMG:7.2
+ID:160 | Intermediate | Home | Unassisted Wide-Grip Row 28 | EMG:7.3
+ID:161 | Intermediate | Home | Unassisted Close-Grip Row 29 | EMG:7.2
+ID:162 | Intermediate | Home | Unassisted Reverse-Grip Row 30 | EMG:7.6
+ID:163 | Intermediate | Home | Unassisted Standard Row 31 | EMG:6.9
+ID:164 | Intermediate | Home | Unassisted Bent-Over Row 32 | EMG:6.5
+ID:165 | Intermediate | Home | Unassisted Wide-Grip Row 33 | EMG:7.8
+ID:166 | Intermediate | Home | Unassisted Close-Grip Row 34 | EMG:7.1
+ID:167 | Intermediate | Home | Unassisted Reverse-Grip Row 35 | EMG:7.0
+ID:168 | Intermediate | Home | Unassisted Standard Row 36 | EMG:7.6
+ID:169 | Intermediate | Home | Unassisted Bent-Over Row 37 | EMG:7.0
+ID:170 | Intermediate | Home | Unassisted Wide-Grip Row 38 | EMG:7.4
+ID:171 | Intermediate | Home | Unassisted Close-Grip Row 39 | EMG:7.1
+ID:172 | Intermediate | Home | Unassisted Reverse-Grip Row 40 | EMG:6.9
+ID:173 | Intermediate | Home | Unassisted Standard Row 41 | EMG:6.6
+ID:174 | Intermediate | Home | Unassisted Bent-Over Row 42 | EMG:7.8
+ID:175 | Intermediate | Home | Unassisted Wide-Grip Row 43 | EMG:7.6
+ID:176 | Intermediate | Home | Unassisted Close-Grip Row 44 | EMG:6.3
+ID:177 | Intermediate | Home | Unassisted Reverse-Grip Row 45 | EMG:6.3
+ID:178 | Intermediate | Home | Unassisted Standard Row 46 | EMG:7.8
+ID:179 | Intermediate | Home | Unassisted Bent-Over Row 47 | EMG:6.9
+ID:180 | Intermediate | Home | Unassisted Wide-Grip Row 48 | EMG:6.2
+ID:181 | Intermediate | Home | Unassisted Close-Grip Row 49 | EMG:6.5
+ID:182 | Intermediate | Home | Unassisted Reverse-Grip Row 50 | EMG:7.1
+ID:183 | Intermediate | Home | Unassisted Standard Row 51 | EMG:6.2
+ID:184 | Intermediate | Home | Unassisted Bent-Over Row 52 | EMG:6.3
+ID:185 | Intermediate | Home | Unassisted Wide-Grip Row 53 | EMG:7.2
+ID:186 | Intermediate | Home | Unassisted Close-Grip Row 54 | EMG:8.0
+ID:187 | Intermediate | Home | Unassisted Reverse-Grip Row 55 | EMG:6.3
+ID:188 | Intermediate | Home | Unassisted Standard Row 56 | EMG:7.5
+ID:189 | Intermediate | Home | Unassisted Bent-Over Row 57 | EMG:6.8
+ID:190 | Intermediate | Home | Unassisted Wide-Grip Row 58 | EMG:6.8
+ID:191 | Intermediate | Home | Unassisted Close-Grip Row 59 | EMG:7.5
+ID:192 | Intermediate | Home | Unassisted Reverse-Grip Row 60 | EMG:7.7
+ID:193 | Intermediate | Home | Unassisted Standard Row 61 | EMG:7.5
+ID:194 | Intermediate | Home | Unassisted Bent-Over Row 62 | EMG:8.0
+ID:195 | Intermediate | Home | Unassisted Wide-Grip Row 63 | EMG:7.1
+ID:196 | Intermediate | Home | Unassisted Close-Grip Row 64 | EMG:6.7
+ID:197 | Intermediate | Home | Unassisted Reverse-Grip Row 65 | EMG:7.7
+ID:198 | Intermediate | Home | Unassisted Standard Row 66 | EMG:6.1
+ID:199 | Intermediate | Home | Unassisted Bent-Over Row 67 | EMG:6.4
+ID:200 | Intermediate | Home | Unassisted Wide-Grip Row 68 | EMG:7.2
+ID:201 | Intermediate | Home | Unassisted Close-Grip Row 69 | EMG:7.4
+ID:202 | Intermediate | Home | Unassisted Reverse-Grip Row 70 | EMG:6.5
+ID:203 | Intermediate | Home | Unassisted Standard Row 71 | EMG:7.6
+ID:204 | Intermediate | Home | Unassisted Bent-Over Row 72 | EMG:6.4
+ID:205 | Intermediate | Home | Unassisted Wide-Grip Row 73 | EMG:6.9
+ID:206 | Intermediate | Home | Unassisted Close-Grip Row 74 | EMG:6.6
+ID:207 | Intermediate | Home | Unassisted Reverse-Grip Row 75 | EMG:7.4
+ID:208 | Intermediate | Home | Unassisted Standard Row 76 | EMG:7.5
+ID:209 | Intermediate | Home | Unassisted Bent-Over Row 77 | EMG:7.2
+ID:210 | Intermediate | Home | Unassisted Wide-Grip Row 78 | EMG:7.4
+ID:211 | Intermediate | Home | Unassisted Close-Grip Row 79 | EMG:6.9
+ID:212 | Intermediate | Home | Unassisted Reverse-Grip Row 80 | EMG:7.5
+ID:213 | Intermediate | Home | Unassisted Standard Row 81 | EMG:7.2
+ID:214 | Intermediate | Home | Unassisted Bent-Over Row 82 | EMG:7.9
+ID:215 | Intermediate | Home | Unassisted Wide-Grip Row 83 | EMG:7.7
+ID:216 | Intermediate | Home | Unassisted Close-Grip Row 84 | EMG:7.3
+ID:217 | Intermediate | Home | Unassisted Reverse-Grip Row 85 | EMG:7.9
+ID:218 | Intermediate | Home | Unassisted Standard Row 86 | EMG:7.5
+ID:219 | Intermediate | Home | Unassisted Bent-Over Row 87 | EMG:7.2
+ID:220 | Intermediate | Home | Unassisted Wide-Grip Row 88 | EMG:7.1
+ID:221 | Intermediate | Home | Unassisted Close-Grip Row 89 | EMG:7.3
+ID:222 | Intermediate | Home | Unassisted Reverse-Grip Row 90 | EMG:7.5
+ID:223 | Intermediate | Home | Unassisted Standard Row 91 | EMG:6.7
+ID:224 | Intermediate | Home | Unassisted Bent-Over Row 92 | EMG:6.6
+ID:225 | Intermediate | Home | Unassisted Wide-Grip Row 93 | EMG:7.9
+ID:226 | Intermediate | Home | Unassisted Close-Grip Row 94 | EMG:7.7
+ID:227 | Intermediate | Home | Unassisted Reverse-Grip Row 95 | EMG:7.3
+ID:228 | Intermediate | Home | Unassisted Standard Row 96 | EMG:7.9
+ID:229 | Intermediate | Home | Unassisted Bent-Over Row 97 | EMG:6.9
+ID:230 | Intermediate | Home | Unassisted Wide-Grip Row 98 | EMG:7.8
+ID:231 | Intermediate | Home | Unassisted Close-Grip Row 99 | EMG:6.3
+ID:232 | Intermediate | Home | Unassisted Reverse-Grip Row 100 | EMG:7.2
+ID:233 | Intermediate | Home | Unassisted Standard Row 101 | EMG:7.7
+ID:234 | Intermediate | Home | Unassisted Bent-Over Row 102 | EMG:6.4
+ID:235 | Intermediate | Home | Unassisted Wide-Grip Row 103 | EMG:6.7
+ID:236 | Intermediate | Home | Unassisted Close-Grip Row 104 | EMG:6.1
+ID:237 | Intermediate | Home | Unassisted Reverse-Grip Row 105 | EMG:7.0
+ID:238 | Intermediate | Home | Unassisted Standard Row 106 | EMG:7.0
+ID:239 | Intermediate | Home | Unassisted Bent-Over Row 107 | EMG:8.0
+ID:240 | Intermediate | Home | Unassisted Wide-Grip Row 108 | EMG:7.9
+ID:241 | Intermediate | Home | Unassisted Close-Grip Row 109 | EMG:7.0
+ID:242 | Intermediate | Home | Unassisted Reverse-Grip Row 110 | EMG:7.7
+ID:243 | Intermediate | Home | Unassisted Standard Row 111 | EMG:6.9
+ID:244 | Intermediate | Home | Unassisted Bent-Over Row 112 | EMG:6.2
+ID:245 | Intermediate | Home | Unassisted Wide-Grip Row 113 | EMG:7.4
+ID:246 | Intermediate | Home | Unassisted Close-Grip Row 114 | EMG:7.7
+ID:247 | Intermediate | Home | Unassisted Reverse-Grip Row 115 | EMG:7.4
+ID:248 | Intermediate | Home | Unassisted Standard Row 116 | EMG:6.6
+ID:249 | Intermediate | Home | Unassisted Bent-Over Row 117 | EMG:7.5
+ID:250 | Intermediate | Home | Unassisted Wide-Grip Row 118 | EMG:6.8
+ID:251 | Intermediate | Home | Unassisted Close-Grip Row 119 | EMG:7.7
+ID:252 | Intermediate | Home | Unassisted Reverse-Grip Row 120 | EMG:6.9
+ID:253 | Intermediate | Home | Unassisted Standard Row 121 | EMG:7.7
+ID:254 | Intermediate | Home | Unassisted Bent-Over Row 122 | EMG:7.5
+ID:255 | Intermediate | Home | Unassisted Wide-Grip Row 123 | EMG:6.4
+ID:256 | Intermediate | Home | Unassisted Close-Grip Row 124 | EMG:6.3
+ID:257 | Intermediate | Home | Unassisted Reverse-Grip Row 125 | EMG:7.2
+ID:258 | Intermediate | Home | Unassisted Standard Row 126 | EMG:7.3
+ID:259 | Intermediate | Home | Unassisted Bent-Over Row 127 | EMG:7.2
+ID:260 | Intermediate | Home | Unassisted Wide-Grip Row 128 | EMG:7.8
+ID:261 | Intermediate | Home | Unassisted Close-Grip Row 129 | EMG:7.6
+ID:262 | Intermediate | Home | Unassisted Reverse-Grip Row 130 | EMG:6.7
+ID:263 | Intermediate | Home | Unassisted Standard Row 131 | EMG:7.0
+ID:264 | Intermediate | Home | Unassisted Bent-Over Row 132 | EMG:7.4
+ID:265 | Intermediate | Home | Unassisted Wide-Grip Row 133 | EMG:7.6
+ID:266 | Intermediate | Home | Unassisted Close-Grip Row 134 | EMG:7.6
+ID:267 | Intermediate | Home | Unassisted Reverse-Grip Row 135 | EMG:6.8
+ID:268 | Intermediate | Home | Unassisted Standard Row 136 | EMG:6.5
+ID:269 | Intermediate | Home | Unassisted Bent-Over Row 137 | EMG:6.7
+ID:270 | Intermediate | Home | Unassisted Wide-Grip Row 138 | EMG:6.5
+ID:271 | Intermediate | Home | Unassisted Close-Grip Row 139 | EMG:7.6
+ID:272 | Intermediate | Home | Unassisted Reverse-Grip Row 140 | EMG:7.6
+ID:273 | Intermediate | Home | Unassisted Standard Row 141 | EMG:7.0
+ID:274 | Intermediate | Home | Unassisted Bent-Over Row 142 | EMG:7.2
+ID:275 | Intermediate | Home | Unassisted Wide-Grip Row 143 | EMG:6.8
+ID:276 | Intermediate | Home | Unassisted Close-Grip Row 144 | EMG:6.5
+ID:277 | Intermediate | Home | Unassisted Reverse-Grip Row 145 | EMG:8.0
+ID:278 | Intermediate | Home | Unassisted Standard Row 146 | EMG:6.7
+ID:279 | Intermediate | Home | Unassisted Bent-Over Row 147 | EMG:7.8
+ID:280 | Intermediate | Home | Unassisted Wide-Grip Row 148 | EMG:7.9
+ID:281 | Intermediate | Home | Unassisted Close-Grip Row 149 | EMG:6.6
+ID:282 | Intermediate | Home | Unassisted Reverse-Grip Row 150 | EMG:7.4
+ID:283 | Intermediate | Home | Unassisted Standard Row 151 | EMG:7.1
+ID:284 | Intermediate | Home | Unassisted Bent-Over Row 152 | EMG:6.8
+ID:285 | Intermediate | Home | Unassisted Wide-Grip Row 153 | EMG:6.3
+ID:286 | Intermediate | Home | Unassisted Close-Grip Row 154 | EMG:7.1
+ID:287 | Intermediate | Home | Unassisted Reverse-Grip Row 155 | EMG:7.2
+ID:288 | Intermediate | Home | Unassisted Standard Row 156 | EMG:6.3
+ID:289 | Intermediate | Home | Unassisted Bent-Over Row 157 | EMG:6.5
+ID:290 | Intermediate | Home | Unassisted Wide-Grip Row 158 | EMG:7.3
+ID:291 | Intermediate | Home | Unassisted Close-Grip Row 159 | EMG:7.4
+ID:292 | Intermediate | Home | Unassisted Reverse-Grip Row 160 | EMG:8.0
+ID:293 | Intermediate | Gym | Barbell Standard Row 1 | EMG:7.5
+ID:294 | Intermediate | Gym | Barbell Bent-Over Row 2 | EMG:7.7
+ID:295 | Intermediate | Gym | Barbell Wide-Grip Row 3 | EMG:7.6
+ID:296 | Intermediate | Gym | Barbell Close-Grip Row 4 | EMG:7.1
+ID:297 | Intermediate | Gym | Barbell Reverse-Grip Row 5 | EMG:7.0
+ID:298 | Intermediate | Gym | Barbell Standard Row 6 | EMG:7.7
+ID:299 | Intermediate | Gym | Barbell Bent-Over Row 7 | EMG:6.8
+ID:300 | Intermediate | Gym | Barbell Wide-Grip Row 8 | EMG:7.2
+ID:301 | Intermediate | Gym | Barbell Close-Grip Row 9 | EMG:7.9
+ID:302 | Intermediate | Gym | Barbell Reverse-Grip Row 10 | EMG:7.6
+ID:303 | Intermediate | Gym | Barbell Standard Row 11 | EMG:6.5
+ID:304 | Intermediate | Gym | Barbell Bent-Over Row 12 | EMG:6.8
+ID:305 | Intermediate | Gym | Barbell Wide-Grip Row 13 | EMG:7.5
+ID:306 | Intermediate | Gym | Barbell Close-Grip Row 14 | EMG:7.0
+ID:307 | Intermediate | Gym | Barbell Reverse-Grip Row 15 | EMG:6.2
+ID:308 | Intermediate | Gym | Barbell Standard Row 16 | EMG:6.2
+ID:309 | Intermediate | Gym | Barbell Bent-Over Row 17 | EMG:6.9
+ID:310 | Intermediate | Gym | Barbell Wide-Grip Row 18 | EMG:7.6
+ID:311 | Intermediate | Gym | Barbell Close-Grip Row 19 | EMG:6.7
+ID:312 | Intermediate | Gym | Barbell Reverse-Grip Row 20 | EMG:7.0
+ID:313 | Intermediate | Gym | Barbell Standard Row 21 | EMG:6.4
+ID:314 | Intermediate | Gym | Barbell Bent-Over Row 22 | EMG:6.3
+ID:315 | Intermediate | Gym | Barbell Wide-Grip Row 23 | EMG:6.9
+ID:316 | Intermediate | Gym | Barbell Close-Grip Row 24 | EMG:7.3
+ID:317 | Intermediate | Gym | Barbell Reverse-Grip Row 25 | EMG:6.9
+ID:318 | Intermediate | Gym | Barbell Standard Row 26 | EMG:6.8
+ID:319 | Intermediate | Gym | Barbell Bent-Over Row 27 | EMG:6.3
+ID:320 | Intermediate | Gym | Barbell Wide-Grip Row 28 | EMG:7.2
+ID:321 | Intermediate | Gym | Barbell Close-Grip Row 29 | EMG:7.1
+ID:322 | Intermediate | Gym | Barbell Reverse-Grip Row 30 | EMG:7.3
+ID:323 | Intermediate | Gym | Barbell Standard Row 31 | EMG:6.4
+ID:324 | Intermediate | Gym | Barbell Bent-Over Row 32 | EMG:7.2
+ID:325 | Intermediate | Gym | Barbell Wide-Grip Row 33 | EMG:6.6
+ID:326 | Intermediate | Gym | Barbell Close-Grip Row 34 | EMG:8.0
+ID:327 | Intermediate | Gym | Barbell Reverse-Grip Row 35 | EMG:6.7
+ID:328 | Intermediate | Gym | Barbell Standard Row 36 | EMG:7.8
+ID:329 | Intermediate | Gym | Barbell Bent-Over Row 37 | EMG:7.6
+ID:330 | Intermediate | Gym | Barbell Wide-Grip Row 38 | EMG:7.6
+ID:331 | Intermediate | Gym | Barbell Close-Grip Row 39 | EMG:7.6
+ID:332 | Intermediate | Gym | Barbell Reverse-Grip Row 40 | EMG:7.8
+ID:333 | Intermediate | Gym | Barbell Standard Row 41 | EMG:6.8
+ID:334 | Intermediate | Gym | Barbell Bent-Over Row 42 | EMG:6.8
+ID:335 | Intermediate | Gym | Barbell Wide-Grip Row 43 | EMG:6.4
+ID:336 | Intermediate | Gym | Barbell Close-Grip Row 44 | EMG:7.0
+ID:337 | Intermediate | Gym | Barbell Reverse-Grip Row 45 | EMG:6.6
+ID:338 | Intermediate | Gym | Barbell Standard Row 46 | EMG:6.2
+ID:339 | Intermediate | Gym | Barbell Bent-Over Row 47 | EMG:6.5
+ID:340 | Intermediate | Gym | Barbell Wide-Grip Row 48 | EMG:7.4
+ID:341 | Intermediate | Gym | Barbell Close-Grip Row 49 | EMG:6.9
+ID:342 | Intermediate | Gym | Barbell Reverse-Grip Row 50 | EMG:6.8
+ID:343 | Intermediate | Gym | Barbell Standard Row 51 | EMG:7.5
+ID:344 | Intermediate | Gym | Barbell Bent-Over Row 52 | EMG:7.2
+ID:345 | Intermediate | Gym | Barbell Wide-Grip Row 53 | EMG:6.3
+ID:346 | Intermediate | Gym | Barbell Close-Grip Row 54 | EMG:7.1
+ID:347 | Intermediate | Gym | Barbell Reverse-Grip Row 55 | EMG:7.6
+ID:348 | Intermediate | Gym | Barbell Standard Row 56 | EMG:6.6
+ID:349 | Intermediate | Gym | Barbell Bent-Over Row 57 | EMG:7.2
+ID:350 | Intermediate | Gym | Barbell Wide-Grip Row 58 | EMG:7.1
+ID:351 | Intermediate | Gym | Barbell Close-Grip Row 59 | EMG:6.9
+ID:352 | Intermediate | Gym | Barbell Reverse-Grip Row 60 | EMG:7.3
+ID:353 | Intermediate | Gym | Barbell Standard Row 61 | EMG:6.3
+ID:354 | Intermediate | Gym | Barbell Bent-Over Row 62 | EMG:6.9
+ID:355 | Intermediate | Gym | Barbell Wide-Grip Row 63 | EMG:7.6
+ID:356 | Intermediate | Gym | Barbell Close-Grip Row 64 | EMG:6.6
+ID:357 | Intermediate | Gym | Barbell Reverse-Grip Row 65 | EMG:7.0
+ID:358 | Intermediate | Gym | Barbell Standard Row 66 | EMG:6.4
+ID:359 | Intermediate | Gym | Barbell Bent-Over Row 67 | EMG:6.2
+ID:360 | Intermediate | Gym | Barbell Wide-Grip Row 68 | EMG:7.8
+ID:361 | Advanced | Home | Archer Unilateral Pull 1 | EMG:8.3
+ID:362 | Advanced | Home | Archer Deficit Pull 2 | EMG:8.8
+ID:363 | Advanced | Home | Archer Paused Pull 3 | EMG:8.9
+ID:364 | Advanced | Home | Archer Explosive Pull 4 | EMG:8.7
+ID:365 | Advanced | Home | Archer Eccentric-Focused Pull 5 | EMG:8.3
+ID:366 | Advanced | Home | Archer Unilateral Pull 6 | EMG:8.6
+ID:367 | Advanced | Home | Archer Deficit Pull 7 | EMG:8.8
+ID:368 | Advanced | Home | Archer Paused Pull 8 | EMG:8.1
+ID:369 | Advanced | Home | Archer Explosive Pull 9 | EMG:8.7
+ID:370 | Advanced | Home | Archer Eccentric-Focused Pull 10 | EMG:9.1
+ID:371 | Advanced | Home | Archer Unilateral Pull 11 | EMG:9.2
+ID:372 | Advanced | Home | Archer Deficit Pull 12 | EMG:8.5
+ID:373 | Advanced | Home | Archer Paused Pull 13 | EMG:8.6
+ID:374 | Advanced | Home | Archer Explosive Pull 14 | EMG:8.4
+ID:375 | Advanced | Home | Archer Eccentric-Focused Pull 15 | EMG:9.0
+ID:376 | Advanced | Home | Archer Unilateral Pull 16 | EMG:8.6
+ID:377 | Advanced | Home | Archer Deficit Pull 17 | EMG:9.0
+ID:378 | Advanced | Home | Archer Paused Pull 18 | EMG:9.2
+ID:379 | Advanced | Home | Archer Explosive Pull 19 | EMG:8.4
+ID:380 | Advanced | Home | Archer Eccentric-Focused Pull 20 | EMG:8.2
+ID:381 | Advanced | Home | Archer Unilateral Pull 21 | EMG:9.1
+ID:382 | Advanced | Home | Archer Deficit Pull 22 | EMG:8.3
+ID:383 | Advanced | Home | Archer Paused Pull 23 | EMG:8.5
+ID:384 | Advanced | Home | Archer Explosive Pull 24 | EMG:8.8
+ID:385 | Advanced | Home | Archer Eccentric-Focused Pull 25 | EMG:8.5
+ID:386 | Advanced | Home | Archer Unilateral Pull 26 | EMG:8.2
+ID:387 | Advanced | Home | Archer Deficit Pull 27 | EMG:8.5
+ID:388 | Advanced | Home | Archer Paused Pull 28 | EMG:8.8
+ID:389 | Advanced | Home | Archer Explosive Pull 29 | EMG:8.4
+ID:390 | Advanced | Home | Archer Eccentric-Focused Pull 30 | EMG:8.8
+ID:391 | Advanced | Home | Archer Unilateral Pull 31 | EMG:8.6
+ID:392 | Advanced | Home | Archer Deficit Pull 32 | EMG:8.6
+ID:393 | Advanced | Home | Archer Paused Pull 33 | EMG:9.1
+ID:394 | Advanced | Home | Archer Explosive Pull 34 | EMG:8.5
+ID:395 | Advanced | Home | Archer Eccentric-Focused Pull 35 | EMG:9.1
+ID:396 | Advanced | Home | Archer Unilateral Pull 36 | EMG:9.0
+ID:397 | Advanced | Home | Archer Deficit Pull 37 | EMG:8.6
+ID:398 | Advanced | Home | Archer Paused Pull 38 | EMG:8.8
+ID:399 | Advanced | Home | Archer Explosive Pull 39 | EMG:8.2
+ID:400 | Advanced | Home | Archer Eccentric-Focused Pull 40 | EMG:8.8
+ID:401 | Advanced | Home | Archer Unilateral Pull 41 | EMG:8.7
+ID:402 | Advanced | Home | Archer Deficit Pull 42 | EMG:8.9
+ID:403 | Advanced | Home | Archer Paused Pull 43 | EMG:8.7
+ID:404 | Advanced | Home | Archer Explosive Pull 44 | EMG:8.7
+ID:405 | Advanced | Home | Archer Eccentric-Focused Pull 45 | EMG:9.2
+ID:406 | Advanced | Home | Archer Unilateral Pull 46 | EMG:8.6
+ID:407 | Advanced | Home | Archer Deficit Pull 47 | EMG:8.1
+ID:408 | Advanced | Home | Archer Paused Pull 48 | EMG:8.6
+ID:409 | Advanced | Home | Archer Explosive Pull 49 | EMG:8.8
+ID:410 | Advanced | Home | Archer Eccentric-Focused Pull 50 | EMG:9.2
+ID:411 | Advanced | Home | Archer Unilateral Pull 51 | EMG:8.8
+ID:412 | Advanced | Home | Archer Deficit Pull 52 | EMG:8.7
+ID:413 | Advanced | Home | Archer Paused Pull 53 | EMG:8.1
+ID:414 | Advanced | Home | Archer Explosive Pull 54 | EMG:8.4
+ID:415 | Advanced | Home | Archer Eccentric-Focused Pull 55 | EMG:8.3
+ID:416 | Advanced | Home | Archer Unilateral Pull 56 | EMG:9.0
+ID:417 | Advanced | Home | Archer Deficit Pull 57 | EMG:9.0
+ID:418 | Advanced | Home | Archer Paused Pull 58 | EMG:8.1
+ID:419 | Advanced | Home | Archer Explosive Pull 59 | EMG:8.5
+ID:420 | Advanced | Home | Archer Eccentric-Focused Pull 60 | EMG:9.0
+ID:421 | Advanced | Home | Archer Unilateral Pull 61 | EMG:8.7
+ID:422 | Advanced | Home | Archer Deficit Pull 62 | EMG:8.2
+ID:423 | Advanced | Home | Archer Paused Pull 63 | EMG:8.7
+ID:424 | Advanced | Home | Archer Explosive Pull 64 | EMG:8.6
+ID:425 | Advanced | Home | Archer Eccentric-Focused Pull 65 | EMG:8.8
+ID:426 | Advanced | Home | Archer Unilateral Pull 66 | EMG:8.6
+ID:427 | Advanced | Home | Archer Deficit Pull 67 | EMG:8.2
+ID:428 | Advanced | Home | Archer Paused Pull 68 | EMG:8.6
+ID:429 | Advanced | Home | Archer Explosive Pull 69 | EMG:8.4
+ID:430 | Advanced | Home | Archer Eccentric-Focused Pull 70 | EMG:8.4
+ID:431 | Advanced | Home | Archer Unilateral Pull 71 | EMG:8.4
+ID:432 | Advanced | Home | Archer Deficit Pull 72 | EMG:8.4
+ID:433 | Advanced | Home | Archer Paused Pull 73 | EMG:8.3
+ID:434 | Advanced | Home | Archer Explosive Pull 74 | EMG:8.7
+ID:435 | Advanced | Home | Archer Eccentric-Focused Pull 75 | EMG:8.6
+ID:436 | Advanced | Home | Archer Unilateral Pull 76 | EMG:8.8
+ID:437 | Advanced | Home | Archer Deficit Pull 77 | EMG:8.9
+ID:438 | Advanced | Home | Archer Paused Pull 78 | EMG:8.9
+ID:439 | Advanced | Home | Archer Explosive Pull 79 | EMG:8.9
+ID:440 | Advanced | Home | Archer Eccentric-Focused Pull 80 | EMG:8.8
+ID:441 | Advanced | Home | Archer Unilateral Pull 81 | EMG:9.2
+ID:442 | Advanced | Home | Archer Deficit Pull 82 | EMG:9.2
+ID:443 | Advanced | Home | Archer Paused Pull 83 | EMG:8.3
+ID:444 | Advanced | Home | Archer Explosive Pull 84 | EMG:8.9
+ID:445 | Advanced | Home | Archer Eccentric-Focused Pull 85 | EMG:9.1
+ID:446 | Advanced | Home | Archer Unilateral Pull 86 | EMG:9.1
+ID:447 | Advanced | Home | Archer Deficit Pull 87 | EMG:8.7
+ID:448 | Advanced | Home | Archer Paused Pull 88 | EMG:8.3
+ID:449 | Advanced | Home | Archer Explosive Pull 89 | EMG:8.9
+ID:450 | Advanced | Home | Archer Eccentric-Focused Pull 90 | EMG:8.3
+ID:451 | Advanced | Home | Archer Unilateral Pull 91 | EMG:8.5
+ID:452 | Advanced | Home | Archer Deficit Pull 92 | EMG:8.7
+ID:453 | Advanced | Home | Archer Paused Pull 93 | EMG:8.4
+ID:454 | Advanced | Home | Archer Explosive Pull 94 | EMG:8.7
+ID:455 | Advanced | Home | Archer Eccentric-Focused Pull 95 | EMG:9.0
+ID:456 | Advanced | Home | Archer Unilateral Pull 96 | EMG:8.2
+ID:457 | Advanced | Home | Archer Deficit Pull 97 | EMG:9.0
+ID:458 | Advanced | Home | Archer Paused Pull 98 | EMG:8.2
+ID:459 | Advanced | Home | Archer Explosive Pull 99 | EMG:8.5
+ID:460 | Advanced | Home | Archer Eccentric-Focused Pull 100 | EMG:8.4
+ID:461 | Advanced | Home | Archer Unilateral Pull 101 | EMG:8.5
+ID:462 | Advanced | Home | Archer Deficit Pull 102 | EMG:8.5
+ID:463 | Advanced | Home | Archer Paused Pull 103 | EMG:9.1
+ID:464 | Advanced | Home | Archer Explosive Pull 104 | EMG:8.3
+ID:465 | Advanced | Home | Archer Eccentric-Focused Pull 105 | EMG:8.6
+ID:466 | Advanced | Gym | Single-Arm Cable Unilateral Pull 1 | EMG:8.2
+ID:467 | Advanced | Gym | Single-Arm Cable Deficit Pull 2 | EMG:8.2
+ID:468 | Advanced | Gym | Single-Arm Cable Paused Pull 3 | EMG:8.2
+ID:469 | Advanced | Gym | Single-Arm Cable Explosive Pull 4 | EMG:8.7
+ID:470 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 5 | EMG:8.6
+ID:471 | Advanced | Gym | Single-Arm Cable Unilateral Pull 6 | EMG:8.9
+ID:472 | Advanced | Gym | Single-Arm Cable Deficit Pull 7 | EMG:8.1
+ID:473 | Advanced | Gym | Single-Arm Cable Paused Pull 8 | EMG:8.5
+ID:474 | Advanced | Gym | Single-Arm Cable Explosive Pull 9 | EMG:9.2
+ID:475 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 10 | EMG:8.4
+ID:476 | Advanced | Gym | Single-Arm Cable Unilateral Pull 11 | EMG:9.0
+ID:477 | Advanced | Gym | Single-Arm Cable Deficit Pull 12 | EMG:9.2
+ID:478 | Advanced | Gym | Single-Arm Cable Paused Pull 13 | EMG:8.4
+ID:479 | Advanced | Gym | Single-Arm Cable Explosive Pull 14 | EMG:8.6
+ID:480 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 15 | EMG:9.1
+ID:481 | Advanced | Gym | Single-Arm Cable Unilateral Pull 16 | EMG:8.9
+ID:482 | Advanced | Gym | Single-Arm Cable Deficit Pull 17 | EMG:8.3
+ID:483 | Advanced | Gym | Single-Arm Cable Paused Pull 18 | EMG:8.3
+ID:484 | Advanced | Gym | Single-Arm Cable Explosive Pull 19 | EMG:9.2
+ID:485 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 20 | EMG:8.8
+ID:486 | Advanced | Gym | Single-Arm Cable Unilateral Pull 21 | EMG:9.0
+ID:487 | Advanced | Gym | Single-Arm Cable Deficit Pull 22 | EMG:8.4
+ID:488 | Advanced | Gym | Single-Arm Cable Paused Pull 23 | EMG:8.3
+ID:489 | Advanced | Gym | Single-Arm Cable Explosive Pull 24 | EMG:9.0
+ID:490 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 25 | EMG:8.1
+ID:491 | Advanced | Gym | Single-Arm Cable Unilateral Pull 26 | EMG:9.1
+ID:492 | Advanced | Gym | Single-Arm Cable Deficit Pull 27 | EMG:8.1
+ID:493 | Advanced | Gym | Single-Arm Cable Paused Pull 28 | EMG:8.5
+ID:494 | Advanced | Gym | Single-Arm Cable Explosive Pull 29 | EMG:8.5
+ID:495 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 30 | EMG:8.8
+ID:496 | Advanced | Gym | Single-Arm Cable Unilateral Pull 31 | EMG:8.7
+ID:497 | Advanced | Gym | Single-Arm Cable Deficit Pull 32 | EMG:8.6
+ID:498 | Advanced | Gym | Single-Arm Cable Paused Pull 33 | EMG:8.3
+ID:499 | Advanced | Gym | Single-Arm Cable Explosive Pull 34 | EMG:8.4
+ID:500 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 35 | EMG:8.4
+ID:501 | Advanced | Gym | Single-Arm Cable Unilateral Pull 36 | EMG:8.4
+ID:502 | Advanced | Gym | Single-Arm Cable Deficit Pull 37 | EMG:8.6
+ID:503 | Advanced | Gym | Single-Arm Cable Paused Pull 38 | EMG:8.6
+ID:504 | Advanced | Gym | Single-Arm Cable Explosive Pull 39 | EMG:9.1
+ID:505 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 40 | EMG:8.4
+ID:506 | Advanced | Gym | Single-Arm Cable Unilateral Pull 41 | EMG:8.4
+ID:507 | Advanced | Gym | Single-Arm Cable Deficit Pull 42 | EMG:8.7
+ID:508 | Advanced | Gym | Single-Arm Cable Paused Pull 43 | EMG:9.1
+ID:509 | Advanced | Gym | Single-Arm Cable Explosive Pull 44 | EMG:8.9
+ID:510 | Advanced | Gym | Single-Arm Cable Eccentric-Focused Pull 45 | EMG:8.8
+ID:511 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 1 | EMG:9.4
+ID:512 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 2 | EMG:9.8
+ID:513 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 3 | EMG:9.9
+ID:514 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 4 | EMG:9.5
+ID:515 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 5 | EMG:9.8
+ID:516 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 6 | EMG:9.7
+ID:517 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 7 | EMG:9.7
+ID:518 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 8 | EMG:9.8
+ID:519 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 9 | EMG:9.5
+ID:520 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 10 | EMG:9.3
+ID:521 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 11 | EMG:9.9
+ID:522 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 12 | EMG:9.9
+ID:523 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 13 | EMG:9.5
+ID:524 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 14 | EMG:9.4
+ID:525 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 15 | EMG:10.0
+ID:526 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 16 | EMG:9.3
+ID:527 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 17 | EMG:9.8
+ID:528 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 18 | EMG:9.4
+ID:529 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 19 | EMG:9.8
+ID:530 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 20 | EMG:9.4
+ID:531 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 21 | EMG:10.0
+ID:532 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 22 | EMG:9.9
+ID:533 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 23 | EMG:9.4
+ID:534 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 24 | EMG:9.7
+ID:535 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 25 | EMG:9.8
+ID:536 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 26 | EMG:9.3
+ID:537 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 27 | EMG:9.4
+ID:538 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 28 | EMG:9.8
+ID:539 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 29 | EMG:9.8
+ID:540 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 30 | EMG:9.8
+ID:541 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 31 | EMG:9.7
+ID:542 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 32 | EMG:10.0
+ID:543 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 33 | EMG:9.3
+ID:544 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 34 | EMG:9.6
+ID:545 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 35 | EMG:9.6
+ID:546 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 36 | EMG:9.7
+ID:547 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 37 | EMG:9.6
+ID:548 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 38 | EMG:9.9
+ID:549 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 39 | EMG:9.6
+ID:550 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 40 | EMG:9.6
+ID:551 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 41 | EMG:9.7
+ID:552 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 42 | EMG:9.7
+ID:553 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 43 | EMG:9.3
+ID:554 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 44 | EMG:9.6
+ID:555 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 45 | EMG:9.4
+ID:556 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 46 | EMG:9.9
+ID:557 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 47 | EMG:9.7
+ID:558 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 48 | EMG:9.3
+ID:559 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 49 | EMG:10.0
+ID:560 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 50 | EMG:9.6
+ID:561 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 51 | EMG:9.4
+ID:562 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 52 | EMG:9.5
+ID:563 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 53 | EMG:9.9
+ID:564 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 54 | EMG:9.5
+ID:565 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 55 | EMG:9.4
+ID:566 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 56 | EMG:9.6
+ID:567 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 57 | EMG:9.5
+ID:568 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 58 | EMG:9.9
+ID:569 | Elite | Home | Hyper-Advanced Front Lever Weighted Touch 1.5 - 59 | EMG:9.9
+ID:570 | Elite | Home | Hyper-Advanced Front Lever Leveraged Touch 1.5 - 60 | EMG:9.9
+ID:571 | Elite | Home | Hyper-Advanced Front Lever Isometric Touch 1.5 - 61 | EMG:9.8
+ID:572 | Elite | Home | Hyper-Advanced Front Lever Dynamic Touch 1.5 - 62 | EMG:9.8
+ID:573 | Elite | Home | Hyper-Advanced Front Lever Suspended Touch 1.5 - 63 | EMG:9.9
+ID:574 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 1 | EMG:9.3
+ID:575 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 2 | EMG:10.0
+ID:576 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Suspended Touch 1.5 - 3 | EMG:9.3
+ID:577 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Weighted Touch 1.5 - 4 | EMG:9.6
+ID:578 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Leveraged Touch 1.5 - 5 | EMG:9.6
+ID:579 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 6 | EMG:9.7
+ID:580 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 7 | EMG:9.7
+ID:581 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Suspended Touch 1.5 - 8 | EMG:9.7
+ID:582 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Weighted Touch 1.5 - 9 | EMG:10.0
+ID:583 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Leveraged Touch 1.5 - 10 | EMG:9.8
+ID:584 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 11 | EMG:9.4
+ID:585 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 12 | EMG:9.6
+ID:586 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Suspended Touch 1.5 - 13 | EMG:9.7
+ID:587 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Weighted Touch 1.5 - 14 | EMG:9.5
+ID:588 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Leveraged Touch 1.5 - 15 | EMG:9.9
+ID:589 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 16 | EMG:10.0
+ID:590 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 17 | EMG:9.4
+ID:591 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Suspended Touch 1.5 - 18 | EMG:9.5
+ID:592 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Weighted Touch 1.5 - 19 | EMG:9.9
+ID:593 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Leveraged Touch 1.5 - 20 | EMG:9.7
+ID:594 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 21 | EMG:9.5
+ID:595 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 22 | EMG:10.0
+ID:596 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Suspended Touch 1.5 - 23 | EMG:9.9
+ID:597 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Weighted Touch 1.5 - 24 | EMG:9.3
+ID:598 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Leveraged Touch 1.5 - 25 | EMG:9.5
+ID:599 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Isometric Touch 1.5 - 26 | EMG:9.5
+ID:600 | Elite | Gym | Hyper-Advanced Weighted Iron Cross Dynamic Touch 1.5 - 27 | EMG:9.6
+
+EXECUTION PROTOCOLS
+Beginner: Controlled eccentric tempo (3s down, 1s hold).
+Intermediate: Moderate time-under-tension. Full range of motion.
+Advanced: Explosive concentric. Strict biomechanical alignment.
+Elite: Strict 1.5 repetition protocol (full eccentric-concentric + mandatory half-range contraction).

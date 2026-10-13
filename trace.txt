@@ -1,0 +1,444 @@
+1: 0 -> import { ProbabilisticBloomFilter, SemanticCollisi
+2: 0 -> import localforage from 'localforage';
+3: 0 -> 
+4: 1 -> const ALLOCATION = {
+5: 1 ->   "Arms": { Beginner: 125, Intermediate: 170, Adva
+6: 1 ->   "Legs": { Beginner: 110, Intermediate: 150, Adva
+7: 1 ->   "Core": { Beginner: 55, Intermediate: 70, Advanc
+8: 1 ->   "Cardio": { Beginner: 80, Intermediate: 100, Adv
+9: 1 ->   "Back": { Beginner: 150, Intermediate: 205, Adva
+10: 1 ->   "Chest": { Beginner: 125, Intermediate: 170, Adv
+11: 1 ->   "Explosiveness": { Beginner: 75, Intermediate: 1
+12: 1 ->   "Neck Strength": { Beginner: 75, Intermediate: 1
+13: 1 ->   "Tendons and Bones": { Beginner: 100, Intermedia
+14: 0 -> };
+15: 0 -> 
+16: 1 -> const BASES = {
+17: 2 ->   "Arms": {
+18: 2 ->      Beginner: ["Bicep Curl", "Tricep Extension", 
+19: 2 ->      Intermediate: ["Barbell Curl", "Dumbbell Exte
+20: 2 ->      Advanced: ["Strict Curl", "Archer Extension",
+21: 2 ->      Elite: ["Victorian Press", "One-Arm Extension
+22: 1 ->   },
+23: 2 ->   "Legs": {
+24: 2 ->      Beginner: ["Wall Sit", "Assisted Squat", "Glu
+25: 2 ->      Intermediate: ["Bodyweight Squat", "Walking L
+26: 2 ->      Advanced: ["Pistol Squat", "Heavy Front Squat
+27: 2 ->      Elite: ["Weighted Pistol Squat", "Heavy Zerch
+28: 1 ->   },
+29: 2 ->   "Core": {
+30: 2 ->      Beginner: ["Knee Plank", "Deadbug", "Bird Dog
+31: 2 ->      Intermediate: ["Standard Plank", "Russian Twi
+32: 2 ->      Advanced: ["Dragon Flag", "L-Sit", "Windshiel
+33: 2 ->      Elite: ["Full Human Flag", "Weighted Dragon F
+34: 1 ->   },
+35: 2 ->   "Cardio": {
+36: 2 ->      Beginner: ["March in Place", "Step Jacks", "S
+37: 2 ->      Intermediate: ["Burpee", "Jumping Jacks", "Hi
+38: 2 ->      Advanced: ["Sprint Intervals", "Double Unders
+39: 2 ->      Elite: ["Weighted Sprint", "High-Altitude Mas
+40: 1 ->   },
+41: 2 ->   "Back": {
+42: 2 ->      Beginner: ["Wall Pull", "Band Row", "Superman
+43: 2 ->      Intermediate: ["Pull-Up", "Dumbbell Row", "La
+44: 2 ->      Advanced: ["Muscle-Up", "Front Lever Progress
+45: 2 ->      Elite: ["One-Arm Pull-Up", "Iron Cross Pull",
+46: 1 ->   },
+47: 2 ->   "Chest": {
+48: 2 ->      Beginner: ["Wall Push-Up", "Incline Push-Up",
+49: 2 ->      Intermediate: ["Standard Push-Up", "Bench Pre
+50: 2 ->      Advanced: ["Archer Push-Up", "Guillotine Pres
+51: 2 ->      Elite: ["90-Degree Push-Up", "Planche Push-Up
+52: 1 ->   },
+53: 2 ->   "Explosiveness": {
+54: 2 ->      Beginner: ["Assisted Jump", "Speed Step-Up", 
+55: 2 ->      Intermediate: ["Jump Squat", "Broad Jump", "C
+56: 2 ->      Advanced: ["Depth Jump", "Power Clean", "Snat
+57: 2 ->      Elite: ["Weighted Muscle-Up", "Heavy Hang Cle
+58: 1 ->   },
+59: 2 ->   "Neck Strength": {
+60: 2 ->      Beginner: ["Isometric Neck Hold", "Band Neck 
+61: 2 ->      Intermediate: ["Weighted Neck Flexion", "Neck
+62: 2 ->      Advanced: ["Heavy Plate Neck Curl", "Advanced
+63: 2 ->      Elite: ["Extreme Harness Extension", "Max Axl
+64: 1 ->   },
+65: 2 ->   "Tendons and Bones": {
+66: 2 ->      Beginner: ["Static Wall Hold", "Slow Step-Dow
+67: 2 ->      Intermediate: ["Farmers Walk", "Loaded Carry"
+68: 2 ->      Advanced: ["Heavy Yoke Carry", "Overload Lock
+69: 2 ->      Elite: ["Super Heavy Rack Hold", "Max Effort 
+70: 1 ->   }
+71: 0 -> };
+72: 0 -> 
+73: 0 -> const HOME_EQUIP = ["Bodyweight", "Backpack-weight
+74: 0 -> const GYM_EQUIP = ["Machine", "Barbell", "Cable"];
+75: 0 -> 
+76: 1 -> function buildAuthenticName(tier, base, attempt) {
+77: 2 ->    if (attempt === 0) {
+78: 2 ->       if (tier === "Elite") return `Weighted ${bas
+79: 2 ->       return base;
+80: 1 ->    }
+81: 1 ->    
+82: 1 ->    const B_MODS = ["Assisted", "Wall-Supported", "
+83: 1 ->    const I_MODS = ["Standard", "Dumbbell", "Barbel
+84: 1 ->    const A_MODS = ["Plyometric", "Strict", "Overco
+85: 1 ->    const E_PRE = ["Weighted", "Heavy", "Maximal", 
+86: 1 ->    const E_SUF = ["1.5", "Heavy", "1.5 Protocol", 
+87: 1 -> 
+88: 1 ->    let name = base;
+89: 2 ->    if (tier === "Beginner") {
+90: 2 ->       let mod1 = B_MODS[attempt % B_MODS.length];
+91: 2 ->       let mod2 = B_MODS[Math.floor(attempt / B_MOD
+92: 2 ->       name = attempt < B_MODS.length ? `${mod1} ${
+93: 2 ->    } else if (tier === "Intermediate") {
+94: 2 ->       let mod1 = I_MODS[attempt % I_MODS.length];
+95: 2 ->       let mod2 = I_MODS[Math.floor(attempt / I_MOD
+96: 2 ->       name = attempt < I_MODS.length ? `${mod1} ${
+97: 2 ->    } else if (tier === "Advanced") {
+98: 2 ->       let mod1 = A_MODS[attempt % A_MODS.length];
+99: 2 ->       let mod2 = A_MODS[Math.floor(attempt / A_MOD
+100: 2 ->       name = attempt < A_MODS.length ? `${mod1} ${
+101: 2 ->    } else if (tier === "Elite") {
+102: 2 ->       let pre = E_PRE[attempt % E_PRE.length];
+103: 2 ->       let pre2 = E_PRE[Math.floor(attempt / E_PRE.
+104: 2 ->       let suf = E_SUF[attempt % E_SUF.length];
+105: 2 ->       name = attempt < E_PRE.length ? `${pre} ${ba
+106: 1 ->    }
+107: 1 ->    
+108: 1 ->    // Deduplicate consecutive words
+109: 1 ->    let parts = name.split(" ");
+110: 1 ->    let uniqueParts = [];
+111: 2 ->    for (let p of parts) {
+112: 3 ->       if (uniqueParts.length === 0 || uniqueParts[
+113: 3 ->          uniqueParts.push(p);
+114: 2 ->       }
+115: 1 ->    }
+116: 1 ->    return uniqueParts.join(" ").trim();
+117: 0 -> }
+118: 0 -> 
+119: 1 -> self.onmessage = async (e) => {
+120: 1 ->   const { type, payload } = e.data;
+121: 1 ->   
+122: 2 ->   if (type === "GENERATE_MASTER") {
+123: 3 ->     try {
+124: 3 ->       const CACHE_KEY = "exercise_tab_v28_bloom_fi
+125: 3 ->       let cached = null;
+126: 3 ->       try { cached = await localforage.getItem(CAC
+127: 3 ->       
+128: 4 ->       if (cached && cached.length >= 3550) {
+129: 4 ->         self.postMessage({ type: "MASTER_GENERATED
+130: 4 ->         return;
+131: 3 ->       }
+132: 3 -> 
+133: 3 ->       const database = [];
+134: 3 ->       
+135: 4 -> const ALLOCATION = {
+136: 4 ->   "Arms": { Beginner: 125, Intermediate: 170, Adva
+137: 4 ->   "Legs": { Beginner: 110, Intermediate: 150, Adva
+138: 4 ->   "Core": { Beginner: 55, Intermediate: 70, Advanc
+139: 4 ->   "Cardio": { Beginner: 80, Intermediate: 100, Adv
+140: 4 ->   "Back": { Beginner: 150, Intermediate: 205, Adva
+141: 4 ->   "Chest": { Beginner: 125, Intermediate: 170, Adv
+142: 4 ->   "Explosiveness": { Beginner: 75, Intermediate: 1
+143: 4 ->   "Neck Strength": { Beginner: 75, Intermediate: 1
+144: 4 ->   "Tendons and Bones": { Beginner: 100, Intermedia
+145: 3 -> };
+146: 3 -> 
+147: 4 -> const BASES = {
+148: 5 ->   "Arms": {
+149: 5 ->      Beginner: ["Bicep Curl", "Tricep Extension", 
+150: 5 ->      Intermediate: ["Barbell Curl", "Dumbbell Exte
+151: 5 ->      Advanced: ["Strict Curl", "Archer Extension",
+152: 5 ->      Elite: ["Victorian Press", "One-Arm Extension
+153: 4 ->   },
+154: 5 ->   "Legs": {
+155: 5 ->      Beginner: ["Wall Sit", "Assisted Squat", "Glu
+156: 5 ->      Intermediate: ["Bodyweight Squat", "Walking L
+157: 5 ->      Advanced: ["Pistol Squat", "Heavy Front Squat
+158: 5 ->      Elite: ["Weighted Pistol Squat", "Heavy Zerch
+159: 4 ->   },
+160: 5 ->   "Core": {
+161: 5 ->      Beginner: ["Knee Plank", "Deadbug", "Bird Dog
+162: 5 ->      Intermediate: ["Standard Plank", "Russian Twi
+163: 5 ->      Advanced: ["Dragon Flag", "L-Sit", "Windshiel
+164: 5 ->      Elite: ["Full Human Flag", "Weighted Dragon F
+165: 4 ->   },
+166: 5 ->   "Cardio": {
+167: 5 ->      Beginner: ["March in Place", "Step Jacks", "S
+168: 5 ->      Intermediate: ["Burpee", "Jumping Jacks", "Hi
+169: 5 ->      Advanced: ["Sprint Intervals", "Double Unders
+170: 5 ->      Elite: ["Weighted Sprint", "High-Altitude Mas
+171: 4 ->   },
+172: 5 ->   "Back": {
+173: 5 ->      Beginner: ["Wall Pull", "Band Row", "Superman
+174: 5 ->      Intermediate: ["Pull-Up", "Dumbbell Row", "La
+175: 5 ->      Advanced: ["Muscle-Up", "Front Lever Progress
+176: 5 ->      Elite: ["One-Arm Pull-Up", "Iron Cross Pull",
+177: 4 ->   },
+178: 5 ->   "Chest": {
+179: 5 ->      Beginner: ["Wall Push-Up", "Incline Push-Up",
+180: 5 ->      Intermediate: ["Standard Push-Up", "Bench Pre
+181: 5 ->      Advanced: ["Archer Push-Up", "Guillotine Pres
+182: 5 ->      Elite: ["90-Degree Push-Up", "Planche Push-Up
+183: 4 ->   },
+184: 5 ->   "Explosiveness": {
+185: 5 ->      Beginner: ["Assisted Jump", "Speed Step-Up", 
+186: 5 ->      Intermediate: ["Jump Squat", "Broad Jump", "C
+187: 5 ->      Advanced: ["Depth Jump", "Power Clean", "Snat
+188: 5 ->      Elite: ["Weighted Muscle-Up", "Heavy Hang Cle
+189: 4 ->   },
+190: 5 ->   "Neck Strength": {
+191: 5 ->      Beginner: ["Isometric Neck Hold", "Band Neck 
+192: 5 ->      Intermediate: ["Weighted Neck Flexion", "Neck
+193: 5 ->      Advanced: ["Heavy Plate Neck Curl", "Advanced
+194: 5 ->      Elite: ["Extreme Harness Extension", "Max Axl
+195: 4 ->   },
+196: 5 ->   "Tendons and Bones": {
+197: 5 ->      Beginner: ["Static Wall Hold", "Slow Step-Dow
+198: 5 ->      Intermediate: ["Farmers Walk", "Loaded Carry"
+199: 5 ->      Advanced: ["Heavy Yoke Carry", "Overload Lock
+200: 5 ->      Elite: ["Super Heavy Rack Hold", "Max Effort 
+201: 4 ->   }
+202: 3 -> };
+203: 3 -> 
+204: 3 -> const HOME_EQUIP = ["Bodyweight", "Backpack-weight
+205: 3 -> const GYM_EQUIP = ["Machine", "Barbell", "Cable"];
+206: 3 -> 
+207: 4 -> function buildAuthenticName(tier, base, attempt) {
+208: 5 ->    if (attempt === 0) {
+209: 5 ->       if (tier === "Elite") return `Weighted ${bas
+210: 5 ->       return base;
+211: 4 ->    }
+212: 4 ->    
+213: 4 ->    const B_MODS = ["Assisted", "Wall-Supported", "
+214: 4 ->    const I_MODS = ["Standard", "Dumbbell", "Barbel
+215: 4 ->    const A_MODS = ["Plyometric", "Strict", "Overco
+216: 4 ->    const E_PRE = ["Weighted", "Heavy", "Maximal", 
+217: 4 ->    const E_SUF = ["1.5", "Heavy", "1.5 Protocol", 
+218: 4 -> 
+219: 4 ->    let name = base;
+220: 5 ->    if (tier === "Beginner") {
+221: 5 ->       let mod1 = B_MODS[attempt % B_MODS.length];
+222: 5 ->       let mod2 = B_MODS[Math.floor(attempt / B_MOD
+223: 5 ->       name = attempt < B_MODS.length ? `${mod1} ${
+224: 5 ->    } else if (tier === "Intermediate") {
+225: 5 ->       let mod1 = I_MODS[attempt % I_MODS.length];
+226: 5 ->       let mod2 = I_MODS[Math.floor(attempt / I_MOD
+227: 5 ->       name = attempt < I_MODS.length ? `${mod1} ${
+228: 5 ->    } else if (tier === "Advanced") {
+229: 5 ->       let mod1 = A_MODS[attempt % A_MODS.length];
+230: 5 ->       let mod2 = A_MODS[Math.floor(attempt / A_MOD
+231: 5 ->       name = attempt < A_MODS.length ? `${mod1} ${
+232: 5 ->    } else if (tier === "Elite") {
+233: 5 ->       let pre = E_PRE[attempt % E_PRE.length];
+234: 5 ->       let pre2 = E_PRE[Math.floor(attempt / E_PRE.
+235: 5 ->       let suf = E_SUF[attempt % E_SUF.length];
+236: 5 ->       name = attempt < E_PRE.length ? `${pre} ${ba
+237: 4 ->    }
+238: 4 ->    
+239: 4 ->    // Deduplicate consecutive words
+240: 4 ->    let parts = name.split(" ");
+241: 4 ->    let uniqueParts = [];
+242: 5 ->    for (let p of parts) {
+243: 6 ->       if (uniqueParts.length === 0 || uniqueParts[
+244: 6 ->          uniqueParts.push(p);
+245: 5 ->       }
+246: 4 ->    }
+247: 4 ->    return uniqueParts.join(" ").trim();
+248: 3 -> }
+249: 3 -> 
+250: 4 -> self.onmessage = async (e) => {
+251: 4 ->   const { type, payload } = e.data;
+252: 4 ->   
+253: 5 ->   if (type === "GENERATE_MASTER") {
+254: 6 ->     try {
+255: 6 ->       const CACHE_KEY = "exercise_tab_v28_bloom_fi
+256: 6 ->       let cached = null;
+257: 6 ->       try { cached = await localforage.getItem(CAC
+258: 6 ->       
+259: 7 ->       if (cached && cached.length >= 3550) {
+260: 7 ->         self.postMessage({ type: "MASTER_GENERATED
+261: 7 ->         return;
+262: 6 ->       }
+263: 6 -> 
+264: 6 ->       const database = [];
+265: 6 ->       
+266: 6 ->       const bloomFilter = new ProbabilisticBloomFi
+267: 6 ->       // Secondary validation set to prevent false
+268: 6 ->       const secondaryValidationSet = new Set<strin
+269: 6 ->       
+270: 6 ->       let globalIndex = 0;
+271: 6 ->       // Calculate perfect 70/30 environment split
+272: 6 ->       let currentHome = 0;
+273: 6 ->       const targetHome = 2485;
+274: 6 ->       let currentGym = 0;
+275: 6 ->       const targetGym = 1065;
+276: 6 ->       
+277: 6 ->       let cells = [];
+278: 7 ->       for (let domain in ALLOCATION) {
+279: 8 ->          for (let tier in ALLOCATION[domain]) {
+280: 8 ->             cells.push({ domain, tier, count: ALLO
+281: 7 ->          }
+282: 6 ->       }
+283: 6 -> 
+284: 7 ->       cells.forEach((cell, index) => {
+285: 8 ->          if (index === cells.length - 1) {
+286: 8 ->             cell.homeCount = targetHome - currentH
+287: 8 ->             cell.gymCount = targetGym - currentGym
+288: 8 ->          } else {
+289: 8 ->             let h = Math.round(cell.count * 0.7);
+290: 8 ->             let g = cell.count - h;
+291: 8 ->             cell.homeCount = h;
+292: 8 ->             cell.gymCount = g;
+293: 8 ->             currentHome += h;
+294: 8 ->             currentGym += g;
+295: 7 ->          }
+296: 6 ->       });
+297: 6 -> 
+298: 7 ->       for (const cell of cells) {
+299: 7 ->          const { domain, tier, homeCount, gymCount
+300: 7 ->          const bases = BASES[domain][tier] || [dom
+301: 7 ->          
+302: 8 ->          const buildCell = (targetCount: number, i
+303: 8 ->             const equips = isHome ? HOME_EQUIP : G
+304: 8 ->             let count = 0;
+305: 8 ->             let attempt = 0;
+306: 8 ->             
+307: 9 ->             while (count < targetCount) {
+308: 9 ->                const base = bases[attempt % bases.
+309: 9 ->                const eq = equips[attempt % equips.
+310: 9 ->                
+311: 9 ->                let name = buildAuthenticName(tier,
+312: 9 ->                
+313: 9 ->                // Ensure 3-to-4 word constraint st
+314: 9 ->                let words = name.split(' ');
+315: 10 ->                if (words.length > 4) {
+316: 10 ->                  name = [...words.slice(0, 2), ...
+317: 10 ->                } else if (words.length < 3) {
+318: 10 ->                  // Add automated modifiers to enf
+319: 10 ->                  name = isHome ? `Strict ${name} P
+320: 9 ->                }
+321: 9 -> 
+322: 9 ->                let { norm, cryptoHash } = Semantic
+323: 9 ->                
+324: 9 ->                let isDuplicate = false;
+325: 9 ->                // Positive flags route candidate r
+326: 10 ->                if (bloomFilter.has(cryptoHash)) {
+327: 11 ->                  if (secondaryValidationSet.has(cr
+328: 11 ->                     isDuplicate = true; // True po
+329: 10 ->                  }
+330: 9 ->                }
+331: 9 ->                
+332: 10 ->                if (!isDuplicate) {
+333: 10 ->                   // Register in pipeline
+334: 10 ->                   bloomFilter.add(cryptoHash);
+335: 10 ->                   secondaryValidationSet.add(crypt
+336: 10 ->                   
+337: 10 ->                   let baseScore = tier === 'Beginn
+338: 10 ->                   let eff = Math.min(10.0, Math.ro
+339: 10 ->                   
+340: 10 ->                   let trainingAge = "";
+341: 10 ->                   let bioProfile = "";
+342: 10 ->                   let specialized = "";
+343: 10 -> 
+344: 11 ->                   if (tier === "Beginner") {
+345: 11 ->                      trainingAge = "1 to 1.5 month
+346: 11 ->                      bioProfile = "Maximum structu
+347: 11 ->                   } else if (tier === "Intermediat
+348: 11 ->                      trainingAge = "3 to 4 months 
+349: 11 ->                      bioProfile = "Full unassisted
+350: 11 ->                   } else if (tier === "Advanced") 
+351: 11 ->                      trainingAge = "3 to 4 years o
+352: 11 ->                      bioProfile = "High mechanical
+353: 11 ->                   } else if (tier === "Elite") {
+354: 11 ->                      trainingAge = "Peak human ana
+355: 11 ->                      specialized = "\n\n**Speciali
+356: 10 ->                   }
+357: 10 ->                   
+358: 10 ->                   let instructions = `**Training A
+359: 10 ->                   
+360: 11 ->                   database.push({
+361: 11 ->                      id: `pulse-ex-${globalIndex.t
+362: 11 ->                      name,
+363: 11 ->                      muscleGroup: domain,
+364: 11 ->                      difficulty: tier,
+365: 11 ->                      scientificEffectivenessScore:
+366: 11 ->                      equipmentNeeded: eq as any,
+367: 11 ->                      environment: isHome ? 'Home' 
+368: 11 ->                      _rawEquipment: eq,
+369: 11 ->                      instructions,
+370: 11 ->                      _searchString: name.toLowerCa
+371: 11 ->                      _cryptoHash: cryptoHash
+372: 10 ->                   });
+373: 10 ->                   
+374: 10 ->                   count++;
+375: 10 ->                   globalIndex++;
+376: 9 ->                }
+377: 9 ->                // Automated Substitution Protocol:
+378: 9 ->                attempt++;
+379: 9 ->                if (attempt > 100000) break; // Fai
+380: 8 ->             }
+381: 7 ->          };
+382: 7 ->          
+383: 7 ->          buildCell(homeCount as number, true);
+384: 7 ->          buildCell(gymCount as number, false);
+385: 6 ->       }
+386: 6 ->       
+387: 6 ->       database.sort((a, b) => a.name.localeCompare
+388: 6 ->       
+389: 7 ->       try {
+390: 7 ->         await localforage.setItem(CACHE_KEY, datab
+391: 6 ->       } catch (err) {}
+392: 6 ->       
+393: 6 ->       self.postMessage({ type: "MASTER_GENERATED",
+394: 6 -> 
+395: 6 ->     } catch (err) {
+396: 6 ->       self.postMessage({ type: "ERROR", payload: e
+397: 5 ->     }
+398: 4 ->   }
+399: 4 ->   
+400: 5 ->   if (type === "FILTER_DB") {
+401: 5 ->     self.postMessage({ type: "FILTER_DONE", payloa
+402: 4 ->   }
+403: 4 -> 
+404: 5 ->   if (type === "SEARCH_DB") {
+405: 6 ->     try {
+406: 6 ->       const { db, query, selectedEquips, selectedG
+407: 6 ->       let result = db;
+408: 6 ->       let q = query.trim().toLowerCase();
+409: 6 -> 
+410: 6 ->       const pointMatch = q.match(/([0-9.]+)s*(poin
+411: 7 ->       if (pointMatch) {
+412: 7 ->         const targetScore = parseFloat(pointMatch[
+413: 8 ->         if (!isNaN(targetScore)) {
+414: 8 ->             result = result.filter((ex) => Math.ab
+415: 7 ->         }
+416: 7 ->         q = q.replace(pointMatch[0], "").trim();
+417: 6 ->       }
+418: 6 -> 
+419: 7 ->       if (q.length > 0) {
+420: 7 ->         const terms = q.split(/s+/);
+421: 8 ->         result = result.filter((ex) => {
+422: 8 ->            const searchSpace = ex._searchString;
+423: 8 ->            return terms.every(term => searchSpace.
+424: 7 ->         });
+425: 6 ->       }
+426: 6 -> 
+427: 7 ->       if (selectedEquips && selectedEquips.length 
+428: 7 ->         result = result.filter((ex) => selectedEqu
+429: 6 ->       }
+430: 6 -> 
+431: 7 ->       if (selectedGroups && selectedGroups.length 
+432: 7 ->         result = result.filter((ex) => selectedGro
+433: 6 ->       }
+434: 7 ->       if (selectedDifficulties && selectedDifficul
+435: 7 ->         result = result.filter((ex) => selectedDif
+436: 6 ->       }
+437: 6 -> 
+438: 6 ->       self.postMessage({ type: "SEARCH_DONE", payl
+439: 6 ->     } catch(err) {
+440: 6 ->       self.postMessage({ type: "ERROR", payload: e
+441: 5 ->     }
+442: 4 ->   }
+443: 3 -> };
+444: 3 -> 

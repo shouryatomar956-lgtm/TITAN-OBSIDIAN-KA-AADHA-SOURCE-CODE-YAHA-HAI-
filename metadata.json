@@ -1,0 +1,13 @@
+{
+  "name": "PulseFit",
+  "description": "High-Performance PWA Architecture & Storage Infrastructure for gym tracking.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone",
+    "publickey-credentials-create",
+    "publickey-credentials-get"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
