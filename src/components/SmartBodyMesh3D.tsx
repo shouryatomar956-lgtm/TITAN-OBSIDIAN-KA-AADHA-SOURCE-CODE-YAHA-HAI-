@@ -199,7 +199,13 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
         if (history.length > 0) {
           setProfileMetrics(history[0].metrics);
         } else {
-          setProfileMetrics(null);
+          // Dynamically compute mathematical baseline anthropometrics from user profile parameters
+          const baseline = bodyMeshReconstruction.computeAnthropometrics(
+            weight, 
+            height, 
+            profile?.gender || 'male'
+          );
+          setProfileMetrics(baseline);
         }
 
         // Generate 3D mesh dynamically from current height & weight
@@ -550,9 +556,9 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2 flex-wrap">
-                Smart 3D Body Mesh & Anthropometrics
+                Smart 3D Body Scan & Measurements
                 <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                  Cloth-Invariant CV
+                  Smart Vision
                 </span>
                 {isLiveCameraActive && (
                   <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 animate-pulse flex items-center gap-1">
@@ -700,7 +706,7 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
                   }`}
                 >
                   <Crosshair className="w-3.5 h-3.5" />
-                  <span>Image Landmark Points Map</span>
+                  <span>Photo Body Points</span>
                 </button>
               </div>
             </div>
@@ -1121,7 +1127,7 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
             <div className="text-base sm:text-lg font-black text-white leading-tight">
               {profileMetrics ? profileMetrics.somatotype : 'Awaiting Scan'}
             </div>
-            <div className="text-[10px] font-mono text-zinc-400 mt-0.5">Somatotype Frame</div>
+            <div className="text-[10px] font-mono text-zinc-400 mt-0.5">Natural Body Build</div>
           </div>
           <div className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 w-fit truncate max-w-full">
             {profileMetrics ? `${profileMetrics.somatotype.split(' ')[0]} Frame` : 'Live Camera'}
@@ -1275,71 +1281,71 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-300 flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-                  4-Compartment Siri/Brozek Density • Ramanujan Elliptical • ABSI & BRI Geometric Matrix
+                  Detailed Body Composition & Shape Analysis
                 </span>
                 <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
-                  P ≈ π(a+b)[1 + 3h/(10+√(4-3h))] • D_b = {profileMetrics.advancedIndices.bodyDensityGcm3} g/cm³
+                  Precision Body Fit • Density: {profileMetrics.advancedIndices.bodyDensityGcm3} g/cm³
                 </span>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Siri / Brozek BF%</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Body Fat Range</span>
                   <span className="text-lg font-black text-rose-400 font-mono mt-0.5">
-                    {profileMetrics.advancedIndices.siriBodyFatPct}% / {profileMetrics.advancedIndices.brozekBodyFatPct}%
+                    {profileMetrics.advancedIndices.siriBodyFatPct}% - {profileMetrics.advancedIndices.brozekBodyFatPct}%
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    Density: {profileMetrics.advancedIndices.bodyDensityGcm3} g/cm³
+                    Dual Formula Check
                   </span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Normalized FFMI</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Muscle Index (FFMI)</span>
                   <span className="text-lg font-black text-cyan-400 font-mono mt-0.5">
-                    {profileMetrics.advancedIndices.normalizedFfmi} kg/m²
+                    {profileMetrics.advancedIndices.normalizedFfmi}
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    Raw FFMI: {profileMetrics.advancedIndices.fatFreeMassIndexFfmi}
+                    Lean Muscle Density
                   </span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Body Roundness BRI</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Body Roundness</span>
                   <span className="text-lg font-black text-emerald-400 font-mono mt-0.5">
                     {profileMetrics.advancedIndices.bodyRoundnessIndexBri}
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    Eccentricity Visceral Index
+                    Health Balance Score
                   </span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Krakauer ABSI</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Body Shape Score</span>
                   <span className="text-lg font-black text-amber-400 font-mono mt-0.5">
                     {profileMetrics.advancedIndices.aBodyShapeIndexAbsi}
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    WC / (BMI²ᐟ³ · √H)
+                    Waist-to-Height Ratio
                   </span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Conicity & Du Bois BSA</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Body Surface Area</span>
                   <span className="text-lg font-black text-purple-400 font-mono mt-0.5">
-                    {profileMetrics.advancedIndices.conicityIndexCi} CI
+                    {profileMetrics.advancedIndices.duBoisSurfaceAreaM2} m²
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    Surface Area: {profileMetrics.advancedIndices.duBoisSurfaceAreaM2} m²
+                    Total Body Surface
                   </span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-black/40 border border-white/5 flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Ramanujan Perimeters</span>
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Circumference</span>
                   <span className="text-lg font-black text-sky-400 font-mono mt-0.5">
                     W:{profileMetrics.advancedIndices.ramanujanWaistCm} / H:{profileMetrics.advancedIndices.ramanujanHipCm}
                   </span>
                   <span className="text-[10px] font-mono text-zinc-500">
-                    cm Elliptical Cross-Section
+                    Waist & Hip in cm
                   </span>
                 </div>
               </div>

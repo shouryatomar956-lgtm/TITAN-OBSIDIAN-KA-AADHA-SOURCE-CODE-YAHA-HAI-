@@ -68,6 +68,9 @@ export function calculatePlates(
   const isKg = unit === 'kg';
   const palette = isKg ? METRIC_PLATES_PALETTE : IMPERIAL_PLATES_PALETTE;
 
+  const safeBar = Number.isFinite(barWeight) && barWeight >= 0 ? barWeight : (isKg ? 20 : 45);
+  const safeTarget = Number.isFinite(targetWeight) && targetWeight >= 0 ? targetWeight : safeBar;
+
   // Filter or sort plate denominations descending
   let activePlates = customAvailablePlates && customAvailablePlates.length > 0
     ? palette.filter(p => customAvailablePlates.includes(p.weight))
@@ -75,7 +78,7 @@ export function calculatePlates(
 
   activePlates.sort((a, b) => b.weight - a.weight);
 
-  const weightNeeded = Math.max(0, targetWeight - barWeight);
+  const weightNeeded = Math.max(0, safeTarget - safeBar);
   const targetPerSide = weightNeeded / 2;
 
   let remaining = targetPerSide;
@@ -154,13 +157,13 @@ export function calculatePlates(
   }
 
   const loadedPerSide = targetPerSide - remaining;
-  const actualTotalWeight = Number((barWeight + (loadedPerSide * 2)).toFixed(2));
-  const remainder = Number((targetWeight - actualTotalWeight).toFixed(2));
+  const actualTotalWeight = Number((safeBar + (loadedPerSide * 2)).toFixed(2));
+  const remainder = Number((safeTarget - actualTotalWeight).toFixed(2));
 
   return {
     unit,
-    targetWeight,
-    barWeight,
+    targetWeight: safeTarget,
+    barWeight: safeBar,
     weightNeeded,
     weightPerSide: loadedPerSide,
     actualTotalWeight,

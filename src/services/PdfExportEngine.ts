@@ -19,7 +19,7 @@ class PdfExportEngine {
   /**
    * Initializes the Comlink background worker proxy
    */
-  private getWorker(): Comlink.Remote<PdfWorkerApi> {
+  private getWorker(): Comlink.Remote<PdfWorkerApi> | null {
     if (!this.workerInstance && typeof Worker !== 'undefined') {
       try {
         const worker = new Worker(
@@ -31,7 +31,7 @@ class PdfExportEngine {
         console.warn('[PdfExportEngine] Worker initialization fallback:', err);
       }
     }
-    return this.workerInstance!;
+    return this.workerInstance;
   }
 
   /**

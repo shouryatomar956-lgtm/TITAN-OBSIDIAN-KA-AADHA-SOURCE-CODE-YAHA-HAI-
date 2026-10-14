@@ -7,7 +7,8 @@ import {
   Code2, 
   PlusCircle,
   Sparkles,
-  Loader2
+  Loader2,
+  Zap
 } from 'lucide-react';
 import { triggerHapticFeedback } from '../utils/haptics';
 
@@ -16,6 +17,7 @@ const MediaPipePoseEngine = lazy(() => import('./MediaPipePoseEngine').then(m =>
 const PlateCalculator = lazy(() => import('./PlateCalculator').then(m => ({ default: m.PlateCalculator })));
 const MuscleFatigueHeatmap = lazy(() => import('./MuscleFatigueHeatmap').then(m => ({ default: m.MuscleFatigueHeatmap })));
 const ProgressiveOverloadWidget = lazy(() => import('./ProgressiveOverloadWidget').then(m => ({ default: m.ProgressiveOverloadWidget })));
+const VelocityKinematicLab = lazy(() => import('./VelocityKinematicLab').then(m => ({ default: m.VelocityKinematicLab })));
 
 export type SuiteSubTab = 'mediapipe_pose' | 'rep_counter' | 'plate_calculator' | 'fatigue_heatmap' | 'progressive_overload' | 'custom_workspace';
 
@@ -96,12 +98,12 @@ export const RepCounterVolumeSuite = memo(function RepCounterVolumeSuite() {
             onClick={() => handleSubTabChange('custom_workspace')}
             className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 ${
               activeSubTab === 'custom_workspace'
-                ? 'bg-zinc-800 text-white shadow-md border border-white/20'
+                ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-lg shadow-purple-500/20'
                 : 'text-white/50 hover:text-white hover:bg-white/5'
             }`}
           >
-            <Code2 className="w-4 h-4" />
-            <span>Custom Extension</span>
+            <Zap className="w-4 h-4 text-purple-300" />
+            <span>VBT Velocity Lab</span>
           </button>
         </div>
       </div>
@@ -121,33 +123,8 @@ export const RepCounterVolumeSuite = memo(function RepCounterVolumeSuite() {
           {activeSubTab === 'plate_calculator' && <PlateCalculator />}
           {activeSubTab === 'fatigue_heatmap' && <MuscleFatigueHeatmap />}
           {activeSubTab === 'progressive_overload' && <ProgressiveOverloadWidget />}
+          {activeSubTab === 'custom_workspace' && <VelocityKinematicLab />}
         </Suspense>
-        
-        {/* The clean reserved sandbox workspace */}
-        {activeSubTab === 'custom_workspace' && (
-          <div className="w-full min-h-[460px] bg-zinc-900/60 border border-white/10 rounded-3xl p-8 flex flex-col items-center justify-center text-center relative overflow-hidden backdrop-blur-xl">
-            <div className="w-16 h-16 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 mb-4 shadow-inner">
-              <PlusCircle className="w-8 h-8 text-indigo-400" />
-            </div>
-            <h3 className="text-xl font-black text-white tracking-tight mb-2">
-              Rep Counter & Volume Calculator Sandbox
-            </h3>
-            <p className="text-sm text-white/60 max-w-md mb-6 leading-relaxed">
-              This dedicated workspace is reserved for your custom extensions, barbell density formulas, or future custom volume metrics.
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <span className="px-3.5 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-white/70">
-                100% Client-Side
-              </span>
-              <span className="px-3.5 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-white/70">
-                Async localforage
-              </span>
-              <span className="px-3.5 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-white/70">
-                Offline Edge Ready
-              </span>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

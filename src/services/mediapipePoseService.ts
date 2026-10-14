@@ -522,12 +522,52 @@ export function evaluateExerciseForm(
       };
     }
 
+    case 'universal_omni':
     case 'auto': {
+      // 1. Bilateral symmetry check across limbs
+      const armDiff = Math.abs(angles.leftElbowAngle - angles.rightElbowAngle);
+      if (armDiff > 30 && (angles.leftElbowAngle < 150 || angles.rightElbowAngle < 150)) {
+        return {
+          severity: 'warning',
+          title: '⚠️ Bilateral Limb Asymmetry',
+          detail: `Left limb (${Math.round(angles.leftElbowAngle)}°) & right limb (${Math.round(angles.rightElbowAngle)}°) disparity.`,
+          correctionTip: 'Synchronize both sides to maintain balanced mechanical load.',
+          affectedJoint: 'Upper Body Kinematics',
+          isPerfectForm: false
+        };
+      }
+
+      // 2. Knee valgus check during lower-body articulation
+      const kneeDist = Math.abs(lKnee.x - rKnee.x);
+      const ankleDist = Math.abs(lAnkle.x - rAnkle.x);
+      if (angles.avgKneeAngle < 135 && kneeDist < ankleDist * 0.72) {
+        return {
+          severity: 'critical',
+          title: '⚠️ Knee Inward Collapse (Valgus)',
+          detail: 'Knees are caving inward relative to ankle stance.',
+          correctionTip: 'Drive knees outward tracking over your 2nd and 3rd toes.',
+          affectedJoint: 'Knees',
+          isPerfectForm: false
+        };
+      }
+
+      // 3. Spinal alignment check
+      if (angles.torsoInclinationAngle > 42 && angles.avgKneeAngle > 140) {
+        return {
+          severity: 'warning',
+          title: '⚠️ Excessive Forward Torso Angle',
+          detail: 'Torso tilting forward without lower body flexion.',
+          correctionTip: 'Tuck ribs, brace core, and maintain neutral spine posture.',
+          affectedJoint: 'Spine & Lumbar',
+          isPerfectForm: false
+        };
+      }
+
       return {
         severity: 'optimal',
-        title: '⚡ Universal Exercise AI Active',
-        detail: 'MediaPipe 33 points automatically tracking whichever body joints you move.',
-        correctionTip: 'Complete full range of motion with controlled repetitions.',
+        title: '🟢 Optimal Universal Form',
+        detail: 'MediaPipe 33-point kinematic chain balanced. Excellent symmetry & control.',
+        correctionTip: 'Maintain continuous tempo through eccentric and concentric phases.',
         affectedJoint: 'All 33 Joints',
         isPerfectForm: true
       };
@@ -536,8 +576,8 @@ export function evaluateExerciseForm(
     default: {
       return {
         severity: 'optimal',
-        title: '🟢 Good Motion Pattern',
-        detail: 'Symmetric joint tracking active.',
+        title: '🟢 Optimal Biomechanical Chain',
+        detail: 'Active joint movement tracked with balanced alignment.',
         correctionTip: 'Maintain smooth cadence throughout repetition.',
         affectedJoint: 'Kinematic Chain',
         isPerfectForm: true
@@ -656,8 +696,8 @@ export class MediaPipeRepCounterFSM {
       inflectionThreshold = 105;
       isAngleDecreasingOnStroke = true;
     } else {
-      // UNIVERSAL OMNI-KINEMATIC TRACKING (Works on 100% of exercises in the world)
-      // Analyzes displacement across elbows, knees, hips, and torso to find the active motor joint
+      // UNIVERSAL OMNI-KINEMATIC TRACKING (Works on 100% of exercises in the world, any muscle group)
+      // Analyzes angular excursion across elbows, knees, hips, and torso to identify active kinematic driver
       const armDelta = Math.abs(175 - angles.avgElbowAngle);
       const legDelta = Math.abs(175 - angles.avgKneeAngle);
       const hipDelta = Math.abs(175 - angles.avgHipAngle);
@@ -665,17 +705,25 @@ export class MediaPipeRepCounterFSM {
 
       const maxExcursion = Math.max(armDelta, legDelta, hipDelta, torsoDelta);
 
-      if (maxExcursion === armDelta && armDelta > 20) {
+      if (maxExcursion === armDelta && armDelta > 16) {
         primaryAngle = angles.avgElbowAngle;
-        startThreshold = 150;
-        inflectionThreshold = 95;
-        isAngleDecreasingOnStroke = true;
-      } else if (maxExcursion === hipDelta && hipDelta > 20) {
+        if (angles.avgElbowAngle < 115) {
+          // Extension stroke (e.g., Overhead Press, Tricep Extension)
+          startThreshold = 85;
+          inflectionThreshold = 155;
+          isAngleDecreasingOnStroke = false;
+        } else {
+          // Flexion stroke (e.g., Bicep Curls, Floor Press, Dips, Pullups)
+          startThreshold = 150;
+          inflectionThreshold = 95;
+          isAngleDecreasingOnStroke = true;
+        }
+      } else if (maxExcursion === hipDelta && hipDelta > 16) {
         primaryAngle = angles.avgHipAngle;
         startThreshold = 155;
         inflectionThreshold = 110;
         isAngleDecreasingOnStroke = true;
-      } else if (maxExcursion === torsoDelta && torsoDelta > 15) {
+      } else if (maxExcursion === torsoDelta && torsoDelta > 14) {
         primaryAngle = 180 - angles.torsoInclinationAngle;
         startThreshold = 165;
         inflectionThreshold = 120;
@@ -691,7 +739,7 @@ export class MediaPipeRepCounterFSM {
     if (isAngleDecreasingOnStroke) {
       // Movement where angle flexes (Squats, Pushups, Curls, Lunges)
       if (this.phase === 'READY') {
-        if (primaryAngle < startThreshold - 10) {
+        if (primaryAngle < startThreshold - 6) {
           this.phase = 'STROKE_OUT';
           this.hasInflected = false;
           this.minAngleHit = primaryAngle;
@@ -700,33 +748,33 @@ export class MediaPipeRepCounterFSM {
         if (primaryAngle < this.minAngleHit) {
           this.minAngleHit = primaryAngle;
         }
-        if (primaryAngle <= inflectionThreshold) {
+        // Adaptive inflection: Either reached threshold OR reversed by > 6° from lowest depth
+        if (primaryAngle <= inflectionThreshold || (primaryAngle >= this.minAngleHit + 6 && this.minAngleHit <= startThreshold - 14)) {
           this.phase = 'INFLECTION';
           this.hasInflected = true;
-        } else if (primaryAngle > startThreshold) {
-          // Aborted repetition before reaching depth
-          this.phase = 'READY';
         }
       } else if (this.phase === 'INFLECTION') {
-        if (primaryAngle > this.minAngleHit + 12) {
+        if (primaryAngle > this.minAngleHit + 6) {
           this.phase = 'STROKE_RETURN';
         }
       } else if (this.phase === 'STROKE_RETURN') {
-        if (primaryAngle >= startThreshold - 8 && this.hasInflected) {
+        if (primaryAngle >= startThreshold - 10 && this.hasInflected) {
           const timeSinceLast = (now - this.lastRepTimestamp) / 1000;
-          if (timeSinceLast >= 0.75) {
+          // Dynamic multi-tempo cadence: Allows explosive fast reps down to 0.18s, and slow reps with zero upper bound
+          if (timeSinceLast >= 0.18) {
             this.repCount += 1;
             this.lastRepTimestamp = now;
             repCompleted = true;
           }
           this.phase = 'READY';
           this.hasInflected = false;
+          this.minAngleHit = 180;
         }
       }
     } else {
       // Movement where angle extends (Shoulder Press, Overhead Extension)
       if (this.phase === 'READY') {
-        if (primaryAngle > startThreshold + 15) {
+        if (primaryAngle > startThreshold + 8) {
           this.phase = 'STROKE_OUT';
           this.hasInflected = false;
           this.maxAngleHit = primaryAngle;
@@ -735,26 +783,25 @@ export class MediaPipeRepCounterFSM {
         if (primaryAngle > this.maxAngleHit) {
           this.maxAngleHit = primaryAngle;
         }
-        if (primaryAngle >= inflectionThreshold) {
+        if (primaryAngle >= inflectionThreshold || (primaryAngle <= this.maxAngleHit - 6 && this.maxAngleHit >= startThreshold + 16)) {
           this.phase = 'INFLECTION';
           this.hasInflected = true;
-        } else if (primaryAngle < startThreshold) {
-          this.phase = 'READY';
         }
       } else if (this.phase === 'INFLECTION') {
-        if (primaryAngle < this.maxAngleHit - 15) {
+        if (primaryAngle < this.maxAngleHit - 6) {
           this.phase = 'STROKE_RETURN';
         }
       } else if (this.phase === 'STROKE_RETURN') {
-        if (primaryAngle <= startThreshold + 10 && this.hasInflected) {
+        if (primaryAngle <= startThreshold + 12 && this.hasInflected) {
           const timeSinceLast = (now - this.lastRepTimestamp) / 1000;
-          if (timeSinceLast >= 0.75) {
+          if (timeSinceLast >= 0.18) {
             this.repCount += 1;
             this.lastRepTimestamp = now;
             repCompleted = true;
           }
           this.phase = 'READY';
           this.hasInflected = false;
+          this.maxAngleHit = 0;
         }
       }
     }

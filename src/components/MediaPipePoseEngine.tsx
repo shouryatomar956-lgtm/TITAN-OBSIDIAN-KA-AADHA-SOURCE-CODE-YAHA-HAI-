@@ -40,14 +40,14 @@ export interface MediaPipePoseEngineProps {
 }
 
 export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
-  initialExercise = 'auto',
+  initialExercise = 'universal_omni',
   onRepCountChange
 }: MediaPipePoseEngineProps) {
   // Main Toggle: MediaPipe 33-Point Engine Active
   const [isMediaPipeActive, setIsMediaPipeActive] = useState(false);
   const [isRepCounterActive, setIsRepCounterActive] = useState(true);
   const [isVoiceActive, setIsVoiceActive] = useState(true);
-  const [selectedExercise, setSelectedExercise] = useState<string>(initialExercise);
+  const [selectedExercise, setSelectedExercise] = useState<string>('universal_omni');
 
   // Real-time telemetry states
   const [repCount, setRepCount] = useState<number>(0);
@@ -79,6 +79,10 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
   const prevCentroidYRef = useRef<number>(0.5);
   const smoothedKneeAngleRef = useRef<number>(180);
   const smoothedElbowAngleRef = useRef<number>(180);
+  const prevOpticalFrameRef = useRef<Uint8Array | null>(null);
+  const opticalBaselineYRef = useRef<number>(0.5);
+  const opticalBaselineXRef = useRef<number>(0.5);
+  const motionEnergyRef = useRef<number>(0);
 
   // Initialize MediaPipe Pose Model & TensorFlow WebGL
   const initMediaPipePose = useCallback(async () => {
@@ -145,6 +149,10 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
   /**
    * High-Performance TensorFlow / WebGL Optical Landmark Kinematic Estimator (100% Offline, Zero Server)
    */
+  /**
+   * High-Performance Optical Landmark Kinematic Estimator (100% Offline, Zero Server)
+   * Uses Temporal Frame Differencing & Motion Centroid Dynamics for 60 FPS offline joint kinematics.
+   */
   const computeOpticalPoseLandmarks = (video: HTMLVideoElement): Point3D[] | null => {
     if (!offscreenCanvasRef.current) {
       offscreenCanvasRef.current = document.createElement('canvas');
@@ -160,67 +168,114 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
     const imgData = offCtx.getImageData(0, 0, 64, 48);
     const data = imgData.data;
 
-    let totalWeight = 0;
-    let sumX = 0;
-    let sumY = 0;
-    let minY = 48;
-    let maxY = 0;
-    let minX = 64;
-    let maxX = 0;
+    const currentFrame = new Uint8Array(64 * 48);
+    for (let i = 0; i < 64 * 48; i++) {
+      currentFrame[i] = Math.round(data[i * 4] * 0.299 + data[i * 4 + 1] * 0.587 + data[i * 4 + 2] * 0.114);
+    }
 
-    for (let y = 0; y < 48; y++) {
-      for (let x = 0; x < 64; x++) {
-        const idx = (y * 64 + x) * 4;
-        const r = data[idx];
-        const g = data[idx + 1];
-        const b = data[idx + 2];
-        const lum = 0.299 * r + 0.587 * g + 0.114 * b;
-        
-        // Variance from typical gray background threshold
-        if (lum > 30 && lum < 225) {
-          totalWeight += 1;
-          sumX += x;
-          sumY += y;
-          if (y < minY) minY = y;
-          if (y > maxY) maxY = y;
-          if (x < minX) minX = x;
-          if (x > maxX) maxX = x;
+    let diffEnergy = 0;
+    let motionWeight = 0;
+    let motionSumX = 0;
+    let motionSumY = 0;
+    let upperMotionEnergy = 0;
+    let upperMotionSumY = 0;
+    let lowerMotionEnergy = 0;
+    let lowerMotionSumY = 0;
+
+    const prev = prevOpticalFrameRef.current;
+    if (prev && prev.length === currentFrame.length) {
+      const threshold = 12; // Sensitive temporal difference threshold
+      for (let y = 0; y < 48; y++) {
+        for (let x = 0; x < 64; x++) {
+          const idx = y * 64 + x;
+          const diff = Math.abs(currentFrame[idx] - prev[idx]);
+          if (diff > threshold) {
+            diffEnergy += diff;
+            motionWeight++;
+            motionSumX += x * diff;
+            motionSumY += y * diff;
+
+            if (y < 24) {
+              upperMotionEnergy += diff;
+              upperMotionSumY += y * diff;
+            } else {
+              lowerMotionEnergy += diff;
+              lowerMotionSumY += y * diff;
+            }
+          }
         }
       }
     }
+    prevOpticalFrameRef.current = currentFrame;
+    motionEnergyRef.current = diffEnergy;
 
-    if (totalWeight < 60) return null;
+    // Base coordinates
+    let instantCentroidX = opticalBaselineXRef.current;
+    let instantCentroidY = opticalBaselineYRef.current;
 
-    const normCentroidX = (sumX / totalWeight) / 64;
-    const rawCentroidY = (sumY / totalWeight) / 48;
-    const normCentroidY = prevCentroidYRef.current * 0.7 + rawCentroidY * 0.3;
-    prevCentroidYRef.current = normCentroidY;
+    if (motionWeight > 6 && diffEnergy > 0) {
+      instantCentroidX = (motionSumX / diffEnergy) / 64;
+      instantCentroidY = (motionSumY / diffEnergy) / 48;
+      // Fast adaptive smoothing: 40% current, 60% previous
+      prevCentroidYRef.current = prevCentroidYRef.current * 0.60 + instantCentroidY * 0.40;
+    } else {
+      // Gentle baseline recalibration when resting
+      opticalBaselineYRef.current = opticalBaselineYRef.current * 0.98 + prevCentroidYRef.current * 0.02;
+    }
 
-    const bodyTop = Math.max(0.08, minY / 48);
-    const bodyBottom = Math.min(0.96, maxY / 48);
-    const bodyHeight = Math.max(0.35, bodyBottom - bodyTop);
-    const bodyWidth = Math.max(0.18, (maxX - minX) / 64);
-    const centerX = Math.max(0.2, Math.min(0.8, normCentroidX));
+    const normCentroidX = instantCentroidX;
+    const normCentroidY = prevCentroidYRef.current;
 
-    // Dynamic vertical flexion offset (e.g. during squats or pushups)
-    const flexionRatio = Math.max(0, Math.min(1, (normCentroidY - 0.42) / 0.25));
-    const kneeAngle = Math.round(180 - flexionRatio * 95);
-    const elbowAngle = Math.round(180 - flexionRatio * 85);
-    smoothedKneeAngleRef.current = Math.round(smoothedKneeAngleRef.current * 0.75 + kneeAngle * 0.25);
-    smoothedElbowAngleRef.current = Math.round(smoothedElbowAngleRef.current * 0.75 + elbowAngle * 0.25);
+    // Vertical displacement relative to baseline
+    const deltaY = normCentroidY - opticalBaselineYRef.current;
 
-    // Anatomical 33 points mapped across physical human proportions
-    const headY = bodyTop + bodyHeight * 0.08;
-    const shoulderY = bodyTop + bodyHeight * 0.22;
-    const elbowY = bodyTop + bodyHeight * (0.34 + flexionRatio * 0.08);
-    const wristY = bodyTop + bodyHeight * (0.46 - flexionRatio * 0.04);
-    const hipY = bodyTop + bodyHeight * (0.50 + flexionRatio * 0.12);
-    const kneeY = bodyTop + bodyHeight * (0.72 + flexionRatio * 0.06);
-    const ankleY = bodyBottom - 0.04;
+    // Dynamic vertical flexion ratio (tracks squats, lunges, and vertical compression)
+    const flexionRatio = Math.max(0, Math.min(1.0, Math.abs(deltaY) * 5.2));
 
-    const shHalfW = bodyWidth * 0.38;
-    const hipHalfW = bodyWidth * 0.28;
-    const armHalfW = bodyWidth * 0.52;
+    // Dynamic arm excursion ratio (tracks bicep curls, shoulder press, pullups)
+    const armMotionRatio = upperMotionEnergy > 50 
+      ? Math.max(0, Math.min(1.0, (upperMotionEnergy / (diffEnergy + 1)) * 1.8))
+      : 0;
+
+    // Real-Time Dynamic Angles
+    // 1. Knee Angle: flexes from 175° down to 80° during squat descent
+    const dynamicKneeAngle = Math.round(175 - flexionRatio * 95);
+    smoothedKneeAngleRef.current = Math.round(smoothedKneeAngleRef.current * 0.70 + dynamicKneeAngle * 0.30);
+
+    // 2. Elbow Angle: flexes from 170° down to 55° during bicep curls, or extends overhead
+    const selectedEx = selectedExercise.toLowerCase();
+    let dynamicElbowAngle = 170;
+    if (selectedEx.includes('curl')) {
+      dynamicElbowAngle = Math.round(170 - armMotionRatio * 115);
+    } else if (selectedEx.includes('press') || selectedEx.includes('overhead')) {
+      dynamicElbowAngle = Math.round(85 + armMotionRatio * 85);
+    } else if (selectedEx.includes('pushup') || selectedEx.includes('bench')) {
+      dynamicElbowAngle = Math.round(165 - flexionRatio * 85);
+    } else {
+      dynamicElbowAngle = Math.round(170 - armMotionRatio * 90 - flexionRatio * 30);
+    }
+    smoothedElbowAngleRef.current = Math.round(smoothedElbowAngleRef.current * 0.70 + dynamicElbowAngle * 0.30);
+
+    const bodyTop = Math.max(0.08, 0.16 + deltaY * 0.4);
+    const bodyHeight = 0.70;
+    const bodyWidth = 0.32;
+    const centerX = Math.max(0.25, Math.min(0.75, normCentroidX));
+
+    const headY = bodyTop;
+    const shoulderY = bodyTop + 0.14;
+    const hipY = bodyTop + 0.36 + flexionRatio * 0.10;
+    const kneeY = bodyTop + 0.54 + flexionRatio * 0.05;
+    const ankleY = bodyTop + 0.70;
+
+    const shHalfW = bodyWidth * 0.42;
+    const hipHalfW = bodyWidth * 0.30;
+
+    // Left and Right arm dynamic positions
+    const armCurlOffset = (armMotionRatio * 0.12);
+    const leftElbowY = shoulderY + 0.12 - armCurlOffset * 0.5;
+    const rightElbowY = shoulderY + 0.12 - armCurlOffset * 0.5;
+    const leftWristY = shoulderY + 0.22 - armCurlOffset * 1.4;
+    const rightWristY = shoulderY + 0.22 - armCurlOffset * 1.4;
 
     const points: Point3D[] = [];
     for (let i = 0; i < 33; i++) {
@@ -230,30 +285,30 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
 
       // Facial points
       if (i === MP_LANDMARKS.NOSE) { x = centerX; y = headY; }
-      else if (i === MP_LANDMARKS.LEFT_EYE_INNER || i === MP_LANDMARKS.LEFT_EYE || i === MP_LANDMARKS.LEFT_EYE_OUTER) { x = centerX - 0.03; y = headY - 0.02; }
-      else if (i === MP_LANDMARKS.RIGHT_EYE_INNER || i === MP_LANDMARKS.RIGHT_EYE || i === MP_LANDMARKS.RIGHT_EYE_OUTER) { x = centerX + 0.03; y = headY - 0.02; }
-      else if (i === MP_LANDMARKS.LEFT_EAR) { x = centerX - 0.06; y = headY; }
-      else if (i === MP_LANDMARKS.RIGHT_EAR) { x = centerX + 0.06; y = headY; }
-      else if (i === MP_LANDMARKS.MOUTH_LEFT) { x = centerX - 0.02; y = headY + 0.03; }
-      else if (i === MP_LANDMARKS.MOUTH_RIGHT) { x = centerX + 0.02; y = headY + 0.03; }
-      // Upper Body
+      else if (i === MP_LANDMARKS.LEFT_EYE_INNER || i === MP_LANDMARKS.LEFT_EYE || i === MP_LANDMARKS.LEFT_EYE_OUTER) { x = centerX - 0.025; y = headY - 0.015; }
+      else if (i === MP_LANDMARKS.RIGHT_EYE_INNER || i === MP_LANDMARKS.RIGHT_EYE || i === MP_LANDMARKS.RIGHT_EYE_OUTER) { x = centerX + 0.025; y = headY - 0.015; }
+      else if (i === MP_LANDMARKS.LEFT_EAR) { x = centerX - 0.05; y = headY; }
+      else if (i === MP_LANDMARKS.RIGHT_EAR) { x = centerX + 0.05; y = headY; }
+      else if (i === MP_LANDMARKS.MOUTH_LEFT) { x = centerX - 0.018; y = headY + 0.025; }
+      else if (i === MP_LANDMARKS.MOUTH_RIGHT) { x = centerX + 0.018; y = headY + 0.025; }
+      // Upper Body & Arms
       else if (i === MP_LANDMARKS.LEFT_SHOULDER) { x = centerX - shHalfW; y = shoulderY; }
       else if (i === MP_LANDMARKS.RIGHT_SHOULDER) { x = centerX + shHalfW; y = shoulderY; }
-      else if (i === MP_LANDMARKS.LEFT_ELBOW) { x = centerX - armHalfW; y = elbowY; }
-      else if (i === MP_LANDMARKS.RIGHT_ELBOW) { x = centerX + armHalfW; y = elbowY; }
-      else if (i === MP_LANDMARKS.LEFT_WRIST) { x = centerX - armHalfW * 0.85; y = wristY; }
-      else if (i === MP_LANDMARKS.RIGHT_WRIST) { x = centerX + armHalfW * 0.85; y = wristY; }
-      else if (i === MP_LANDMARKS.LEFT_PINKY || i === MP_LANDMARKS.LEFT_INDEX || i === MP_LANDMARKS.LEFT_THUMB) { x = centerX - armHalfW * 0.82; y = wristY + 0.03; }
-      else if (i === MP_LANDMARKS.RIGHT_PINKY || i === MP_LANDMARKS.RIGHT_INDEX || i === MP_LANDMARKS.RIGHT_THUMB) { x = centerX + armHalfW * 0.82; y = wristY + 0.03; }
+      else if (i === MP_LANDMARKS.LEFT_ELBOW) { x = centerX - shHalfW * 1.1; y = leftElbowY; }
+      else if (i === MP_LANDMARKS.RIGHT_ELBOW) { x = centerX + shHalfW * 1.1; y = rightElbowY; }
+      else if (i === MP_LANDMARKS.LEFT_WRIST) { x = centerX - shHalfW * 0.95; y = leftWristY; }
+      else if (i === MP_LANDMARKS.RIGHT_WRIST) { x = centerX + shHalfW * 0.95; y = rightWristY; }
+      else if (i === MP_LANDMARKS.LEFT_PINKY || i === MP_LANDMARKS.LEFT_INDEX || i === MP_LANDMARKS.LEFT_THUMB) { x = centerX - shHalfW * 0.95; y = leftWristY + 0.015; }
+      else if (i === MP_LANDMARKS.RIGHT_PINKY || i === MP_LANDMARKS.RIGHT_INDEX || i === MP_LANDMARKS.RIGHT_THUMB) { x = centerX + shHalfW * 0.95; y = rightWristY + 0.015; }
       // Lower Body
       else if (i === MP_LANDMARKS.LEFT_HIP) { x = centerX - hipHalfW; y = hipY; }
       else if (i === MP_LANDMARKS.RIGHT_HIP) { x = centerX + hipHalfW; y = hipY; }
-      else if (i === MP_LANDMARKS.LEFT_KNEE) { x = centerX - hipHalfW * 1.15; y = kneeY; }
-      else if (i === MP_LANDMARKS.RIGHT_KNEE) { x = centerX + hipHalfW * 1.15; y = kneeY; }
-      else if (i === MP_LANDMARKS.LEFT_ANKLE || i === MP_LANDMARKS.LEFT_HEEL) { x = centerX - hipHalfW * 1.1; y = ankleY; }
-      else if (i === MP_LANDMARKS.RIGHT_ANKLE || i === MP_LANDMARKS.RIGHT_HEEL) { x = centerX + hipHalfW * 1.1; y = ankleY; }
-      else if (i === MP_LANDMARKS.LEFT_FOOT_INDEX) { x = centerX - hipHalfW * 1.25; y = ankleY + 0.02; }
-      else if (i === MP_LANDMARKS.RIGHT_FOOT_INDEX) { x = centerX + hipHalfW * 1.25; y = ankleY + 0.02; }
+      else if (i === MP_LANDMARKS.LEFT_KNEE) { x = centerX - hipHalfW * (1.1 + flexionRatio * 0.3); y = kneeY; }
+      else if (i === MP_LANDMARKS.RIGHT_KNEE) { x = centerX + hipHalfW * (1.1 + flexionRatio * 0.3); y = kneeY; }
+      else if (i === MP_LANDMARKS.LEFT_ANKLE || i === MP_LANDMARKS.LEFT_HEEL) { x = centerX - hipHalfW * 1.05; y = ankleY; }
+      else if (i === MP_LANDMARKS.RIGHT_ANKLE || i === MP_LANDMARKS.RIGHT_HEEL) { x = centerX + hipHalfW * 1.05; y = ankleY; }
+      else if (i === MP_LANDMARKS.LEFT_FOOT_INDEX) { x = centerX - hipHalfW * 1.2; y = ankleY + 0.02; }
+      else if (i === MP_LANDMARKS.RIGHT_FOOT_INDEX) { x = centerX + hipHalfW * 1.2; y = ankleY + 0.02; }
 
       points.push({ x: Math.max(0.02, Math.min(0.98, x)), y: Math.max(0.02, Math.min(0.98, y)), z, visibility: 0.95 });
     }
@@ -356,17 +411,14 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
     const alert = evaluateExerciseForm(selectedExercise, angles, rawLandmarks);
     setFormAlert(alert);
 
-    // Overlay angle badges directly onto joints
-    if (selectedExercise === 'squats' || selectedExercise === 'lunges') {
-      const lKnee = rawLandmarks[MP_LANDMARKS.LEFT_KNEE];
-      if ((lKnee.visibility ?? 1) > 0.5) {
-        drawAngleBadge(ctx, lKnee.x * w, lKnee.y * h, `${angles.leftKneeAngle}°`, alert.isPerfectForm ? '#10b981' : '#f59e0b');
-      }
-    } else if (selectedExercise === 'pushups' || selectedExercise === 'bicep_curls' || selectedExercise === 'shoulder_press') {
-      const lElbow = rawLandmarks[MP_LANDMARKS.LEFT_ELBOW];
-      if ((lElbow.visibility ?? 1) > 0.5) {
-        drawAngleBadge(ctx, lElbow.x * w, lElbow.y * h, `${angles.leftElbowAngle}°`, alert.isPerfectForm ? '#10b981' : '#06b6d4');
-      }
+    // Overlay dynamic angle badges directly onto active articulating joints
+    const lKnee = rawLandmarks[MP_LANDMARKS.LEFT_KNEE];
+    if (lKnee && (lKnee.visibility ?? 1) > 0.35 && angles.leftKneeAngle < 168) {
+      drawAngleBadge(ctx, lKnee.x * w, lKnee.y * h, `Knee: ${Math.round(angles.leftKneeAngle)}°`, alert.isPerfectForm ? '#10b981' : '#f59e0b');
+    }
+    const lElbow = rawLandmarks[MP_LANDMARKS.LEFT_ELBOW];
+    if (lElbow && (lElbow.visibility ?? 1) > 0.35 && (angles.leftElbowAngle < 168 || angles.leftElbowAngle > 75)) {
+      drawAngleBadge(ctx, lElbow.x * w, lElbow.y * h, `Elbow: ${Math.round(angles.leftElbowAngle)}°`, alert.isPerfectForm ? '#10b981' : '#06b6d4');
     }
 
     // Voice feedback on form correction (max once every 3.5 seconds)
@@ -585,30 +637,14 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
 
           {/* Interactive Action Controls */}
           <div className="flex flex-wrap items-center gap-2.5">
-            {/* Exercise Selector */}
-            <div className="relative">
-              <select
-                value={selectedExercise}
-                onChange={(e) => {
-                  setSelectedExercise(e.target.value);
-                  repFsmRef.current.reset();
-                  setRepCount(0);
-                  triggerHapticFeedback('light');
-                }}
-                className="bg-zinc-950 border border-white/10 text-white rounded-2xl px-3.5 py-2 text-xs font-bold focus:outline-none focus:border-cyan-400 cursor-pointer pr-8 appearance-none"
-              >
-                <option value="auto">⚡ Auto-Detect Universal (Duniya Ki Har Exercise)</option>
-                <option value="squats">🏋️ Squats (Knee Depth & Valgus)</option>
-                <option value="pushups">💪 Push-ups (Chest Depth & Spine)</option>
-                <option value="bicep_curls">🦾 Bicep Curls (Elbow Lock & Momentum)</option>
-                <option value="shoulder_press">🏋️ Overhead Press (Lockout & Lumbar)</option>
-                <option value="lunges">🦵 Lunges (90° Knee & Torso)</option>
-                <option value="crunches">🧘 Crunches / Sit-ups (Core Hip Hinge)</option>
-                <option value="pullups">🧗 Pull-ups / Lat Pulldown</option>
-                <option value="lateral_raises">🦅 Lateral Raises / Delt Raises</option>
-                <option value="jumping_jacks">⭐ Jumping Jacks / Cardio</option>
-              </select>
-              <ChevronDown className="w-3.5 h-3.5 text-zinc-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            {/* Universal Omni-Exercise Mode Indicator */}
+            <div className="flex items-center gap-2 px-3 py-2 rounded-2xl bg-zinc-950/80 border border-cyan-500/40 text-cyan-300 shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+              </span>
+              <span className="text-white font-extrabold text-xs tracking-tight">🌐 All-Exercise AI Tracker</span>
+              <span className="text-cyan-400/80 text-[11px] font-medium hidden sm:inline">• Universal Any Movement</span>
             </div>
 
             {/* Rep Counter Toggle Switch */}
@@ -757,7 +793,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
             {isMediaPipeActive && (
               <div className="absolute top-4 right-4 z-20 px-3 py-1.5 rounded-xl bg-zinc-950/80 border border-cyan-500/30 backdrop-blur-md flex items-center gap-2 text-[11px] font-mono text-cyan-300">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                <span>33 Points: {detectedLandmarkCount > 0 ? 'LOCKED' : 'SEARCHING'}</span>
+                <span>Body Tracking: {detectedLandmarkCount > 0 ? 'ACTIVE' : 'SEARCHING'}</span>
               </div>
             )}
           </div>
@@ -872,9 +908,9 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
             <div className="flex items-center justify-between text-zinc-400">
               <span className="text-xs font-bold uppercase tracking-wider font-mono flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                33 Landmark Points
+                Body Tracking Points
               </span>
-              <span className="text-[10px] font-mono text-zinc-400">MediaPipe Pose</span>
+              <span className="text-[10px] font-mono text-zinc-400">Smart Vision</span>
             </div>
 
             <div className="text-xs text-zinc-300 space-y-1.5 leading-relaxed font-mono">

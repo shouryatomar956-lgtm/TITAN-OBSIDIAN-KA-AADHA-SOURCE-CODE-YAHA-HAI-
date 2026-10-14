@@ -135,9 +135,10 @@ export class CardiacTelemetryWorker {
       const minRr = Math.min(...rrs) / 1000;
       const maxRr = Math.max(...rrs) / 1000;
       const mxDmn = Math.max(0.06, maxRr - minRr);
-      const mo = meanRr / 1000;
+      const mo = Math.max(0.1, meanRr / 1000);
       const amo = (count50 / (rrs.length - 1)) * 100;
-      stressIndex = Math.round((amo / (2 * mo * mxDmn)) * 10) / 10;
+      const calculatedSi = (amo / (2 * mo * mxDmn));
+      stressIndex = Number.isFinite(calculatedSi) ? Math.round(calculatedSi * 10) / 10 : 0;
     } else {
       // Baseline prior estimation if no real-time RR intervals are streamed yet
       let hrvBase = Math.round(85 - (age * 0.7) - (restingHr - 60) * 0.8 + (workouts * 3));

@@ -41,7 +41,7 @@ export const VitalsBiometricSuite = memo(function VitalsBiometricSuite() {
             <span>Heart Rate &amp; Recovery</span>
           </button>
 
-          {/* Toggle 2: Smart 3D Body Mesh */}
+          {/* Toggle 2: Smart 3D Body Scan */}
           <button
             onClick={() => handleSubTabChange('body_mesh')}
             className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 ${
@@ -51,10 +51,10 @@ export const VitalsBiometricSuite = memo(function VitalsBiometricSuite() {
             }`}
           >
             <Box className="w-4 h-4 text-cyan-300" />
-            <span>Smart 3D Body Mesh</span>
+            <span>Smart 3D Body Scan</span>
           </button>
 
-          {/* Toggle 3: Acoustic Heart Sound & Pulse Engine */}
+          {/* Toggle 3: Heart Sound & Pulse Engine */}
           <button
             onClick={() => handleSubTabChange('acoustic_pulse')}
             className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 ${
@@ -64,7 +64,7 @@ export const VitalsBiometricSuite = memo(function VitalsBiometricSuite() {
             }`}
           >
             <Activity className="w-4 h-4 text-emerald-300" />
-            <span>Acoustic Heart & Pulse (Mic)</span>
+            <span>Heart Sound & Pulse (Mic)</span>
           </button>
 
           {/* Toggle 4: BMR & Vascular Stress Analyzer */}

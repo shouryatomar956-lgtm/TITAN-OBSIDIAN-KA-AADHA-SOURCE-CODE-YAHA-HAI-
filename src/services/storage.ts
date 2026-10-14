@@ -347,7 +347,29 @@ class StorageService {
        const today = new Date().toISOString().split('T')[0];
        const last = new Date(state.lastWorkoutDate).toISOString().split('T')[0];
        if (today !== last) {
-          state.currentStreak += 1;
+          const lastWorkout = new Date(state.lastWorkoutDate);
+          const now = new Date();
+          now.setHours(0, 0, 0, 0);
+          lastWorkout.setHours(0, 0, 0, 0);
+          const diffDays = Math.floor((now.getTime() - lastWorkout.getTime()) / (1000 * 60 * 60 * 24));
+
+          let broken = false;
+          if (diffDays > 1) {
+            for (let i = 1; i < diffDays; i++) {
+              const checkDate = new Date(lastWorkout.getTime() + i * (1000 * 60 * 60 * 24));
+              const dateStr = format(checkDate, 'yyyy-MM-dd');
+              if (!state.protectedRestDates?.includes(dateStr)) {
+                broken = true;
+                break;
+              }
+            }
+          }
+
+          if (broken) {
+            state.currentStreak = 1;
+          } else {
+            state.currentStreak += 1;
+          }
           state.lastWorkoutDate = todayStr;
        }
     }
