@@ -41,6 +41,8 @@
  * 35. Gagge Two-Node Dynamic Thermal Core-Skin Compartment Differential Equilibrium: C_cr * d(T_cr)/dt = M - W - Q_res - K_sk*(T_cr - T_sk)
  */
 
+import { polyglotStorageMesh } from './polyglotStorageMesh';
+
 export interface BiophysicalUserBaseline {
   age: number;
   weightKg: number;
@@ -199,6 +201,46 @@ export class SupremeRealTimeDataSupervisor {
   }
 
   private initDefaultUser() {
+    // 1. Asynchronously read user profile from 7-Tier Polyglot Storage Mesh Quorum (OPFS, Dexie, RxDB, LocalForage, CacheStorage)
+    polyglotStorageMesh
+      .readQuorum<any>('pulsefit_user_profile')
+      .then((profile) => {
+        if (profile) {
+          this.setUserBaseline({
+            age: Number(profile.age) || this.baseline.age,
+            weightKg: Number(profile.weightKg) || Number(profile.weight) || this.baseline.weightKg,
+            heightCm: Number(profile.heightCm) || Number(profile.height) || this.baseline.heightCm,
+            gender: profile.gender === 'female' ? 'female' : 'male',
+            restingHr: Number(profile.restingHr) || this.baseline.restingHr,
+            fitnessLevel: profile.experienceLevel === 'Advanced' ? 'advanced' : 'intermediate'
+          });
+        }
+      })
+      .catch(() => {});
+
+    // 2. Real-Time BroadcastChannel Mesh Listener for instant cross-tab/cross-worker profile sync
+    if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
+      try {
+        const bc = new BroadcastChannel('pulsefit_polyglot_quorum_v2');
+        bc.addEventListener('message', (ev) => {
+          if (ev.data?.type === 'QUORUM_WRITE' && ev.data?.key === 'pulsefit_user_profile') {
+            const profile = ev.data.payload;
+            if (profile) {
+              this.setUserBaseline({
+                age: Number(profile.age) || this.baseline.age,
+                weightKg: Number(profile.weightKg) || Number(profile.weight) || this.baseline.weightKg,
+                heightCm: Number(profile.heightCm) || Number(profile.height) || this.baseline.heightCm,
+                gender: profile.gender === 'female' ? 'female' : 'male',
+                restingHr: Number(profile.restingHr) || this.baseline.restingHr,
+                fitnessLevel: profile.experienceLevel === 'Advanced' ? 'advanced' : 'intermediate'
+              });
+            }
+          }
+        });
+      } catch {}
+    }
+
+    // 3. Zero-downtime legacy localStorage migration & immediate permanent purge
     try {
       if (typeof window !== 'undefined' && window.localStorage) {
         const stored = localStorage.getItem('pulsefit_user_profile');
@@ -212,6 +254,10 @@ export class SupremeRealTimeDataSupervisor {
             restingHr: Number(parsed.restingHr) || 68,
             fitnessLevel: parsed.experienceLevel === 'Advanced' ? 'advanced' : 'intermediate'
           });
+          // Immediately persist to 7-Tier Polyglot Storage Mesh
+          polyglotStorageMesh.writeQuorum('pulsefit_user_profile', parsed).catch(() => {});
+          // Permanently purge from localStorage
+          localStorage.removeItem('pulsefit_user_profile');
         }
       }
     } catch {}

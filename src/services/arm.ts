@@ -4683,33 +4683,33 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_469",
-    "name": "Strict Fat-Grip Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Fat-Grip Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_470",
-    "name": "Strict Pinch Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Pinch Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_471",
-    "name": "Strict Ring Impossible Dip 1.5 Rep",
+    "name": "Strict Ring Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_472",
@@ -4723,13 +4723,13 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_473",
-    "name": "Strict False Impossible Dip 1.5 Rep",
+    "name": "Strict False Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_474",
@@ -4753,63 +4753,63 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_476",
-    "name": "Strict Standard Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Standard Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_477",
-    "name": "Strict Mixed Ring Dip 1.5 Rep",
+    "name": "Strict Mixed Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_478",
-    "name": "Strict False Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict False Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_479",
-    "name": "Strict Mixed L-Sit Dip 1.5 Rep",
+    "name": "Strict Mixed L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_480",
-    "name": "Strict One-Finger Pelican Curl 1.5 Rep",
+    "name": "Strict One-Finger Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_481",
-    "name": "Strict Mixed Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Mixed Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_482",
@@ -4823,43 +4823,43 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_483",
-    "name": "Strict Standard Ring Dip 1.5 Rep",
+    "name": "Strict Standard Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_484",
-    "name": "Strict Neutral L-Sit Dip 1.5 Rep",
+    "name": "Strict Neutral L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_485",
-    "name": "Strict Pronated Impossible Dip 1.5 Rep",
+    "name": "Strict Pronated Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_486",
-    "name": "Strict Two-Finger L-Sit Dip 1.5 Rep",
+    "name": "Strict Two-Finger L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_487",
@@ -4883,13 +4883,13 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_489",
-    "name": "Strict Pronated L-Sit Dip 1.5 Rep",
+    "name": "Strict Pronated L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_490",
@@ -4913,23 +4913,23 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_492",
-    "name": "Strict False Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict False Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_493",
-    "name": "Strict Standard L-Sit Dip 1.5 Rep",
+    "name": "Strict Standard L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_494",
@@ -4943,33 +4943,33 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_495",
-    "name": "Strict Neutral Impossible Dip 1.5 Rep",
+    "name": "Strict Neutral Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_496",
-    "name": "Strict Towel Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Towel Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_497",
-    "name": "Strict Fat-Grip Pelican Curl 1.5 Rep",
+    "name": "Strict Fat-Grip Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_498",
@@ -4993,33 +4993,33 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_500",
-    "name": "Strict Pronated Pelican Curl 1.5 Rep",
+    "name": "Strict Pronated Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_501",
-    "name": "Strict One-Finger Impossible Dip 1.5 Rep",
+    "name": "Strict One-Finger Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_502",
-    "name": "Strict Pinch L-Sit Dip 1.5 Rep",
+    "name": "Strict Pinch L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_503",
@@ -5043,13 +5043,13 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_505",
-    "name": "Strict False Pelican Curl 1.5 Rep",
+    "name": "Strict False Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_506",
@@ -5073,13 +5073,13 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_508",
-    "name": "Strict One-Finger Ring Dip 1.5 Rep",
+    "name": "Strict One-Finger Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_509",
@@ -5093,53 +5093,53 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_510",
-    "name": "Strict Supinated L-Sit Dip 1.5 Rep",
+    "name": "Strict Supinated L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_511",
-    "name": "Strict Ring Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Ring Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_512",
-    "name": "Strict Fat-Grip Ring Dip 1.5 Rep",
+    "name": "Strict Fat-Grip Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_513",
-    "name": "Strict Neutral Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Neutral Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_514",
-    "name": "Strict One-Finger L-Sit Dip 1.5 Rep",
+    "name": "Strict One-Finger L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_515",
@@ -5153,23 +5153,23 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_516",
-    "name": "Strict Pronated Ring Dip 1.5 Rep",
+    "name": "Strict Pronated Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_517",
-    "name": "Strict Fat-Grip Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Fat-Grip Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_518",
@@ -5183,43 +5183,43 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_519",
-    "name": "Strict Pronated Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Pronated Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_520",
-    "name": "Strict Towel Impossible Dip 1.5 Rep",
+    "name": "Strict Towel Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Resistance Bands",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_521",
-    "name": "Strict One-Finger Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict One-Finger Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_522",
-    "name": "Strict Towel Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Towel Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_523",
@@ -5233,53 +5233,53 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_524",
-    "name": "Strict Standard Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Standard Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "None",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_525",
-    "name": "Strict Neutral Ring Dip 1.5 Rep",
+    "name": "Strict Neutral Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_526",
-    "name": "Strict Standard Pelican Curl 1.5 Rep",
+    "name": "Strict Standard Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Dumbbells",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_527",
-    "name": "Strict Supinated Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Supinated Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "EZ-Bar",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_528",
-    "name": "Strict Pronated Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Pronated Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_529",
@@ -5303,23 +5303,23 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_531",
-    "name": "Strict Two-Finger Ring Dip 1.5 Rep",
+    "name": "Strict Two-Finger Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Dumbbells",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_532",
-    "name": "Strict Two-Finger Bodyweight Skullcrusher 1.5 Rep",
+    "name": "Strict Two-Finger Bodyweight Skullcrusher",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "EZ-Bar",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_533",
@@ -5333,13 +5333,13 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_534",
-    "name": "Strict Two-Finger Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Two-Finger Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_535",
@@ -5373,73 +5373,73 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_538",
-    "name": "Strict Ring Ring Dip 1.5 Rep",
+    "name": "Strict Ring Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_539",
-    "name": "Strict Towel Ring Dip 1.5 Rep",
+    "name": "Strict Towel Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_540",
-    "name": "Strict Fat-Grip L-Sit Dip 1.5 Rep",
+    "name": "Strict Fat-Grip L-Sit Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Cable",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_541",
-    "name": "Strict Two-Finger Impossible Dip 1.5 Rep",
+    "name": "Strict Two-Finger Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Dumbbells",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_542",
-    "name": "Strict Fat-Grip Impossible Dip 1.5 Rep",
+    "name": "Strict Fat-Grip Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "EZ-Bar",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_543",
-    "name": "Strict Pinch Tiger Bend Push-up 1.5 Rep",
+    "name": "Strict Pinch Tiger Bend Push-up",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_544",
-    "name": "Strict Mixed Impossible Dip 1.5 Rep",
+    "name": "Strict Mixed Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_545",
@@ -5463,42 +5463,42 @@ export const ARM_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "arms_547",
-    "name": "Strict Supinated Impossible Dip 1.5 Rep",
+    "name": "Strict Supinated Impossible Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "EZ-Bar",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_548",
-    "name": "Strict False Ring Dip 1.5 Rep",
+    "name": "Strict False Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_549",
-    "name": "Strict Supinated Ring Dip 1.5 Rep",
+    "name": "Strict Supinated Ring Dip",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   },
   {
     "id": "arms_550",
-    "name": "Strict Two-Finger Pelican Curl 1.5 Rep",
+    "name": "Strict Two-Finger Pelican Curl",
     "muscleGroup": "Arms",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Cable",
     "environment": "Gym",
-    "instructions": "Strict 1.5 repetition protocol (full eccentric-concentric range followed by a mandatory half-range contraction under continuous time-under-tension) paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
+    "instructions": "Execute full range of motion under continuous time-under-tension with strict muscular control. paired with hyper-advanced levers maximizing tendon stiffness and neural drive."
   }
 ];

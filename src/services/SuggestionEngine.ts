@@ -653,7 +653,7 @@ export class SuggestionEngine {
       pool = tierMatches;
     }
 
-    // Step 3: Score every candidate in the 3,350+ database using our multi-factor Contextual Bandit matrix
+    // Step 3: Score every candidate in the 5,050+ database using our multi-factor Contextual Bandit matrix
     const todayStr = new Date().toISOString().split('T')[0];
     const profileSignature = `${this.profile?.username || ''}_${this.profile?.primaryGoal || ''}_${this.profile?.experienceLevel || ''}_${this.mood}_${overload.totalCompletedSessions}`;
 

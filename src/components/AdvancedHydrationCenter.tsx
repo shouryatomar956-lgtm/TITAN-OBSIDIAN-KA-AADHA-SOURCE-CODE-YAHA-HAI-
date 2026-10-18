@@ -57,6 +57,7 @@ import {
   EnterocyteSGLT1StoichiometricFormulary,
   CircadianVasopressinChronobiologyEngine
 } from '../services/hydrationBiophysicsEngine';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 
 export type HydrationSubView = 
   | 'overview'
@@ -254,6 +255,7 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
 
   // Acoustic Sip Monitor State
   const [isAcousticRunning, setIsAcousticRunning] = useState<boolean>(false);
+  const [micPermissionError, setMicPermissionError] = useState<string | null>(null);
   const [acousticSipCount, setAcousticSipCount] = useState<number>(0);
   const [acousticVolumeMl, setAcousticVolumeMl] = useState<number>(0);
   const [micEnergyLevel, setMicEnergyLevel] = useState<number>(0);
@@ -806,10 +808,11 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
    */
   const startAcousticMonitor = async () => {
     if (isAcousticRunning) return;
+    setMicPermissionError(null);
     triggerHapticFeedback('medium');
 
     if (typeof window === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
-      alert('Microphone access is not supported on this browser.');
+      setMicPermissionError('Microphone hardware access is not supported on this browser.');
       return;
     }
 
@@ -853,9 +856,10 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
 
       pollAcousticStream();
       voiceCoach.speak('Acoustic sip monitoring active. Take a drink to test automatic detection.');
-    } catch (err) {
+    } catch (err: any) {
       console.error('[AcousticSip] Mic start error:', err);
       setIsAcousticRunning(false);
+      setMicPermissionError(err?.message || 'Microphone permission was denied or device is unavailable. Please grant microphone access to enable real-time swallow detection.');
     }
   };
 
@@ -943,7 +947,7 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
       // Automatically log to main hydration tracker asynchronously
       handleLogWater(sipMl);
       setLastSipNotification(
-        `+${sipMl}mL Bolus Detected (TKEO: ${dspReport.tkeoInstantaneousEnergy}% • Centroid: ${dspReport.spectralCentroidHz}Hz • Conf: ${dspReport.swallowConfidencePct}%)`
+        `+${sipMl} mL Sip Detected! Auto-Logged • ${dspReport.swallowConfidencePct}% Match`
       );
       setTimeout(() => setLastSipNotification(null), 4500);
       triggerHapticFeedback('success');
@@ -1439,6 +1443,18 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
             </button>
           </div>
 
+          {/* Microphone Permission Fallback UI */}
+          {micPermissionError && (
+            <MediaPermissionFallback
+              mediaType="microphone"
+              moduleTitle="Acoustic Hydration Sip Classifier"
+              errorMessage={micPermissionError}
+              onRetry={startAcousticMonitor}
+              onManualFallback={() => setMicPermissionError(null)}
+              manualFallbackLabel="Dismiss"
+            />
+          )}
+
           {/* Live Audio Visualizer Canvas */}
           <div className="w-full bg-black/50 border border-white/10 rounded-2xl p-4 flex flex-col space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-zinc-400">
@@ -1525,7 +1541,7 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
               <div className="text-2xl font-black text-sky-400 font-mono mt-1">+{acousticVolumeMl} mL</div>
             </div>
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <span className="text-[11px] font-mono uppercase text-zinc-400">MFCC Cepstral Vector (C₀–C₅)</span>
+              <span className="text-[11px] font-mono uppercase text-zinc-400">Acoustic Sound Frequency</span>
               <div className="text-xs font-mono font-bold text-emerald-400 mt-2 truncate">
                 {acousticMetrics?.mfccVector ? `[${acousticMetrics.mfccVector.join(', ')}]` : '[0.00, 0.00, 0.00, 0.00, 0.00, 0.00]'}
               </div>
@@ -2241,13 +2257,13 @@ export const AdvancedHydrationCenter = memo(function AdvancedHydrationCenter() {
               <span className="text-sm font-bold text-white block mt-1">{chronobiologyReport.circadianPhaseName}</span>
             </div>
             <div className="p-4 rounded-2xl bg-zinc-950 border border-white/10">
-              <span className="text-[10px] font-mono uppercase text-emerald-400 block font-bold">Diurnal Renal GFR & SCN AVP</span>
+              <span className="text-[10px] font-mono uppercase text-emerald-400 block font-bold">Kidney Filter Rate & Balance</span>
               <span className="text-lg font-black text-white font-mono">
-                {chronobiologyReport.renalGfrMlMin} mL/min • AVP {chronobiologyReport.scnVasopressinDrivePct}%
+                {chronobiologyReport.renalGfrMlMin} mL/min • Fluid Balance {chronobiologyReport.scnVasopressinDrivePct}%
               </span>
             </div>
             <div className="p-4 rounded-2xl bg-zinc-950 border border-white/10">
-              <span className="text-[10px] font-mono uppercase text-amber-400 block font-bold">Optimal Gastric Bolus Limit</span>
+              <span className="text-[10px] font-mono uppercase text-amber-400 block font-bold">Recommended Sip Size</span>
               <span className="text-lg font-black text-amber-400 font-mono">
                 {chronobiologyReport.optimalBolusSipVolumeMl} mL / {chronobiologyReport.recommendedCadenceMins} min
               </span>

@@ -171,6 +171,36 @@ export class DataMigrationEngine {
     await opfs.init();
 
     try {
+      // 0. Auto-sweep & purge ALL legacy localStorage keys directly into 7-Tier Polyglot Storage Mesh
+      if (typeof window !== 'undefined' && window.localStorage && localStorage.length > 0) {
+        try {
+          const { polyglotStorageMesh } = await import('./polyglotStorageMesh');
+          const keysToMigrate: string[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k) keysToMigrate.push(k);
+          }
+          for (const key of keysToMigrate) {
+            try {
+              const raw = localStorage.getItem(key);
+              if (raw !== null) {
+                let parsed: any;
+                try {
+                  parsed = JSON.parse(raw);
+                } catch {
+                  parsed = raw;
+                }
+                await polyglotStorageMesh.writeQuorum(key, parsed);
+                localStorage.removeItem(key);
+                recordsMigrated++;
+              }
+            } catch {}
+          }
+        } catch (lsErr) {
+          console.warn('[Data Migration] localStorage migration notice:', lsErr);
+        }
+      }
+
       // 1. Check legacy localForage profile
       const legacyProfile = await localforage.getItem('pulsefit_user_profile');
       if (legacyProfile && SchemaValidator.validateUserProfile(legacyProfile)) {

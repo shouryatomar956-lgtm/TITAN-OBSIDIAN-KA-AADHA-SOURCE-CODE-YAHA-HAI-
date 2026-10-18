@@ -173,10 +173,19 @@
 
 @layer utilities {
   .pt-safe {
-    padding-top: env(safe-area-inset-top, 1rem);
+    padding-top: max(1rem, env(safe-area-inset-top, 1rem));
   }
   .pb-safe {
-    padding-bottom: env(safe-area-inset-bottom, 1rem);
+    padding-bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.25rem));
+  }
+  .pb-safe-nav {
+    padding-bottom: max(4.5rem, calc(env(safe-area-inset-bottom, 0px) + 4rem));
+  }
+  .safe-bottom-inset {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-bottom-fixed {
+    bottom: max(1rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem));
   }
 }
 

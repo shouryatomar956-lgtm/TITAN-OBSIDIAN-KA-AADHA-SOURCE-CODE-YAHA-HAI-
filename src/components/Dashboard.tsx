@@ -12,6 +12,7 @@ import {  ExerciseEntity } from '../services/exerciseFactory';
 import { BiometricSettings } from './BiometricSettings';
 import { UserProfileForm } from './UserProfileForm';
 import { AnalyticsDashboard } from './AnalyticsDashboard';
+import { SupremeHapticRestTimer } from './SupremeHapticRestTimer';
 import { ExerciseCatalog } from './ExerciseCatalog';
 import { useSearchRegistration } from '../hooks/useSearchRegistration';
 
@@ -555,7 +556,7 @@ export const Dashboard = memo(function Dashboard() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 26, stiffness: 280 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 max-w-[85vw] bg-zinc-950 text-white border-l border-zinc-800 shadow-2xl p-5 flex flex-col justify-between overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 z-50 w-72 max-w-[85vw] bg-zinc-950 text-white border-l border-zinc-800 shadow-2xl p-5 pb-safe flex flex-col justify-between overflow-y-auto"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
@@ -576,7 +577,7 @@ export const Dashboard = memo(function Dashboard() {
                 <div className="flex flex-col gap-1.5">
                   {[
                     { id: 'overview', label: 'Dashboard & Stats', icon: LayoutDashboard, color: 'text-zinc-200' },
-                    { id: 'exercises', label: '3,350+ Exercise Catalog', icon: Dumbbell, color: 'text-emerald-400' },
+                    { id: 'exercises', label: '5,050+ Exercise Catalog', icon: Dumbbell, color: 'text-emerald-400' },
                     { id: 'calories', label: 'Calorie & Step Tracker', icon: Flame, color: 'text-amber-400' },
                     { id: 'diet', label: '3,900+ Diet & Nutrition', icon: Soup, color: 'text-emerald-400' },
                     { id: 'vault', label: 'Reward Vault & Themes', icon: Vault, color: 'text-purple-400' },
@@ -889,6 +890,9 @@ export const Dashboard = memo(function Dashboard() {
                 </section>
 
                 <AnalyticsDashboard currentStreak={state?.currentStreak || 0} username={profile?.username || 'Athlete'} />
+
+                {/* Supreme Haptic Rest & Interval Timer with 30s, 60s, 90s Presets and Tactile Sensations */}
+                <SupremeHapticRestTimer />
             </div>
           </div>
         )}
@@ -913,7 +917,7 @@ export const Dashboard = memo(function Dashboard() {
         )}
         
         {activeTab === 'vault' && (
-          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto">
+          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pb-safe">
             <Suspense fallback={<DashboardSkeleton />}>
               <VaultView />
             </Suspense>
@@ -921,13 +925,13 @@ export const Dashboard = memo(function Dashboard() {
         )}
         
         {activeTab === 'profile' && (
-          <div className="flex-1 w-full flex flex-col bg-white text-zinc-900 min-h-0 overflow-y-auto">
+          <div className="flex-1 w-full flex flex-col bg-white text-zinc-900 min-h-0 overflow-y-auto pb-safe">
             <ProfileView />
           </div>
         )}
 
         {activeTab === 'rep-counter-volume' && (
-          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-4">
+          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-4 pb-safe">
             <Suspense fallback={<DashboardSkeleton />}>
               <RepCounterVolumeSuite />
             </Suspense>
@@ -935,7 +939,7 @@ export const Dashboard = memo(function Dashboard() {
         )}
 
         {activeTab === 'vitals' && (
-          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-4">
+          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-4 pb-safe">
             <Suspense fallback={<DashboardSkeleton />}>
               <VitalsBiometricSuite />
             </Suspense>
@@ -943,7 +947,7 @@ export const Dashboard = memo(function Dashboard() {
         )}
 
         {activeTab === 'water' && (
-          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-6 px-4 sm:px-6 md:px-8 pb-10">
+          <div className="flex-1 w-full flex flex-col bg-zinc-950 text-zinc-100 min-h-0 overflow-y-auto pt-6 px-4 sm:px-6 md:px-8 pb-safe">
             <Suspense fallback={<DashboardSkeleton />}>
               <AdvancedHydrationCenter />
             </Suspense>
@@ -953,7 +957,11 @@ export const Dashboard = memo(function Dashboard() {
 
       <AnimatePresence>
         {toastMessage && (
-          <motion.div className="hardware-accelerated fixed bottom-6 left-1/2 z-50 px-6 py-4 bg-zinc-900 text-white rounded-[20px] shadow-2xl font-bold text-sm whitespace-nowrap flex items-center gap-3"
+          <motion.div 
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="hardware-accelerated fixed bottom-[max(1.5rem,calc(env(safe-area-inset-bottom,0px)+1rem))] left-1/2 -translate-x-1/2 z-50 px-6 py-4 bg-zinc-900 text-white rounded-[20px] shadow-2xl font-bold text-sm whitespace-nowrap flex items-center gap-3 border border-zinc-700/50"
           >
             <Trophy className="w-5 h-5 text-purple-400" />
             {toastMessage}

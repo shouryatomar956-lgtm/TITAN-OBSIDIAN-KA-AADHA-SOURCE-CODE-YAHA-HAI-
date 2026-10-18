@@ -3403,602 +3403,602 @@ export const CHEST_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "chest_elite_home_341",
-    "name": "Hyper-Advanced Heavy Vest Planche Push-up 1.5",
+    "name": "Hyper-Advanced Heavy Vest Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_342",
-    "name": "Extreme Deficit Heavy Vest Weighted Ring Dip 1.5",
+    "name": "Extreme Deficit Heavy Vest Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_343",
-    "name": "Planche Position Heavy Vest Full Planche Hold 1.5",
+    "name": "Planche Position Heavy Vest Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_344",
-    "name": "Suspended Rings Heavy Vest One-Arm Ring Fly 1.5",
+    "name": "Suspended Rings Heavy Vest One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_345",
-    "name": "Hyper-Advanced Maximal Tension Planche Push-up 1.5",
+    "name": "Hyper-Advanced Maximal Tension Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_346",
-    "name": "Extreme Deficit Maximal Tension Weighted Ring Dip 1.5",
+    "name": "Extreme Deficit Maximal Tension Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_347",
-    "name": "Planche Position Maximal Tension Extreme Range Deficit Push-up 1.5",
+    "name": "Planche Position Maximal Tension Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_348",
-    "name": "Suspended Rings Maximal Tension One-Arm Ring Fly 1.5",
+    "name": "Suspended Rings Maximal Tension One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_349",
-    "name": "Hyper-Advanced Kinetic Planche Push-up 1.5",
+    "name": "Hyper-Advanced Kinetic Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_350",
-    "name": "Extreme Deficit Kinetic Full Planche Hold 1.5",
+    "name": "Extreme Deficit Kinetic Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_351",
-    "name": "Planche Position Kinetic Extreme Range Deficit Push-up 1.5",
+    "name": "Planche Position Kinetic Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_352",
-    "name": "Suspended Rings Kinetic One-Arm Ring Fly 1.5",
+    "name": "Suspended Rings Kinetic One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_353",
-    "name": "Hyper-Advanced Heavy Vest Weighted Ring Dip 1.5",
+    "name": "Hyper-Advanced Heavy Vest Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_354",
-    "name": "Extreme Deficit Heavy Vest Full Planche Hold 1.5",
+    "name": "Extreme Deficit Heavy Vest Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_355",
-    "name": "Planche Position Heavy Vest Extreme Range Deficit Push-up 1.5",
+    "name": "Planche Position Heavy Vest Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_356",
-    "name": "Suspended Rings Heavy Vest Planche Push-up 1.5",
+    "name": "Suspended Rings Heavy Vest Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_357",
-    "name": "Hyper-Advanced Maximal Tension Weighted Ring Dip 1.5",
+    "name": "Hyper-Advanced Maximal Tension Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_358",
-    "name": "Extreme Deficit Maximal Tension Full Planche Hold 1.5",
+    "name": "Extreme Deficit Maximal Tension Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_359",
-    "name": "Planche Position Maximal Tension One-Arm Ring Fly 1.5",
+    "name": "Planche Position Maximal Tension One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_360",
-    "name": "Suspended Rings Maximal Tension Planche Push-up 1.5",
+    "name": "Suspended Rings Maximal Tension Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_361",
-    "name": "Hyper-Advanced Kinetic Weighted Ring Dip 1.5",
+    "name": "Hyper-Advanced Kinetic Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_362",
-    "name": "Extreme Deficit Kinetic Extreme Range Deficit Push-up 1.5",
+    "name": "Extreme Deficit Kinetic Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_363",
-    "name": "Planche Position Kinetic One-Arm Ring Fly 1.5",
+    "name": "Planche Position Kinetic One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_364",
-    "name": "Suspended Rings Kinetic Planche Push-up 1.5",
+    "name": "Suspended Rings Kinetic Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_365",
-    "name": "Hyper-Advanced Heavy Vest Full Planche Hold 1.5",
+    "name": "Hyper-Advanced Heavy Vest Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_366",
-    "name": "Extreme Deficit Heavy Vest Extreme Range Deficit Push-up 1.5",
+    "name": "Extreme Deficit Heavy Vest Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_367",
-    "name": "Planche Position Heavy Vest One-Arm Ring Fly 1.5",
+    "name": "Planche Position Heavy Vest One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_368",
-    "name": "Suspended Rings Heavy Vest Weighted Ring Dip 1.5",
+    "name": "Suspended Rings Heavy Vest Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_369",
-    "name": "Hyper-Advanced Maximal Tension Full Planche Hold 1.5",
+    "name": "Hyper-Advanced Maximal Tension Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_370",
-    "name": "Extreme Deficit Maximal Tension Extreme Range Deficit Push-up 1.5",
+    "name": "Extreme Deficit Maximal Tension Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_371",
-    "name": "Planche Position Maximal Tension Planche Push-up 1.5",
+    "name": "Planche Position Maximal Tension Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_372",
-    "name": "Suspended Rings Maximal Tension Weighted Ring Dip 1.5",
+    "name": "Suspended Rings Maximal Tension Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_373",
-    "name": "Hyper-Advanced Kinetic Full Planche Hold 1.5",
+    "name": "Hyper-Advanced Kinetic Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_374",
-    "name": "Extreme Deficit Kinetic One-Arm Ring Fly 1.5",
+    "name": "Extreme Deficit Kinetic One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_375",
-    "name": "Planche Position Kinetic Planche Push-up 1.5",
+    "name": "Planche Position Kinetic Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_376",
-    "name": "Suspended Rings Kinetic Weighted Ring Dip 1.5",
+    "name": "Suspended Rings Kinetic Weighted Ring Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_377",
-    "name": "Hyper-Advanced Heavy Vest Extreme Range Deficit Push-up 1.5",
+    "name": "Hyper-Advanced Heavy Vest Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_378",
-    "name": "Extreme Deficit Heavy Vest One-Arm Ring Fly 1.5",
+    "name": "Extreme Deficit Heavy Vest One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_379",
-    "name": "Planche Position Heavy Vest Planche Push-up 1.5",
+    "name": "Planche Position Heavy Vest Planche Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_380",
-    "name": "Suspended Rings Heavy Vest Full Planche Hold 1.5",
+    "name": "Suspended Rings Heavy Vest Full Planche Hold",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_381",
-    "name": "Hyper-Advanced Maximal Tension Extreme Range Deficit Push-up 1.5",
+    "name": "Hyper-Advanced Maximal Tension Extreme Range Deficit Push-up",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_home_382",
-    "name": "Extreme Deficit Maximal Tension One-Arm Ring Fly 1.5",
+    "name": "Extreme Deficit Maximal Tension One-Arm Ring Fly",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_383",
-    "name": "Maximal Power Rack Hyper-Advanced Maximal Bench Press 1.5",
+    "name": "Maximal Power Rack Hyper-Advanced Maximal Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_384",
-    "name": "Competition Bench Hyper-Advanced Overload Chain Dip 1.5",
+    "name": "Competition Bench Hyper-Advanced Overload Chain Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_385",
-    "name": "Custom Rig Hyper-Advanced Reverse Band Bench Press 1.5",
+    "name": "Custom Rig Hyper-Advanced Reverse Band Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_386",
-    "name": "Maximal Power Rack Extreme Chain Load Extreme Isometric Pin Press 1.5",
+    "name": "Maximal Power Rack Extreme Chain Load Extreme Isometric Pin Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_387",
-    "name": "Competition Bench Extreme Chain Load Overload Chain Dip 1.5",
+    "name": "Competition Bench Extreme Chain Load Overload Chain Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_388",
-    "name": "Custom Rig Extreme Chain Load Reverse Band Bench Press 1.5",
+    "name": "Custom Rig Extreme Chain Load Reverse Band Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_389",
-    "name": "Maximal Power Rack Maximal Barbell Overload Extreme Isometric Pin Press 1.5",
+    "name": "Maximal Power Rack Maximal Barbell Overload Extreme Isometric Pin Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_390",
-    "name": "Competition Bench Maximal Barbell Overload Maximal Bench Press 1.5",
+    "name": "Competition Bench Maximal Barbell Overload Maximal Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_391",
-    "name": "Custom Rig Maximal Barbell Overload Reverse Band Bench Press 1.5",
+    "name": "Custom Rig Maximal Barbell Overload Reverse Band Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_392",
-    "name": "Maximal Power Rack Band-Tensioned Extreme Isometric Pin Press 1.5",
+    "name": "Maximal Power Rack Band-Tensioned Extreme Isometric Pin Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_393",
-    "name": "Competition Bench Band-Tensioned Maximal Bench Press 1.5",
+    "name": "Competition Bench Band-Tensioned Maximal Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_394",
-    "name": "Custom Rig Band-Tensioned Overload Chain Dip 1.5",
+    "name": "Custom Rig Band-Tensioned Overload Chain Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_395",
-    "name": "Maximal Power Rack Hyper-Advanced Extreme Isometric Pin Press 1.5",
+    "name": "Maximal Power Rack Hyper-Advanced Extreme Isometric Pin Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_396",
-    "name": "Competition Bench Hyper-Advanced Maximal Bench Press 1.5",
+    "name": "Competition Bench Hyper-Advanced Maximal Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_397",
-    "name": "Custom Rig Hyper-Advanced Overload Chain Dip 1.5",
+    "name": "Custom Rig Hyper-Advanced Overload Chain Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_398",
-    "name": "Maximal Power Rack Extreme Chain Load Reverse Band Bench Press 1.5",
+    "name": "Maximal Power Rack Extreme Chain Load Reverse Band Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_399",
-    "name": "Competition Bench Extreme Chain Load Maximal Bench Press 1.5",
+    "name": "Competition Bench Extreme Chain Load Maximal Bench Press",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   },
   {
     "id": "chest_elite_gym_400",
-    "name": "Custom Rig Extreme Chain Load Overload Chain Dip 1.5",
+    "name": "Custom Rig Extreme Chain Load Overload Chain Dip",
     "muscleGroup": "Chest",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
+    "instructions": "Execute using the strict continuous tension protocol (where applicable): perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Maximize tendon stiffness and explosive neural drive."
   }
 ];

@@ -23,6 +23,7 @@ import {
   WindkesselSdppgHemodynamics
 } from '../services/windkesselSdppgHemodynamicEngine';
 import { triggerHapticFeedback } from '../utils/haptics';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 
 export const VascularStressBmrAnalyzer = memo(function VascularStressBmrAnalyzer() {
   const [isScanning, setIsScanning] = useState(false);
@@ -444,9 +445,15 @@ export const VascularStressBmrAnalyzer = memo(function VascularStressBmrAnalyzer
         </div>
 
         {cameraError && (
-          <div className="mt-4 p-3 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center gap-2 text-xs text-red-300">
-            <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
-            <span>{cameraError}</span>
+          <div className="mt-4">
+            <MediaPermissionFallback
+              mediaType="camera"
+              moduleTitle="Vascular Arterial & BMR Analyzer"
+              errorMessage={cameraError}
+              onRetry={startScanner}
+              onManualFallback={() => setCameraError(null)}
+              manualFallbackLabel="Dismiss"
+            />
           </div>
         )}
       </div>

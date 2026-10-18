@@ -22,6 +22,7 @@ import { posChromRppgHarmonicEngine, PosChromHarmonicMetrics } from '../services
 import { voiceCoach } from '../services/voiceCoachService';
 import { triggerHapticFeedback } from '../utils/haptics';
 import { supremeDataSupervisor } from '../services/supremeRealTimeDataSupervisor';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 
 export interface HeartRateBiometricRecord {
   id: string;
@@ -653,9 +654,15 @@ export const HeartRateMonitor = memo(function HeartRateMonitor() {
         )}
 
         {cameraError && (
-          <div className="mt-4 p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-medium flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
-            <span>Camera Error: {cameraError} (Ensure camera permissions are granted in browser)</span>
+          <div className="mt-4">
+            <MediaPermissionFallback
+              mediaType="camera"
+              moduleTitle="Arterial PPG Pulse Scan"
+              errorMessage={cameraError}
+              onRetry={startScanner}
+              onManualFallback={() => setCameraError(null)}
+              manualFallbackLabel="Dismiss"
+            />
           </div>
         )}
       </div>

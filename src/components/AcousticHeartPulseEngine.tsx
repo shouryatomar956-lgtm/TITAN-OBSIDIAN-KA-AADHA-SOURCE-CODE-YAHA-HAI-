@@ -500,7 +500,7 @@ export const AcousticHeartPulseEngine = memo(function AcousticHeartPulseEngine()
             }`}
           >
             <ShieldCheck className="w-4 h-4" />
-            <span>Save Acoustic Session to RxDB</span>
+            <span>Save Acoustic Session to Vault</span>
           </button>
         </div>
       </div>
@@ -639,7 +639,7 @@ export const AcousticHeartPulseEngine = memo(function AcousticHeartPulseEngine()
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-zinc-400" />
             <h4 className="text-xs font-bold text-zinc-300 uppercase tracking-wider">
-              Recent Acoustic Records (RxDB Local Storage)
+              Recent Acoustic Heart Records (Offline Vault)
             </h4>
           </div>
 

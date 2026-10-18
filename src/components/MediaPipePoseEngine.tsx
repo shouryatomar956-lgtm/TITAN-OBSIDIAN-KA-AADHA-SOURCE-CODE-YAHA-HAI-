@@ -20,6 +20,7 @@ import {
   Info,
   ChevronDown
 } from 'lucide-react';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 import { 
   Point3D, 
   JointAngles, 
@@ -718,12 +719,16 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
         </div>
       </div>
 
-      {/* Camera Error Alert */}
+      {/* Camera Error Alert & Guided Fallback UI */}
       {cameraError && (
-        <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs flex items-center gap-3">
-          <AlertCircle className="w-5 h-5 shrink-0 text-rose-400" />
-          <span>{cameraError}</span>
-        </div>
+        <MediaPermissionFallback
+          mediaType="camera"
+          moduleTitle="MediaPipe 33-Point Pose Engine"
+          errorMessage={cameraError}
+          onRetry={startEngine}
+          onManualFallback={() => setCameraError(null)}
+          manualFallbackLabel="Dismiss Alert"
+        />
       )}
 
       {/* Main Viewport: Video Feed + Canvas Overlay */}

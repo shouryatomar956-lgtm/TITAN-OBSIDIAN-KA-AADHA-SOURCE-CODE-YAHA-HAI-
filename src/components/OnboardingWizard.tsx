@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { UserProfile, storage } from '../services/storage';
 import { PinPad } from './PinPad';
+import { InteractiveProductManual } from './InteractiveProductManual';
+import { polyglotStorageMesh } from '../services/polyglotStorageMesh';
 
 interface OnboardingProps {
   onComplete: () => void;
@@ -17,10 +19,10 @@ const steps = [
   { id: 'location', title: 'Training Preference', options: ['Gym Membership', 'Home (Bodyweight & Backpack)', 'Hybrid'] },
   { id: 'equipmentInventory', title: 'Available Equipment', isMulti: true,
     options: [
-      // Home
-      'Bodyweight', 'Backpack-weighted', 'Minimal Structural Support', 'Resistance Bands',
-      // Gym
-      'Olympic Barbell', 'Heavy Cable Machine Stack', 'Commercial Power Rack', 'Pin-loaded Leverage System'
+      // Home & Free Weights
+      'Bodyweight Only', 'Dumbbells', 'Resistance Bands', 'Home Weighted Items',
+      // Gym Equipment
+      'Barbell & Plates', 'Cable Machine', 'Squat Rack & Bench', 'Weight Machines'
     ]
   },
   { id: 'bodyType', title: 'Body Type', options: ['Ectomorph (Lean)', 'Mesomorph (Athletic)', 'Endomorph (Heavy)'] },
@@ -29,6 +31,7 @@ const steps = [
 ];
 
 export function OnboardingWizard({ onComplete }: OnboardingProps) {
+  const [showManual, setShowManual] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
   
   const [username, setUsername] = useState('');
@@ -74,6 +77,20 @@ export function OnboardingWizard({ onComplete }: OnboardingProps) {
     await storage.saveUserProfile(fullProfile);
     onComplete();
   };
+
+  const handleDismissManual = () => {
+    polyglotStorageMesh.writeQuorum('pulsefit_interactive_manual_seen', true).catch(() => {});
+    setShowManual(false);
+  };
+
+  if (showManual) {
+    return (
+      <InteractiveProductManual
+        onComplete={handleDismissManual}
+        onSkip={handleDismissManual}
+      />
+    );
+  }
 
   const renderStepContent = () => {
     const step = steps[currentStep];

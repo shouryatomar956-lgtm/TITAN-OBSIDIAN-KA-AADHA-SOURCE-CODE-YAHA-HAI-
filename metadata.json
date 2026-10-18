@@ -2,8 +2,14 @@
   "name": "PulseFit",
   "description": "High-Performance PWA Architecture & Storage Infrastructure for gym tracking.",
   "requestFramePermissions": [
-    "geolocation",
+    "camera",
     "microphone",
+    "geolocation",
+    "accelerometer",
+    "gyroscope",
+    "screen-wake-lock",
+    "clipboard-write",
+    "clipboard-read",
     "publickey-credentials-create",
     "publickey-credentials-get"
   ],

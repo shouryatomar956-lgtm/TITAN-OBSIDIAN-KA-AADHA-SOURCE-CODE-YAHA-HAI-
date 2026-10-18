@@ -34,6 +34,7 @@ import {
 } from '../services/bodyMeshReconstruction';
 import { storage } from '../services/storage';
 import { triggerHapticFeedback } from '../utils/haptics';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 
 type RenderStyle = 'wireframe' | 'pointcloud';
 
@@ -679,9 +680,15 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
         )}
 
         {cameraError && (
-          <div className="mt-3 p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />
-            <span>{cameraError}</span>
+          <div className="mt-3">
+            <MediaPermissionFallback
+              mediaType="camera"
+              moduleTitle="3D Optical Body Contour Scanner"
+              errorMessage={cameraError}
+              onRetry={startLiveCamera}
+              onManualFallback={() => setCameraError(null)}
+              manualFallbackLabel="Dismiss"
+            />
           </div>
         )}
 
@@ -1380,7 +1387,7 @@ export const SmartBodyMesh3D = memo(function SmartBodyMesh3D() {
             <h4 className="text-sm font-black text-white tracking-wider uppercase font-mono">
               Body Scan Progress History ({scanHistory.length})
             </h4>
-            <span className="text-xs font-mono text-zinc-500">LocalForage Persistent</span>
+            <span className="text-xs font-mono text-zinc-500">Saved to Device Vault</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">

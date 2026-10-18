@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { storage, UserProfile } from '../services/storage';
 import { zkBiometricEnclave } from '../services/zeroKnowledgeBiometricEnclave';
-import { User, Activity, MapPin, RefreshCw, Sparkles, Navigation, Edit2, Check, X, Volume2, VolumeX, Mic, BatteryCharging, Zap, KeyRound, ShieldCheck } from 'lucide-react';
+import { User, Activity, MapPin, RefreshCw, Sparkles, Navigation, Edit2, Check, X, Volume2, VolumeX, Mic, BatteryCharging, Zap, KeyRound, ShieldCheck, Download, Upload, Database, HardDrive, CheckCircle2, AlertCircle, BookOpen } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { BMIWidget } from './BMIWidget';
 import { BiometricSettings } from './BiometricSettings';
@@ -9,6 +9,8 @@ import { GeolocationService } from '../services/GeolocationService';
 import { voiceCoach } from '../services/voiceCoachService';
 import { batterySaverService } from '../services/batterySaverService';
 import { triggerHapticFeedback } from '../utils/haptics';
+import { offlineBackupEngine, RestoreResult } from '../services/offlineBackupEngine';
+import { InteractiveProductManual } from './InteractiveProductManual';
 
 
 
@@ -87,6 +89,7 @@ export function ProfileView() {
   const [newPinInput, setNewPinInput] = useState('');
   const [pinUpdateMsg, setPinUpdateMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [updatingPin, setUpdatingPin] = useState(false);
+  const [showManualModal, setShowManualModal] = useState(false);
 
   const handleUpdatePin = async () => {
     setPinUpdateMsg(null);
@@ -123,6 +126,59 @@ export function ProfileView() {
       setPinUpdateMsg({ type: 'error', text: 'Failed to update security PIN.' });
     } finally {
       setUpdatingPin(false);
+    }
+  };
+
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportStatus, setExportStatus] = useState<string | null>(null);
+  const [isRestoring, setIsRestoring] = useState(false);
+  const [restoreResult, setRestoreResult] = useState<RestoreResult | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleExportBackup = async () => {
+    setIsExporting(true);
+    setExportStatus(null);
+    triggerHapticFeedback('medium');
+    try {
+      const { filename, manifest } = await offlineBackupEngine.exportBackup();
+      setExportStatus(`Exported ${manifest.totalKeys} records (${(manifest.byteSize / 1024).toFixed(1)} KB) to ${filename}`);
+      triggerHapticFeedback('heavy');
+    } catch (err: any) {
+      setExportStatus(`Export failed: ${err.message || 'Unknown error'}`);
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+  const handleFileSelected = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setIsRestoring(true);
+    setRestoreResult(null);
+    triggerHapticFeedback('medium');
+    try {
+      const res = await offlineBackupEngine.restoreBackup(file);
+      setRestoreResult(res);
+      if (res.success) {
+        triggerHapticFeedback('heavy');
+        const refreshed = await storage.getUserProfile();
+        if (refreshed) {
+          setProfile(refreshed);
+          setEditProfile(refreshed);
+        }
+      }
+    } catch (err: any) {
+      setRestoreResult({
+        success: false,
+        keysRestored: 0,
+        username: '',
+        exportedAt: '',
+        message: err.message || 'Restore error',
+        error: err.message
+      });
+    } finally {
+      setIsRestoring(false);
+      if (fileInputRef.current) fileInputRef.current.value = '';
     }
   };
 
@@ -623,9 +679,177 @@ export function ProfileView() {
             </div>
           </GlassCard>
 
+          {/* Interactive Feature Guide & Master Manual Card */}
+          <GlassCard>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/50 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center text-white shadow-md shrink-0">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-zinc-800 tracking-tight">
+                    PulseFit Master Feature Guide &amp; Manual
+                  </h2>
+                  <p className="text-[11px] text-zinc-500">
+                    5-Page Interactive Manual Covering Every Engine &amp; Feature in Detail
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowManualModal(true)}
+                className="self-start sm:self-auto px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-bold transition-all shadow-sm flex items-center gap-2 cursor-pointer active:scale-95"
+              >
+                <BookOpen className="w-3.5 h-3.5 text-purple-400" />
+                <span>Open 5-Page Guide</span>
+              </button>
+            </div>
+            <p className="text-xs text-zinc-600 leading-relaxed">
+              Explore step-by-step guides for the 5,050+ Exercise Catalog, AI Camera Rep Counter, Contactless Heart Rate &amp; Vitals, Acoustic Hydration, and the Secure Offline Vault.
+            </p>
+          </GlassCard>
+
+          {/* 100% Offline Vault Backup & Recovery (Tamper-Proof SHA-256) */}
+          <GlassCard>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/50 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md shrink-0">
+                  <Database className="w-5 h-5" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-zinc-800 tracking-tight">
+                    Offline Backup &amp; Recovery Enclave
+                  </h2>
+                  <p className="text-[11px] text-zinc-500">
+                    100% Client-Side Snapshot with SHA-256 Cryptographic Tamper-Proofing
+                  </p>
+                </div>
+              </div>
+              <span className="self-start sm:self-auto text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                ZERO CLOUD / 100% OFFLINE
+              </span>
+            </div>
+
+            <p className="text-xs text-zinc-600 leading-relaxed">
+              Your workouts, rep counts, vitals, hydration logs, unlocked themes, and athlete profile are stored completely and securely on your own device. Your private data stays 100% offline and in your hands. Export a private encrypted backup anytime to keep a saved copy or transfer to another phone.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Export Backup Card */}
+              <div className="p-4 rounded-2xl bg-white/70 border border-zinc-200/80 shadow-xs flex flex-col justify-between gap-3">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
+                    <Download className="w-4 h-4 text-indigo-600" />
+                    <span>Export Local Backup</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-500 leading-normal">
+                    Download an authenticated .json snapshot file directly to your device storage.
+                  </p>
+                </div>
+
+                {exportStatus && (
+                  <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
+                    <span className="truncate">{exportStatus}</span>
+                  </div>
+                )}
+
+                <button
+                  type="button"
+                  onClick={handleExportBackup}
+                  disabled={isExporting}
+                  className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  {isExporting ? (
+                    <>
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                      <span>Hashing &amp; Packaging...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-3.5 h-3.5" />
+                      <span>Export Backup (.json)</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Import Backup Card */}
+              <div className="p-4 rounded-2xl bg-white/70 border border-zinc-200/80 shadow-xs flex flex-col justify-between gap-3">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
+                    <Upload className="w-4 h-4 text-purple-600" />
+                    <span>Restore From Backup</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-500 leading-normal">
+                    Import a previously exported PulseFit backup to restore all workout metrics and athlete data.
+                  </p>
+                </div>
+
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".json,application/json"
+                  className="hidden"
+                  onChange={handleFileSelected}
+                />
+
+                {restoreResult && (
+                  <div className={cn(
+                    "p-2.5 rounded-xl text-xs flex items-center gap-2",
+                    restoreResult.success
+                      ? "bg-emerald-50 border border-emerald-200 text-emerald-700"
+                      : "bg-rose-50 border border-rose-200 text-rose-700"
+                  )}>
+                    {restoreResult.success ? (
+                      <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
+                    ) : (
+                      <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
+                    )}
+                    <span className="truncate">{restoreResult.message}</span>
+                  </div>
+                )}
+
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={isRestoring}
+                  className="w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 disabled:opacity-50 text-white text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  {isRestoring ? (
+                    <>
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                      <span>Verifying SHA-256 &amp; Restoring...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="w-3.5 h-3.5" />
+                      <span>Select Backup File</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-zinc-200/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] text-zinc-400 font-mono">
+              <span className="flex items-center gap-1.5">
+                <HardDrive className="w-3 h-3 text-zinc-400" />
+                <span>Format: PulseFit Cryptographic Snapshot v2.5</span>
+              </span>
+              <span>Integrity: SHA-256 Validated</span>
+            </div>
+          </GlassCard>
+
         </div>
 
       </div>
+
+      {showManualModal && (
+        <InteractiveProductManual
+          onComplete={() => setShowManualModal(false)}
+          onSkip={() => setShowManualModal(false)}
+        />
+      )}
     </div>
   );
 }

@@ -15,7 +15,9 @@ import {
   Zap,
   Info,
   Save,
-  Sparkles
+  Sparkles,
+  Plus,
+  Minus
 } from 'lucide-react';
 import { voiceCoach } from '../services/voiceCoachService';
 import { storage } from '../services/storage';
@@ -23,6 +25,7 @@ import { fatigueHeatmapService } from '../services/fatigueHeatmapService';
 import { triggerHapticFeedback } from '../utils/haptics';
 import { supremeDataSupervisor } from '../services/supremeRealTimeDataSupervisor';
 import { MediaPipePoseEngine } from './MediaPipePoseEngine';
+import { MediaPermissionFallback } from './MediaPermissionFallback';
 
 export type RepPhase = 'READY' | 'STROKE_OUT' | 'INFLECTION' | 'STROKE_RETURN' | 'REP_COMPLETED';
 
@@ -639,12 +642,16 @@ export const RepCounter = memo(function RepCounter() {
         />
       ) : (
         <>
-          {/* Camera Error Alert */}
+          {/* Camera Error Fallback UI */}
           {cameraError && (
-            <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center gap-3 text-rose-300 text-xs">
-              <AlertTriangle className="w-5 h-5 shrink-0 text-rose-400" />
-              <p className="flex-1">{cameraError}</p>
-            </div>
+            <MediaPermissionFallback
+              mediaType="camera"
+              moduleTitle="Universal AI Rep Counter"
+              errorMessage={cameraError}
+              onRetry={startCamera}
+              onManualFallback={() => setCameraError(null)}
+              manualFallbackLabel="Use Manual Rep Mode"
+            />
           )}
 
           {/* Saved Success Notice */}
@@ -746,6 +753,37 @@ export const RepCounter = memo(function RepCounter() {
               }`}>
                 Phase: {currentPhase.replace('_', ' ')}
               </span>
+            </div>
+
+            {/* Manual Rep Adjust Controls */}
+            <div className="flex items-center gap-3 mt-3">
+              <button
+                type="button"
+                onClick={() => {
+                  const updated = Math.max(0, repCount - 1);
+                  setRepCount(updated);
+                  repCountRef.current = updated;
+                  triggerHapticFeedback('light');
+                }}
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white flex items-center justify-center transition-all cursor-pointer"
+                title="Subtract 1 Rep"
+              >
+                <Minus className="w-4 h-4" />
+              </button>
+              <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">Manual ±</span>
+              <button
+                type="button"
+                onClick={() => {
+                  const updated = repCount + 1;
+                  setRepCount(updated);
+                  repCountRef.current = updated;
+                  triggerHapticFeedback('medium');
+                }}
+                className="w-9 h-9 rounded-xl bg-cyan-600 hover:bg-cyan-500 active:scale-95 text-white flex items-center justify-center transition-all shadow-md shadow-cyan-600/30 cursor-pointer"
+                title="Add 1 Rep"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
             </div>
 
             {/* Save Button */}

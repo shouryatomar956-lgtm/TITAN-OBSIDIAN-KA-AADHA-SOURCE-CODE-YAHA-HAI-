@@ -4253,752 +4253,752 @@ export const EXPLOSIVENESS_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "explosiveness_elite_home_426",
-    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out 1.5",
+    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_427",
-    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps 1.5",
+    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_428",
-    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold 1.5",
+    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_429",
-    "name": "Free-Standing Heavy Vest Maximum RFD Bound 1.5",
+    "name": "Free-Standing Heavy Vest Maximum RFD Bound",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_430",
-    "name": "Peak Leverage Heavy Vest Plyometric Shock Drop 1.5",
+    "name": "Peak Leverage Heavy Vest Plyometric Shock Drop",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_431",
-    "name": "Hyper-Advanced Extreme Axial Load Explosive Maltese Press-Out 1.5",
+    "name": "Hyper-Advanced Extreme Axial Load Explosive Maltese Press-Out",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_432",
-    "name": "Extreme Unilateral Extreme Axial Load Weighted Depth Jumps 1.5",
+    "name": "Extreme Unilateral Extreme Axial Load Weighted Depth Jumps",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_433",
-    "name": "Suspended Bodyweight Extreme Axial Load Static-Active Launch Hold 1.5",
+    "name": "Suspended Bodyweight Extreme Axial Load Static-Active Launch Hold",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_434",
-    "name": "Free-Standing Extreme Axial Load Maximum RFD Bound 1.5",
+    "name": "Free-Standing Extreme Axial Load Maximum RFD Bound",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_435",
-    "name": "Peak Leverage Extreme Axial Load Plyometric Shock Drop 1.5",
+    "name": "Peak Leverage Extreme Axial Load Plyometric Shock Drop",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_436",
-    "name": "Hyper-Advanced Maximal Tension Explosive Maltese Press-Out 1.5",
+    "name": "Hyper-Advanced Maximal Tension Explosive Maltese Press-Out",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_437",
-    "name": "Extreme Unilateral Maximal Tension Weighted Depth Jumps 1.5",
+    "name": "Extreme Unilateral Maximal Tension Weighted Depth Jumps",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_438",
-    "name": "Suspended Bodyweight Maximal Tension Static-Active Launch Hold 1.5",
+    "name": "Suspended Bodyweight Maximal Tension Static-Active Launch Hold",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_439",
-    "name": "Free-Standing Maximal Tension Maximum RFD Bound 1.5",
+    "name": "Free-Standing Maximal Tension Maximum RFD Bound",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_440",
-    "name": "Peak Leverage Maximal Tension Plyometric Shock Drop 1.5",
+    "name": "Peak Leverage Maximal Tension Plyometric Shock Drop",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_441",
-    "name": "Hyper-Advanced Dead-Stop Explosive Maltese Press-Out 1.5",
+    "name": "Hyper-Advanced Dead-Stop Explosive Maltese Press-Out",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_442",
-    "name": "Extreme Unilateral Dead-Stop Weighted Depth Jumps 1.5",
+    "name": "Extreme Unilateral Dead-Stop Weighted Depth Jumps",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_443",
-    "name": "Suspended Bodyweight Dead-Stop Static-Active Launch Hold 1.5",
+    "name": "Suspended Bodyweight Dead-Stop Static-Active Launch Hold",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_444",
-    "name": "Free-Standing Dead-Stop Maximum RFD Bound 1.5",
+    "name": "Free-Standing Dead-Stop Maximum RFD Bound",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_445",
-    "name": "Peak Leverage Dead-Stop Plyometric Shock Drop 1.5",
+    "name": "Peak Leverage Dead-Stop Plyometric Shock Drop",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_446",
-    "name": "Hyper-Advanced Kinetic Explosive Maltese Press-Out 1.5",
+    "name": "Hyper-Advanced Kinetic Explosive Maltese Press-Out",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_447",
-    "name": "Extreme Unilateral Kinetic Weighted Depth Jumps 1.5",
+    "name": "Extreme Unilateral Kinetic Weighted Depth Jumps",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_448",
-    "name": "Suspended Bodyweight Kinetic Static-Active Launch Hold 1.5",
+    "name": "Suspended Bodyweight Kinetic Static-Active Launch Hold",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_449",
-    "name": "Free-Standing Kinetic Maximum RFD Bound 1.5",
+    "name": "Free-Standing Kinetic Maximum RFD Bound",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_450",
-    "name": "Peak Leverage Kinetic Plyometric Shock Drop 1.5",
+    "name": "Peak Leverage Kinetic Plyometric Shock Drop",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_451",
-    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out 1.5 Sequence",
+    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_452",
-    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps 1.5 Sequence",
+    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_453",
-    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold 1.5 Sequence",
+    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_454",
-    "name": "Free-Standing Heavy Vest Maximum RFD Bound 1.5 Sequence",
+    "name": "Free-Standing Heavy Vest Maximum RFD Bound Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_455",
-    "name": "Peak Leverage Heavy Vest Plyometric Shock Drop 1.5 Sequence",
+    "name": "Peak Leverage Heavy Vest Plyometric Shock Drop Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_456",
-    "name": "Hyper-Advanced Extreme Axial Load Explosive Maltese Press-Out 1.5 Sequence",
+    "name": "Hyper-Advanced Extreme Axial Load Explosive Maltese Press-Out Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_457",
-    "name": "Extreme Unilateral Extreme Axial Load Weighted Depth Jumps 1.5 Sequence",
+    "name": "Extreme Unilateral Extreme Axial Load Weighted Depth Jumps Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_458",
-    "name": "Suspended Bodyweight Extreme Axial Load Static-Active Launch Hold 1.5 Sequence",
+    "name": "Suspended Bodyweight Extreme Axial Load Static-Active Launch Hold Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_459",
-    "name": "Free-Standing Extreme Axial Load Maximum RFD Bound 1.5 Sequence",
+    "name": "Free-Standing Extreme Axial Load Maximum RFD Bound Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_460",
-    "name": "Peak Leverage Extreme Axial Load Plyometric Shock Drop 1.5 Sequence",
+    "name": "Peak Leverage Extreme Axial Load Plyometric Shock Drop Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_461",
-    "name": "Hyper-Advanced Maximal Tension Explosive Maltese Press-Out 1.5 Sequence",
+    "name": "Hyper-Advanced Maximal Tension Explosive Maltese Press-Out Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_462",
-    "name": "Extreme Unilateral Maximal Tension Weighted Depth Jumps 1.5 Sequence",
+    "name": "Extreme Unilateral Maximal Tension Weighted Depth Jumps Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_463",
-    "name": "Suspended Bodyweight Maximal Tension Static-Active Launch Hold 1.5 Sequence",
+    "name": "Suspended Bodyweight Maximal Tension Static-Active Launch Hold Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_464",
-    "name": "Free-Standing Maximal Tension Maximum RFD Bound 1.5 Sequence",
+    "name": "Free-Standing Maximal Tension Maximum RFD Bound Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_465",
-    "name": "Peak Leverage Maximal Tension Plyometric Shock Drop 1.5 Sequence",
+    "name": "Peak Leverage Maximal Tension Plyometric Shock Drop Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_466",
-    "name": "Hyper-Advanced Dead-Stop Explosive Maltese Press-Out 1.5 Sequence",
+    "name": "Hyper-Advanced Dead-Stop Explosive Maltese Press-Out Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_467",
-    "name": "Extreme Unilateral Dead-Stop Weighted Depth Jumps 1.5 Sequence",
+    "name": "Extreme Unilateral Dead-Stop Weighted Depth Jumps Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_468",
-    "name": "Suspended Bodyweight Dead-Stop Static-Active Launch Hold 1.5 Sequence",
+    "name": "Suspended Bodyweight Dead-Stop Static-Active Launch Hold Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_469",
-    "name": "Free-Standing Dead-Stop Maximum RFD Bound 1.5 Sequence",
+    "name": "Free-Standing Dead-Stop Maximum RFD Bound Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_470",
-    "name": "Peak Leverage Dead-Stop Plyometric Shock Drop 1.5 Sequence",
+    "name": "Peak Leverage Dead-Stop Plyometric Shock Drop Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_471",
-    "name": "Hyper-Advanced Kinetic Explosive Maltese Press-Out 1.5 Sequence",
+    "name": "Hyper-Advanced Kinetic Explosive Maltese Press-Out Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_472",
-    "name": "Extreme Unilateral Kinetic Weighted Depth Jumps 1.5 Sequence",
+    "name": "Extreme Unilateral Kinetic Weighted Depth Jumps Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_473",
-    "name": "Suspended Bodyweight Kinetic Static-Active Launch Hold 1.5 Sequence",
+    "name": "Suspended Bodyweight Kinetic Static-Active Launch Hold Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_474",
-    "name": "Free-Standing Kinetic Maximum RFD Bound 1.5 Sequence",
+    "name": "Free-Standing Kinetic Maximum RFD Bound Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_475",
-    "name": "Peak Leverage Kinetic Plyometric Shock Drop 1.5 Sequence",
+    "name": "Peak Leverage Kinetic Plyometric Shock Drop Sequence",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Bodyweight",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_476",
-    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out 1.5 Variation",
+    "name": "Hyper-Advanced Heavy Vest Explosive Maltese Press-Out Variation",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_477",
-    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps 1.5 Variation",
+    "name": "Extreme Unilateral Heavy Vest Weighted Depth Jumps Variation",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_home_478",
-    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold 1.5 Variation",
+    "name": "Suspended Bodyweight Heavy Vest Static-Active Launch Hold Variation",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Backpack-weighted",
     "environment": "Home",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_479",
-    "name": "Maximal Platform Hyper-Advanced Heavy Power Clean 1.5",
+    "name": "Maximal Platform Hyper-Advanced Heavy Power Clean",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_480",
-    "name": "Heavy Rig Hyper-Advanced Heavy Snatch 1.5",
+    "name": "Heavy Rig Hyper-Advanced Heavy Snatch",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_481",
-    "name": "Custom Overload Rig Hyper-Advanced Ballistic Squat Jump 1.5",
+    "name": "Custom Overload Rig Hyper-Advanced Ballistic Squat Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_482",
-    "name": "Block Position Hyper-Advanced Maximal RFD Barbell Jump 1.5",
+    "name": "Block Position Hyper-Advanced Maximal RFD Barbell Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_483",
-    "name": "Maximal Platform Extreme Chain Load Extreme Split Jerk 1.5",
+    "name": "Maximal Platform Extreme Chain Load Extreme Split Jerk",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_484",
-    "name": "Heavy Rig Extreme Chain Load Heavy Power Clean 1.5",
+    "name": "Heavy Rig Extreme Chain Load Heavy Power Clean",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_485",
-    "name": "Custom Overload Rig Extreme Chain Load Heavy Snatch 1.5",
+    "name": "Custom Overload Rig Extreme Chain Load Heavy Snatch",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_486",
-    "name": "Block Position Extreme Chain Load Ballistic Squat Jump 1.5",
+    "name": "Block Position Extreme Chain Load Ballistic Squat Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_487",
-    "name": "Maximal Platform Maximal Barbell Overload Hyper-Advanced Ballistic Bench 1.5",
+    "name": "Maximal Platform Maximal Barbell Overload Hyper-Advanced Ballistic Bench",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.3,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_488",
-    "name": "Heavy Rig Maximal Barbell Overload Extreme Split Jerk 1.5",
+    "name": "Heavy Rig Maximal Barbell Overload Extreme Split Jerk",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_489",
-    "name": "Custom Overload Rig Maximal Barbell Overload Heavy Power Clean 1.5",
+    "name": "Custom Overload Rig Maximal Barbell Overload Heavy Power Clean",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_490",
-    "name": "Block Position Maximal Barbell Overload Heavy Snatch 1.5",
+    "name": "Block Position Maximal Barbell Overload Heavy Snatch",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_491",
-    "name": "Maximal Platform Severe External Axial Load Maximal RFD Barbell Jump 1.5",
+    "name": "Maximal Platform Severe External Axial Load Maximal RFD Barbell Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_492",
-    "name": "Heavy Rig Severe External Axial Load Hyper-Advanced Ballistic Bench 1.5",
+    "name": "Heavy Rig Severe External Axial Load Hyper-Advanced Ballistic Bench",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_493",
-    "name": "Custom Overload Rig Severe External Axial Load Extreme Split Jerk 1.5",
+    "name": "Custom Overload Rig Severe External Axial Load Extreme Split Jerk",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_494",
-    "name": "Block Position Severe External Axial Load Heavy Power Clean 1.5",
+    "name": "Block Position Severe External Axial Load Heavy Power Clean",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.4,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_495",
-    "name": "Maximal Platform Hyper-Advanced Ballistic Squat Jump 1.5",
+    "name": "Maximal Platform Hyper-Advanced Ballistic Squat Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_496",
-    "name": "Heavy Rig Hyper-Advanced Maximal RFD Barbell Jump 1.5",
+    "name": "Heavy Rig Hyper-Advanced Maximal RFD Barbell Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_497",
-    "name": "Custom Overload Rig Hyper-Advanced Hyper-Advanced Ballistic Bench 1.5",
+    "name": "Custom Overload Rig Hyper-Advanced Hyper-Advanced Ballistic Bench",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_498",
-    "name": "Block Position Hyper-Advanced Extreme Split Jerk 1.5",
+    "name": "Block Position Hyper-Advanced Extreme Split Jerk",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_499",
-    "name": "Maximal Platform Extreme Chain Load Heavy Snatch 1.5",
+    "name": "Maximal Platform Extreme Chain Load Heavy Snatch",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   },
   {
     "id": "explosiveness_elite_gym_500",
-    "name": "Heavy Rig Extreme Chain Load Ballistic Squat Jump 1.5",
+    "name": "Heavy Rig Extreme Chain Load Ballistic Squat Jump",
     "muscleGroup": "Explosiveness",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute using the strict 1.5 repetition protocol: perform a full eccentric-concentric range followed immediately by a mandatory half-range contraction under continuous time-under-tension. Pair with maximum explosive intent and minimal ground contact time."
+    "instructions": "Execute full range of motion under continuous time-under-tension with maximum explosive intent and minimal ground contact time."
   }
 ];
