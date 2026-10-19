@@ -3123,13 +3123,13 @@ export const TENDON_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "tendon_313",
-    "name": "Trap Bar Heavy Farmer Walk 100% Bodyweight Load",
+    "name": "Trap Bar Heavy Farmer Walk",
     "muscleGroup": "Tendons and Bones",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Load a trap bar with your full bodyweight. Stand tall with packed scapulae and walk in a deliberate straight path for 45 seconds, delivering vertical compressive loading through the spine, hips, and radius."
+    "instructions": "Load a trap bar heavily. Stand tall with packed scapulae and walk in a deliberate straight path for 45 seconds, delivering vertical compressive loading through the spine, hips, and radius."
   },
   {
     "id": "tendon_314",
@@ -3869,7 +3869,7 @@ export const TENDON_EXERCISES: ExerciseEntity[] = [
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Load trap bar with 150% bodyweight. Execute with strict form and continuous tension: walk forward for 30 seconds, execute a controlled quarter-squat dip and pulse, rise back up, and walk for another 15 seconds to maximize skeletal osteogenic load."
+    "instructions": "Load trap bar with heavy resistance. Execute with strict form and continuous tension: walk forward for 30 seconds, execute a controlled quarter-squat dip and pulse, rise back up, and walk for another 15 seconds to maximize skeletal osteogenic load."
   },
   {
     "id": "tendon_388",

@@ -2372,13 +2372,13 @@ export const CARDIO_EXERCISES: ExerciseEntity[] = [
     "id": "cardio_237"
   },
   {
-    "name": "Gym Turf Sled Heavy Push Sprints (100% Bodyweight Load)",
+    "name": "Gym Turf Sled Heavy Push Sprints",
     "muscleGroup": "Cardio",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Load sled with 100% of athlete's bodyweight. Drive legs forcefully into turf in 25-meter all-out sprints with low forward torso lean, resting 60 seconds between rounds.",
+    "instructions": "Load sled heavily. Drive legs forcefully into turf in 25-meter all-out sprints with low forward torso lean, resting 60 seconds between rounds.",
     "id": "cardio_238"
   },
   {
@@ -2888,7 +2888,7 @@ export const CARDIO_EXERCISES: ExerciseEntity[] = [
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Sprint 300m on SkiErg at sub-1:38 split pace, run to loaded turf sled (150% bodyweight), drive sled 25 meters, drop into a 15-second static-active squat hold, and complete 3 sled push pulses (continuous tension protocol).",
+    "instructions": "Sprint 300m on SkiErg at sub-1:38 split pace, run to loaded turf sled, drive sled 25 meters, drop into a 15-second static-active squat hold, and complete 3 sled push pulses (continuous tension protocol).",
     "id": "cardio_289"
   },
   {
@@ -2902,13 +2902,13 @@ export const CARDIO_EXERCISES: ExerciseEntity[] = [
     "id": "cardio_290"
   },
   {
-    "name": "Gym Turf Sled Extreme Heavy Sprint (150% Bodyweight) Drive Shuttles",
+    "name": "Gym Turf Sled Extreme Heavy Sprint Drive Shuttles",
     "muscleGroup": "Cardio",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Machine",
     "environment": "Gym",
-    "instructions": "Push sled loaded with 150% bodyweight for 20 meters, immediately drop into an isometric low push hold against uprights for 10 seconds under continuous static-active tension, and perform 5 explosive peak pulse strides.",
+    "instructions": "Push loaded sled for 20 meters, immediately drop into an isometric low push hold against uprights for 10 seconds under continuous static-active tension, and perform 5 explosive peak pulse strides.",
     "id": "cardio_291"
   },
   {

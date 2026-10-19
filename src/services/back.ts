@@ -983,7 +983,7 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_99",
-    "name": "45-Degree Back Extension (Bodyweight)",
+    "name": "45-Degree Back Extension",
     "muscleGroup": "Back",
     "difficulty": "Beginner",
     "scientificEffectivenessScore": 5.5,
@@ -1243,7 +1243,7 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_125",
-    "name": "Horizontal Back Extension Bench (Bodyweight)",
+    "name": "Horizontal Back Extension Bench",
     "muscleGroup": "Back",
     "difficulty": "Beginner",
     "scientificEffectivenessScore": 5.5,
@@ -5733,13 +5733,13 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_574",
-    "name": "Competition Barbell Deadlift (2.5x Bodyweight Attempt)",
+    "name": "Competition Barbell Deadlift",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 10,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Execute conventional deadlift with 2.5x bodyweight load on Olympic bar, maintaining rigid neutral spine and locked lats throughout."
+    "instructions": "Execute conventional deadlift on Olympic bar, maintaining rigid neutral spine and locked lats throughout."
   },
   {
     "id": "back_575",
@@ -5763,13 +5763,13 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_577",
-    "name": "Heavy Barbell Romanian Deadlift (2x Bodyweight Load)",
+    "name": "Heavy Barbell Romanian Deadlift",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Hinge at hips with 2x bodyweight on barbell. Lower to mid-shin with rigid spine, loading hamstrings and spinal erectors to peak tension."
+    "instructions": "Hinge at hips with barbell. Lower to mid-shin with rigid spine, loading hamstrings and spinal erectors to peak tension."
   },
   {
     "id": "back_578",
@@ -5803,23 +5803,23 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_581",
-    "name": "Barbell Pendlay Row with 1.5x Bodyweight Load (Dead Stop)",
+    "name": "Barbell Pendlay Row (Dead Stop)",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Row 1.5x bodyweight barbell from floor to sternum with torso strictly parallel to ground, resting bar completely between reps."
+    "instructions": "Row barbell from floor to sternum with torso strictly parallel to ground, resting bar completely between reps."
   },
   {
     "id": "back_582",
-    "name": "Barbell Bent-Over Row with 1.5x Bodyweight Load (Strict)",
+    "name": "Barbell Bent-Over Row (Strict)",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Hinge at hips to 45 degrees and row 1.5x bodyweight barbell to lower abdomen without knee dip or torso jerk."
+    "instructions": "Hinge at hips to 45 degrees and row barbell to lower abdomen without knee dip or torso jerk."
   },
   {
     "id": "back_583",
@@ -5863,23 +5863,23 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_587",
-    "name": "Heavy Barbell Rack Pull from Below Knee (3x Bodyweight Load)",
+    "name": "Heavy Barbell Rack Pull from Below Knee",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Pull 3x bodyweight barbell from power rack pins just below kneecap to full hip lockout, overloading trapezius."
+    "instructions": "Pull barbell from power rack pins just below kneecap to full hip lockout, overloading trapezius."
   },
   {
     "id": "back_588",
-    "name": "Safety Squat Bar Good Morning with Heavy Load (1.5x Bodyweight)",
+    "name": "Safety Squat Bar Good Morning with Heavy Load",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.7,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Hinge to horizontal with 1.5x bodyweight on safety squat bar across traps, building immense spinal erector integrity."
+    "instructions": "Hinge to horizontal with safety squat bar across traps, building immense spinal erector integrity."
   },
   {
     "id": "back_589",
@@ -5963,23 +5963,23 @@ export const BACK_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "back_597",
-    "name": "Heavy Trap Bar Deadlift from Low Handles (2.5x Bodyweight)",
+    "name": "Heavy Trap Bar Deadlift from Low Handles",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Grip low handles of trap bar loaded with 2.5x bodyweight. Drive through floor to lockout with packed lats."
+    "instructions": "Grip low handles of loaded trap bar. Drive through floor to lockout with packed lats."
   },
   {
     "id": "back_598",
-    "name": "Heavy Barbell Snatch-Grip High Pull from Hang (1.2x Bodyweight)",
+    "name": "Heavy Barbell Snatch-Grip High Pull from Hang",
     "muscleGroup": "Back",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.5,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Explosively pull 1.2x bodyweight barbell from hang to chest with wide snatch grip and violent hip extension."
+    "instructions": "Explosively pull barbell from hang to chest with wide snatch grip and violent hip extension."
   },
   {
     "id": "back_599",

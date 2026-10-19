@@ -181,7 +181,7 @@ export function ProfileView() {
     triggerHapticFeedback('medium');
     try {
       const res = await offlineBackupEngine.syncToLinkedFile();
-      setLiveSyncMsg(`Atomic sync complete: ${res.filename} (${(res.bytesWritten / 1024).toFixed(1)} KB) • SHA-256 Verified`);
+      setLiveSyncMsg(`Backup saved successfully: ${res.filename} (${(res.bytesWritten / 1024).toFixed(1)} KB) • Verified Safe`);
       triggerHapticFeedback('heavy');
       const updated = await offlineBackupEngine.getLinkedFileInfo();
       setLinkedFileInfo(updated);

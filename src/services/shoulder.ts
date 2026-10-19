@@ -3102,23 +3102,23 @@ export const SHOULDER_EXERCISES: ExerciseEntity[] = [
     "id": "shoulder_310"
   },
   {
-    "name": "Barbell Standing Overhead Military Press (Bodyweight Load)",
+    "name": "Barbell Standing Overhead Military Press",
     "muscleGroup": "Shoulder",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Clean or unrack Olympic barbell loaded to athlete's bodyweight. Press strictly from clavicles to full lockout overhead with zero hip dip or backward spine lean.",
+    "instructions": "Clean or unrack Olympic barbell. Press strictly from clavicles to full lockout overhead with zero hip dip or backward spine lean.",
     "id": "shoulder_311"
   },
   {
-    "name": "Barbell Standing Push Press (120% Bodyweight Overload)",
+    "name": "Barbell Standing Push Press",
     "muscleGroup": "Shoulder",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.1,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Load barbell with 120% bodyweight. Dip knees 3 inches, drive explosively through heels, and punch bar overhead, absorbing lockout with stiff core and elevated shoulders.",
+    "instructions": "Load barbell. Dip knees 3 inches, drive explosively through heels, and punch bar overhead, absorbing lockout with stiff core and elevated shoulders.",
     "id": "shoulder_312"
   },
   {
@@ -3822,23 +3822,23 @@ export const SHOULDER_EXERCISES: ExerciseEntity[] = [
     "id": "shoulder_382"
   },
   {
-    "name": "Heavy Push Press (Barbell 135% Bodyweight)",
+    "name": "Heavy Push Press",
     "muscleGroup": "Shoulder",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Load Olympic barbell with 135% bodyweight. Dip and drive violently overhead to lockout, lower under control to eye level, pulse back up to lockout (continuous tension protocol) under continuous deltoid tension, and reset.",
+    "instructions": "Load Olympic barbell. Dip and drive violently overhead to lockout, lower under control to eye level, pulse back up to lockout (continuous tension protocol) under continuous deltoid tension, and reset.",
     "id": "shoulder_383"
   },
   {
-    "name": "Standing Barbell Military Press (Bodyweight Load)",
+    "name": "Standing Barbell Military Press",
     "muscleGroup": "Shoulder",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.8,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Press bodyweight load strictly from collarbones overhead, lower under control to eye level, pulse back to lockout (continuous tension protocol) maintaining rigid glute and abdominal brace.",
+    "instructions": "Press strictly from collarbones overhead, lower under control to eye level, pulse back to lockout (continuous tension protocol) maintaining rigid glute and abdominal brace.",
     "id": "shoulder_384"
   },
   {

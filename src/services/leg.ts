@@ -243,7 +243,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_25",
-    "name": "Static Lunge Bottom Pulse (Bodyweight)",
+    "name": "Static Lunge Bottom Pulse",
     "muscleGroup": "Legs",
     "difficulty": "Beginner",
     "scientificEffectivenessScore": 5.1,
@@ -2953,7 +2953,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_296",
-    "name": "Single-Leg Stair Deficit Calf Raise (Bodyweight)",
+    "name": "Single-Leg Stair Deficit Calf Raise",
     "muscleGroup": "Legs",
     "difficulty": "Intermediate",
     "scientificEffectivenessScore": 7.6,
@@ -4063,7 +4063,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_407",
-    "name": "Glute-Ham Raise (GHR) Machine (Bodyweight)",
+    "name": "Glute-Ham Raise (GHR) Machine",
     "muscleGroup": "Legs",
     "difficulty": "Intermediate",
     "scientificEffectivenessScore": 8,
@@ -4083,7 +4083,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_409",
-    "name": "45-Degree Hyperextension Bench (Bodyweight)",
+    "name": "45-Degree Hyperextension Bench",
     "muscleGroup": "Legs",
     "difficulty": "Intermediate",
     "scientificEffectivenessScore": 7.7,
@@ -4393,7 +4393,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_440",
-    "name": "Dumbbell Farmer's Walk with Heavy Load (50% Bodyweight)",
+    "name": "Dumbbell Farmer's Walk with Heavy Load",
     "muscleGroup": "Legs",
     "difficulty": "Intermediate",
     "scientificEffectivenessScore": 8,
@@ -5893,7 +5893,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_590",
-    "name": "Barbell Bulgarian Split Squat (Bodyweight Equivalent Load)",
+    "name": "Barbell Bulgarian Split Squat",
     "muscleGroup": "Legs",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
@@ -5983,7 +5983,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_599",
-    "name": "Heavy Dumbbell Bulgarian Split Squat (50% Bodyweight per Hand)",
+    "name": "Heavy Dumbbell Bulgarian Split Squat",
     "muscleGroup": "Legs",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
@@ -6083,7 +6083,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_609",
-    "name": "Barbell Hip Thrust (2x Bodyweight Load)",
+    "name": "Barbell Hip Thrust",
     "muscleGroup": "Legs",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
@@ -6343,7 +6343,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_635",
-    "name": "Heavy Sled Push on Turf Track (2x Bodyweight Load)",
+    "name": "Heavy Sled Push on Turf Track",
     "muscleGroup": "Legs",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
@@ -6363,13 +6363,13 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_637",
-    "name": "Heavy Farmer's Walk with Trap Bar (1.5x Bodyweight Load)",
+    "name": "Heavy Farmer's Walk with Trap Bar",
     "muscleGroup": "Legs",
     "difficulty": "Advanced",
     "scientificEffectivenessScore": 9.2,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Pick up trap bar loaded to 1.5 times bodyweight and walk 40 meters with rigid core, crushing grip, and stiff lower-body mechanics."
+    "instructions": "Pick up loaded trap bar and walk 40 meters with rigid core, crushing grip, and stiff lower-body mechanics."
   },
   {
     "id": "legs_638",
@@ -7233,13 +7233,13 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_724",
-    "name": "Barbell Overhead Squat (Bodyweight on Bar, Full Deep Lockout)",
+    "name": "Barbell Overhead Squat",
     "muscleGroup": "Legs",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.6,
     "equipmentNeeded": "Barbell",
     "environment": "Gym",
-    "instructions": "Snatch-grip barbell loaded to bodyweight locked out overhead. Squat deep below parallel maintaining bar over midfoot, demanding elite mobility and strength."
+    "instructions": "Snatch-grip barbell locked out overhead. Squat deep below parallel maintaining bar over midfoot, demanding elite mobility and strength."
   },
   {
     "id": "legs_725",
@@ -7343,7 +7343,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_735",
-    "name": "Barbell Hip Thrust (2.5x Bodyweight Load)",
+    "name": "Barbell Hip Thrust",
     "muscleGroup": "Legs",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
@@ -7453,7 +7453,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_746",
-    "name": "Heavy Sled Push on Turf Track (3x Bodyweight Load)",
+    "name": "Heavy Sled Push on Turf Track",
     "muscleGroup": "Legs",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
@@ -7473,7 +7473,7 @@ export const LEG_EXERCISES: ExerciseEntity[] = [
   },
   {
     "id": "legs_748",
-    "name": "Heavy Farmer's Walk with Trap Bar (2x Bodyweight Load)",
+    "name": "Heavy Farmer's Walk with Trap Bar",
     "muscleGroup": "Legs",
     "difficulty": "Elite",
     "scientificEffectivenessScore": 9.9,
