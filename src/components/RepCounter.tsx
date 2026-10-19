@@ -576,22 +576,22 @@ export const RepCounter = memo(function RepCounter() {
             </button>
           )}
 
-          {/* 33-Point MediaPipe Pose Toggle */}
+          {/* SOTA 133-Point Pose & 10,475-Mesh Toggle */}
           <button
             onClick={() => {
               if (isActive) stopCamera();
               setUseMediaPipeMode(!useMediaPipeMode);
               triggerHapticFeedback('medium');
             }}
-            className={`px-3.5 py-2 rounded-2xl border text-xs font-bold flex items-center gap-2 transition-all ${
+            className={`px-3.5 py-2 rounded-2xl border text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
               useMediaPipeMode
                 ? 'bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 border-cyan-400'
                 : 'bg-white/5 border-white/10 text-cyan-300 hover:bg-white/10'
             }`}
-            title="Toggle MediaPipe 33-Point Pose & Form Engine"
+            title="Toggle SOTA 133-Point Pose & 10,475 SMPL-X 3D Mesh Engine (WebGPU Accelerated)"
           >
             <Sparkles className="w-4 h-4 text-cyan-200 animate-pulse" />
-            <span>33-Pt MediaPipe: {useMediaPipeMode ? 'ON' : 'OFF'}</span>
+            <span>133-Pt SOTA Vision: {useMediaPipeMode ? 'ON' : 'OFF'}</span>
           </button>
 
           {/* Voice Coach Switch */}

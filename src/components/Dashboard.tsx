@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo, useCallback, startTransition, memo, useRef, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import localforage from 'localforage';
-import { Flame, CheckCircle2, Trophy, Dumbbell, Zap, BatteryLow, BrainCircuit, Shield, ShieldCheck, LayoutDashboard, Database, Search, Activity, Crosshair, Settings, Palette, User, Soup, Vault, ChevronLeft, ChevronRight, HeartPulse, Droplets, MoreHorizontal, X, Loader2 } from 'lucide-react';
+import { Flame, CheckCircle2, Trophy, Dumbbell, Zap, BatteryLow, BrainCircuit, Shield, ShieldCheck, LayoutDashboard, Database, Search, Activity, Crosshair, Settings, Palette, User, Soup, Vault, ChevronLeft, ChevronRight, HeartPulse, Droplets, MoreHorizontal, X, Loader2, Cpu } from 'lucide-react';
 import { storage, AppState } from '../services/storage';
 import { storageQueueManager } from '../services/StorageService';
 import { format } from 'date-fns';
@@ -15,6 +15,7 @@ import { AnalyticsDashboard } from './AnalyticsDashboard';
 import { SupremeHapticRestTimer } from './SupremeHapticRestTimer';
 import { ExerciseCatalog } from './ExerciseCatalog';
 import { useSearchRegistration } from '../hooks/useSearchRegistration';
+import { ExokernelSupervisorTelemetryModal } from './ExokernelSupervisorTelemetryModal';
 
 
 type Mood = 'Energetic' | 'Tired' | 'Stressed';

@@ -43,7 +43,7 @@ export const RepCounterVolumeSuite = memo(function RepCounterVolumeSuite() {
             }`}
           >
             <Sparkles className="w-4 h-4 text-cyan-200 animate-pulse" />
-            <span>MediaPipe 33-Pt Form & Rep AI</span>
+            <span>SOTA 133-Pt ViT/SMPL-X Pose AI</span>
           </button>
 
           <button

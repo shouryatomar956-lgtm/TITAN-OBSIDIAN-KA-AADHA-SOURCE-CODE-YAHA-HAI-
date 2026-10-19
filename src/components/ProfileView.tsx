@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { storage, UserProfile } from '../services/storage';
 import { zkBiometricEnclave } from '../services/zeroKnowledgeBiometricEnclave';
-import { User, Activity, MapPin, RefreshCw, Sparkles, Navigation, Edit2, Check, X, Volume2, VolumeX, Mic, BatteryCharging, Zap, KeyRound, ShieldCheck, Download, Upload, Database, HardDrive, CheckCircle2, AlertCircle, BookOpen } from 'lucide-react';
+import { User, Activity, MapPin, RefreshCw, Sparkles, Navigation, Edit2, Check, X, Volume2, VolumeX, Mic, BatteryCharging, Zap, KeyRound, ShieldCheck, Download, Upload, Database, HardDrive, CheckCircle2, AlertCircle, BookOpen, Link2, Unlink, Layers, Cpu, FileCheck } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { BMIWidget } from './BMIWidget';
 import { BiometricSettings } from './BiometricSettings';
@@ -9,7 +9,7 @@ import { GeolocationService } from '../services/GeolocationService';
 import { voiceCoach } from '../services/voiceCoachService';
 import { batterySaverService } from '../services/batterySaverService';
 import { triggerHapticFeedback } from '../utils/haptics';
-import { offlineBackupEngine, RestoreResult } from '../services/offlineBackupEngine';
+import { offlineBackupEngine, RestoreResult, LinkedFileInfo } from '../services/offlineBackupEngine';
 import { InteractiveProductManual } from './InteractiveProductManual';
 
 
@@ -133,6 +133,11 @@ export function ProfileView() {
   const [exportStatus, setExportStatus] = useState<string | null>(null);
   const [isRestoring, setIsRestoring] = useState(false);
   const [restoreResult, setRestoreResult] = useState<RestoreResult | null>(null);
+  const [restoreMode, setRestoreMode] = useState<'exact_replace' | 'crdt_merge'>('exact_replace');
+  const [linkedFileInfo, setLinkedFileInfo] = useState<LinkedFileInfo | null>(null);
+  const [isLinkingFile, setIsLinkingFile] = useState(false);
+  const [isSyncingLive, setIsSyncingLive] = useState(false);
+  const [liveSyncMsg, setLiveSyncMsg] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleExportBackup = async () => {
@@ -141,13 +146,57 @@ export function ProfileView() {
     triggerHapticFeedback('medium');
     try {
       const { filename, manifest } = await offlineBackupEngine.exportBackup();
-      setExportStatus(`Exported ${manifest.totalKeys} records (${(manifest.byteSize / 1024).toFixed(1)} KB) to ${filename}`);
+      setExportStatus(`Exported ${manifest.totalKeys} records (${(manifest.totalPayloadBytes / 1024).toFixed(1)} KB) to ${filename}`);
       triggerHapticFeedback('heavy');
     } catch (err: any) {
       setExportStatus(`Export failed: ${err.message || 'Unknown error'}`);
     } finally {
       setIsExporting(false);
     }
+  };
+
+  const handleLinkContinuousFile = async () => {
+    setIsLinkingFile(true);
+    setLiveSyncMsg(null);
+    triggerHapticFeedback('medium');
+    try {
+      const info = await offlineBackupEngine.linkContinuousVaultFile();
+      setLinkedFileInfo(info);
+      if (info.status === 'LINKED_ACTIVE') {
+        setLiveSyncMsg(`Linked to ${info.filename}. Continuous sync active!`);
+        triggerHapticFeedback('heavy');
+      }
+    } catch (err: any) {
+      if (err.name !== 'AbortError') {
+        setLiveSyncMsg(`Linking notice: ${err.message || 'Cancelled'}`);
+      }
+    } finally {
+      setIsLinkingFile(false);
+    }
+  };
+
+  const handleSyncNow = async () => {
+    setIsSyncingLive(true);
+    setLiveSyncMsg(null);
+    triggerHapticFeedback('medium');
+    try {
+      const res = await offlineBackupEngine.syncToLinkedFile();
+      setLiveSyncMsg(`Atomic sync complete: ${res.filename} (${(res.bytesWritten / 1024).toFixed(1)} KB) • SHA-256 Verified`);
+      triggerHapticFeedback('heavy');
+      const updated = await offlineBackupEngine.getLinkedFileInfo();
+      setLinkedFileInfo(updated);
+    } catch (err: any) {
+      setLiveSyncMsg(`Sync error: ${err.message || 'Failed'}`);
+    } finally {
+      setIsSyncingLive(false);
+    }
+  };
+
+  const handleUnlinkFile = async () => {
+    await offlineBackupEngine.unlinkContinuousVaultFile();
+    setLinkedFileInfo({ status: 'NOT_LINKED' });
+    setLiveSyncMsg('Persistent vault file unlinked.');
+    triggerHapticFeedback('light');
   };
 
   const handleFileSelected = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -157,7 +206,7 @@ export function ProfileView() {
     setRestoreResult(null);
     triggerHapticFeedback('medium');
     try {
-      const res = await offlineBackupEngine.restoreBackup(file);
+      const res = await offlineBackupEngine.restoreBackup(file, restoreMode);
       setRestoreResult(res);
       if (res.success) {
         triggerHapticFeedback('heavy');
@@ -194,11 +243,19 @@ export function ProfileView() {
       setVoiceEnabled(v);
     });
 
+    offlineBackupEngine.getLinkedFileInfo().then(setLinkedFileInfo);
+
+    const handleVaultSynced = () => {
+      offlineBackupEngine.getLinkedFileInfo().then(setLinkedFileInfo);
+    };
+    window.addEventListener('pulsefit_vault_synced', handleVaultSynced);
+
     const unsubBattery = batterySaverService.subscribe((enabled) => {
       setBatterySaver(enabled);
     });
 
     return () => {
+      window.removeEventListener('pulsefit_vault_synced', handleVaultSynced);
       unsubBattery();
     };
   }, []);
@@ -475,27 +532,54 @@ export function ProfileView() {
                 ) : (
                   <VolumeX className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
                 )}
-                <p className="leading-relaxed">
-                  {voiceEnabled ? (
-                    <span>
-                      <strong className="text-zinc-800">Voice Coach is active:</strong> Real-time reps, form correction cues, rest timer countdowns, and reward milestone announcements will be spoken aloud.
-                    </span>
-                  ) : (
-                    <span>
-                      <strong className="text-zinc-800">Voice Coach is muted:</strong> Notifications will remain strictly visual toasts and badges without speech synthesis.
-                    </span>
+                <div className="flex flex-col gap-1.5">
+                  <p className="leading-relaxed">
+                    {voiceEnabled ? (
+                      <span>
+                        <strong className="text-zinc-800">Peak Biomechanical Voice Engine Active:</strong> Real-time form corrections, completed reps, and bio-acoustic DSP feedback.
+                      </span>
+                    ) : (
+                      <span>
+                        <strong className="text-zinc-800">Voice Coach is muted:</strong> Notifications will remain strictly visual toasts and badges without speech synthesis.
+                      </span>
+                    )}
+                  </p>
+                  {voiceEnabled && (
+                    <div className="flex flex-col gap-1 pt-1 text-[11px]">
+                      <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span><strong>Strict Once-Only Milestones:</strong> Weather sync updates, reward unlocks &amp; badges are spoken strictly once in lifetime.</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-cyan-700 font-medium">
+                        <Activity className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
+                        <span><strong>Real-Time Form Correction:</strong> Speaks whenever posture/angles deviate (knee cave, forward lean, depth) to protect joints.</span>
+                      </div>
+                    </div>
                   )}
-                </p>
+                </div>
               </div>
 
               {voiceEnabled && (
-                <button
-                  onClick={() => voiceCoach.speak("PulseFit offline voice coach ready. Perfect your form and crush your workout!", { force: true })}
-                  className="w-full py-2.5 px-4 rounded-xl bg-cyan-50 hover:bg-cyan-100 text-cyan-700 border border-cyan-200 text-xs font-bold transition-colors flex items-center justify-center gap-2"
-                >
-                  <Volume2 className="w-3.5 h-3.5" />
-                  Test Voice Audio Cue
-                </button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <button
+                    onClick={() => voiceCoach.speak("PulseFit offline voice coach ready. Perfect your form and crush your workout!", { force: true, allowRepeat: true })}
+                    className="py-2.5 px-4 rounded-xl bg-cyan-50 hover:bg-cyan-100 text-cyan-700 border border-cyan-200 text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <Volume2 className="w-3.5 h-3.5" />
+                    Test Voice Audio Cue
+                  </button>
+                  <button
+                    onClick={() => {
+                      voiceCoach.resetSpokenHistory();
+                      triggerHapticFeedback('light');
+                      voiceCoach.speak("Voice cue memory reset.", { force: true, allowRepeat: true });
+                    }}
+                    className="py-2.5 px-4 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-700 border border-zinc-200 text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    Reset Spoken Cue Memory
+                  </button>
+                </div>
               )}
             </div>
           </GlassCard>
@@ -709,7 +793,7 @@ export function ProfileView() {
             </p>
           </GlassCard>
 
-          {/* 100% Offline Vault Backup & Recovery (Tamper-Proof SHA-256) */}
+          {/* Sovereign Quantum Vault & Zero-Collision Enclave (W3C File System Access API) */}
           <GlassCard>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/50 pb-4">
               <div className="flex items-center gap-3">
@@ -718,21 +802,136 @@ export function ProfileView() {
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-zinc-800 tracking-tight">
-                    Offline Backup &amp; Recovery Enclave
+                    Sovereign Quantum Vault &amp; Continuous Sync
                   </h2>
                   <p className="text-[11px] text-zinc-500">
-                    100% Client-Side Snapshot with SHA-256 Cryptographic Tamper-Proofing
+                    100% Client-Side • Persistent File System Access • CRDT Zero-Collision • SHA-256 Seal
                   </p>
                 </div>
               </div>
-              <span className="self-start sm:self-auto text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
-                ZERO CLOUD / 100% OFFLINE
+              <span className="self-start sm:self-auto text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                ZERO SERVER / 100% OFFLINE
               </span>
             </div>
 
             <p className="text-xs text-zinc-600 leading-relaxed">
-              Your workouts, rep counts, vitals, hydration logs, unlocked themes, and athlete profile are stored completely and securely on your own device. Your private data stays 100% offline and in your hands. Export a private encrypted backup anytime to keep a saved copy or transfer to another phone.
+              Your workouts, rep counts, vitals, hydration logs, and athlete profile live 100% on your own device. Link a persistent local file once to auto-sync your entire dataset to the exact same file on disk with zero corruption, or export and restore with mathematical CRDT collision-free precision.
             </p>
+
+            {/* LIVE PERSISTENT FILE SYSTEM ACCESS PANEL */}
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50/70 via-white/80 to-purple-50/70 border border-indigo-100/90 shadow-xs flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs">
+                    <Link2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-bold text-zinc-900 flex items-center gap-2">
+                      <span>Continuous Local File Sync (Same-File Persistence)</span>
+                      {linkedFileInfo?.status === 'LINKED_ACTIVE' ? (
+                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                          LIVE LINKED
+                        </span>
+                      ) : (
+                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600 border border-zinc-200">
+                          STANDALONE
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-[11px] text-zinc-500">
+                      Atomic Write-Ahead streaming guarantees the exact same file is updated on disk with 0 corruption.
+                    </p>
+                  </div>
+                </div>
+
+                {linkedFileInfo?.status === 'LINKED_ACTIVE' && (
+                  <button
+                    type="button"
+                    onClick={handleUnlinkFile}
+                    className="self-start sm:self-auto text-[11px] font-semibold text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 px-2.5 py-1 rounded-lg border border-rose-200 transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <Unlink className="w-3 h-3" />
+                    <span>Unlink File</span>
+                  </button>
+                )}
+              </div>
+
+              {/* Status details */}
+              {linkedFileInfo?.status === 'LINKED_ACTIVE' ? (
+                <div className="p-3 rounded-xl bg-white/90 border border-indigo-100 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 truncate">
+                    <FileCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span className="font-mono font-bold text-zinc-800 truncate">{linkedFileInfo.filename}</span>
+                    <span className="text-[10px] text-zinc-400">({(linkedFileInfo.byteSize ? linkedFileInfo.byteSize / 1024 : 0).toFixed(1)} KB)</span>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-[10px] text-zinc-500 font-mono">Auto-Sync: Active</span>
+                    <button
+                      type="button"
+                      onClick={handleSyncNow}
+                      disabled={isSyncingLive}
+                      className="px-3 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-[11px] font-bold transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                    >
+                      {isSyncingLive ? (
+                        <>
+                          <RefreshCw className="w-3 h-3 animate-spin" />
+                          <span>Streaming Atomic Swap...</span>
+                        </>
+                      ) : (
+                        <>
+                          <RefreshCw className="w-3 h-3" />
+                          <span>Sync Now</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              ) : linkedFileInfo?.status === 'LINKED_NEEDS_PERMISSION' ? (
+                <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between gap-2">
+                  <span>Permission required to resume continuous sync to <strong>{linkedFileInfo.filename}</strong></span>
+                  <button
+                    type="button"
+                    onClick={handleLinkContinuousFile}
+                    className="px-3 py-1 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[11px] font-bold cursor-pointer"
+                  >
+                    Re-Authorize File
+                  </button>
+                </div>
+              ) : (
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-xl bg-white/70 border border-zinc-200/70 text-xs">
+                  <div className="text-zinc-600 text-[11px] leading-relaxed">
+                    Choose a file on your device (e.g. <code>pulsefit_vault.json</code>). All workouts, reps &amp; nutrition will continuously auto-save to that exact file.
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleLinkContinuousFile}
+                    disabled={isLinkingFile}
+                    className="w-full sm:w-auto px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer shrink-0"
+                  >
+                    {isLinkingFile ? (
+                      <>
+                        <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                        <span>Opening File Picker...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Link2 className="w-3.5 h-3.5" />
+                        <span>Link Persistent Vault File</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
+
+              {liveSyncMsg && (
+                <div className="p-2.5 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-800 text-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-indigo-600" />
+                  <span className="truncate">{liveSyncMsg}</span>
+                </div>
+              )}
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Export Backup Card */}
@@ -740,10 +939,10 @@ export function ProfileView() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
                     <Download className="w-4 h-4 text-indigo-600" />
-                    <span>Export Local Backup</span>
+                    <span>Export Quantum Snapshot</span>
                   </div>
                   <p className="text-[11px] text-zinc-500 leading-normal">
-                    Download an authenticated .json snapshot file directly to your device storage.
+                    Download an authenticated .json container with SHA-256 seal &amp; Merkle shard tree.
                   </p>
                 </div>
 
@@ -768,7 +967,7 @@ export function ProfileView() {
                   ) : (
                     <>
                       <Download className="w-3.5 h-3.5" />
-                      <span>Export Backup (.json)</span>
+                      <span>Export Snapshot (.json)</span>
                     </>
                   )}
                 </button>
@@ -776,20 +975,50 @@ export function ProfileView() {
 
               {/* Import Backup Card */}
               <div className="p-4 rounded-2xl bg-white/70 border border-zinc-200/80 shadow-xs flex flex-col justify-between gap-3">
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
-                    <Upload className="w-4 h-4 text-purple-600" />
-                    <span>Restore From Backup</span>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
+                      <Upload className="w-4 h-4 text-purple-600" />
+                      <span>Restore From Backup</span>
+                    </div>
                   </div>
                   <p className="text-[11px] text-zinc-500 leading-normal">
-                    Import a previously exported PulseFit backup to restore all workout metrics and athlete data.
+                    Import any PulseFit snapshot with Two-Phase Commit &amp; instant shadow rollback.
                   </p>
+
+                  {/* Mode Selector */}
+                  <div className="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-zinc-100 text-[10px] font-bold">
+                    <button
+                      type="button"
+                      onClick={() => setRestoreMode('exact_replace')}
+                      className={cn(
+                        "py-1 px-2 rounded-lg transition-all text-center cursor-pointer",
+                        restoreMode === 'exact_replace'
+                          ? "bg-white text-zinc-900 shadow-xs"
+                          : "text-zinc-500 hover:text-zinc-700"
+                      )}
+                    >
+                      Exact 100% Replace
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setRestoreMode('crdt_merge')}
+                      className={cn(
+                        "py-1 px-2 rounded-lg transition-all text-center cursor-pointer",
+                        restoreMode === 'crdt_merge'
+                          ? "bg-white text-indigo-700 shadow-xs"
+                          : "text-zinc-500 hover:text-zinc-700"
+                      )}
+                    >
+                      CRDT Zero-Collision Merge
+                    </button>
+                  </div>
                 </div>
 
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".json,application/json"
+                  accept=".json,.pulsefit,application/json"
                   className="hidden"
                   onChange={handleFileSelected}
                 />
@@ -824,7 +1053,7 @@ export function ProfileView() {
                   ) : (
                     <>
                       <Upload className="w-3.5 h-3.5" />
-                      <span>Select Backup File</span>
+                      <span>Select Backup File ({restoreMode === 'exact_replace' ? 'Exact' : 'CRDT Merge'})</span>
                     </>
                   )}
                 </button>
@@ -834,9 +1063,13 @@ export function ProfileView() {
             <div className="pt-2 border-t border-zinc-200/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] text-zinc-400 font-mono">
               <span className="flex items-center gap-1.5">
                 <HardDrive className="w-3 h-3 text-zinc-400" />
-                <span>Format: PulseFit Cryptographic Snapshot v2.5</span>
+                <span>Format: Sovereign Quantum Vault v3.0 (Peak CS Edition)</span>
               </span>
-              <span>Integrity: SHA-256 Validated</span>
+              <span className="flex items-center gap-2">
+                <span>CRDT: OR-Set + LWW Register</span>
+                <span>•</span>
+                <span>SHA-256 Validated</span>
+              </span>
             </div>
           </GlassCard>
 
