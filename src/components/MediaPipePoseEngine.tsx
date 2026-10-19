@@ -32,6 +32,7 @@ import {
   ViTPoseOcclusionSolver,
   BladePhysicsEngine,
   WebGPUHardwarePipeline,
+  SovereignHighPerformanceCameraController,
   extractJointAngles, 
   evaluateExerciseForm, 
   SotaRepCounterFSM 
@@ -97,6 +98,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
   const vitPoseSolverRef = useRef<ViTPoseOcclusionSolver>(new ViTPoseOcclusionSolver());
   const bladePhysicsRef = useRef<BladePhysicsEngine>(new BladePhysicsEngine());
   const webgpuPipelineRef = useRef<WebGPUHardwarePipeline>(new WebGPUHardwarePipeline());
+  const cameraControllerRef = useRef<SovereignHighPerformanceCameraController>(new SovereignHighPerformanceCameraController());
 
   // Kinematic temporal smoothing
   const rawKeypointsRef = useRef<Point3D[]>([]);
@@ -407,15 +409,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
       setCameraError(null);
       setIsModelLoading(true);
 
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: {
-          width: { ideal: 640 },
-          height: { ideal: 480 },
-          facingMode: 'user',
-          frameRate: { ideal: 60 }
-        },
-        audio: false
-      });
+      const stream = await cameraControllerRef.current.acquireUltraPerformanceCameraStream();
 
       streamRef.current = stream;
       if (videoRef.current) {
@@ -447,6 +441,8 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
       streamRef.current.getTracks().forEach(t => t.stop());
       streamRef.current = null;
     }
+
+    cameraControllerRef.current.stopStream();
 
     if (videoRef.current) {
       videoRef.current.srcObject = null;
@@ -488,6 +484,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
       if (streamRef.current) {
         streamRef.current.getTracks().forEach(t => t.stop());
       }
+      cameraControllerRef.current.stopStream();
     };
   }, []);
 
