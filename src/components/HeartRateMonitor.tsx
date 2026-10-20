@@ -845,7 +845,7 @@ export const HeartRateMonitor = memo(function HeartRateMonitor() {
             <h4 className="text-sm font-black text-white tracking-wider uppercase font-mono">
               Biometric Scan History ({scanHistory.length})
             </h4>
-            <span className="text-xs font-mono text-zinc-500">Asynchronously Cached (localforage)</span>
+            <span className="text-xs font-mono text-emerald-400">Securely Saved to Vault</span>
           </div>
 
           <div className="w-full overflow-x-auto">

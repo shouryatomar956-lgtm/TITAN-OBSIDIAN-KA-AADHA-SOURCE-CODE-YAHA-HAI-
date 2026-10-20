@@ -130,7 +130,7 @@ export const MediaPermissionFallback: React.FC<MediaPermissionFallbackProps> = (
                 <span>100% Client-Side Privacy Boundary</span>
               </div>
               <p>
-                PulseFit operates offline. Zero video frames or audio buffers ever leave your device or touch an external server. Computations run locally inside your browser GPU/WASM pipeline.
+                PulseFit operates 100% privately. Zero video frames or audio ever leave your device or touch any external server. All analysis runs entirely on your device with complete privacy.
               </p>
             </div>
           )}

@@ -313,7 +313,7 @@ export const AcousticHeartPulseEngine = memo(function AcousticHeartPulseEngine()
                 Acoustic Heart Sound & Pulse Engine
               </h2>
               <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                GENUINE WEB AUDIO DSP
+                REAL-TIME SENSOR SCAN
               </span>
             </div>
             <p className="text-xs text-zinc-400">

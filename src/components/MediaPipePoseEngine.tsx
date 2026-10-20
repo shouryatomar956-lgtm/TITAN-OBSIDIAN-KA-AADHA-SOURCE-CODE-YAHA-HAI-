@@ -605,7 +605,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
                 className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-xs font-black tracking-wide uppercase flex items-center gap-2 shadow-lg shadow-cyan-500/20 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
               >
                 <Play className="w-4 h-4 fill-white" />
-                <span>{isModelLoading ? 'Initializing WebGPU...' : 'Start Vision Camera'}</span>
+                <span>{isModelLoading ? 'Starting AI Vision...' : 'Start Vision Camera'}</span>
               </button>
             ) : (
               <button
@@ -613,7 +613,7 @@ export const MediaPipePoseEngine = memo(function MediaPipePoseEngine({
                 className="px-5 py-2.5 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-black tracking-wide uppercase flex items-center gap-2 shadow-lg shadow-rose-600/20 active:scale-95 transition-all cursor-pointer"
               >
                 <Square className="w-4 h-4 fill-white" />
-                <span>Stop Vision Engine</span>
+                <span>Stop Camera</span>
               </button>
             )}
           </div>

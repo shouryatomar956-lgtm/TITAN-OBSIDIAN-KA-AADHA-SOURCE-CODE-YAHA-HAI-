@@ -802,10 +802,10 @@ export function ProfileView() {
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-zinc-800 tracking-tight">
-                    Sovereign Quantum Vault &amp; Continuous Sync
+                    Private Offline Backup &amp; Auto-Save
                   </h2>
                   <p className="text-[11px] text-zinc-500">
-                    100% Client-Side • Persistent File System Access • CRDT Zero-Collision • SHA-256 Seal
+                    100% Private On-Device • Bank-Grade Protection • Seamless Sync • Zero Cloud Exposure
                   </p>
                 </div>
               </div>
@@ -816,7 +816,7 @@ export function ProfileView() {
             </div>
 
             <p className="text-xs text-zinc-600 leading-relaxed">
-              Your workouts, rep counts, vitals, hydration logs, and athlete profile live 100% on your own device. Link a persistent local file once to auto-sync your entire dataset to the exact same file on disk with zero corruption, or export and restore with mathematical CRDT collision-free precision.
+              Your workouts, rep counts, vitals, hydration logs, and athlete profile are stored 100% privately on your own device. Link a local file once to automatically keep your progress backed up, or export a safe backup anytime to restore on any device.
             </p>
 
             {/* LIVE PERSISTENT FILE SYSTEM ACCESS PANEL */}
@@ -828,7 +828,7 @@ export function ProfileView() {
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-zinc-900 flex items-center gap-2">
-                      <span>Continuous Local File Sync (Same-File Persistence)</span>
+                      <span>Continuous Local File Backup (Auto-Save)</span>
                       {linkedFileInfo?.status === 'LINKED_ACTIVE' ? (
                         <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
@@ -841,7 +841,7 @@ export function ProfileView() {
                       )}
                     </h3>
                     <p className="text-[11px] text-zinc-500">
-                      Atomic Write-Ahead streaming guarantees the exact same file is updated on disk with 0 corruption.
+                      Smart auto-saving keeps your progress updated smoothly and safely on your device.
                     </p>
                   </div>
                 </div>
@@ -877,7 +877,7 @@ export function ProfileView() {
                       {isSyncingLive ? (
                         <>
                           <RefreshCw className="w-3 h-3 animate-spin" />
-                          <span>Streaming Atomic Swap...</span>
+                          <span>Saving Progress...</span>
                         </>
                       ) : (
                         <>
@@ -902,7 +902,7 @@ export function ProfileView() {
               ) : (
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-xl bg-white/70 border border-zinc-200/70 text-xs">
                   <div className="text-zinc-600 text-[11px] leading-relaxed">
-                    Choose a file on your device (e.g. <code>pulsefit_vault.json</code>). All workouts, reps &amp; nutrition will continuously auto-save to that exact file.
+                    Choose a file on your device (e.g. <code>pulsefit_backup.json</code>). All workouts, reps &amp; nutrition will continuously auto-save to that exact file.
                   </div>
                   <button
                     type="button"
@@ -918,7 +918,7 @@ export function ProfileView() {
                     ) : (
                       <>
                         <Link2 className="w-3.5 h-3.5" />
-                        <span>Link Persistent Vault File</span>
+                        <span>Link Offline Backup File</span>
                       </>
                     )}
                   </button>
@@ -939,10 +939,10 @@ export function ProfileView() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-zinc-900 font-bold text-sm">
                     <Download className="w-4 h-4 text-indigo-600" />
-                    <span>Export Quantum Snapshot</span>
+                    <span>Export Backup File</span>
                   </div>
                   <p className="text-[11px] text-zinc-500 leading-normal">
-                    Download an authenticated .json container with SHA-256 seal &amp; Merkle shard tree.
+                    Download a secure, complete backup of your workouts, vitals, and profile history.
                   </p>
                 </div>
 
@@ -962,12 +962,12 @@ export function ProfileView() {
                   {isExporting ? (
                     <>
                       <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                      <span>Hashing &amp; Packaging...</span>
+                      <span>Preparing Secure Backup...</span>
                     </>
                   ) : (
                     <>
                       <Download className="w-3.5 h-3.5" />
-                      <span>Export Snapshot (.json)</span>
+                      <span>Download Backup (.json)</span>
                     </>
                   )}
                 </button>
@@ -998,7 +998,7 @@ export function ProfileView() {
                           : "text-zinc-500 hover:text-zinc-700"
                       )}
                     >
-                      Exact 100% Replace
+                      Full Restore (Overwrite)
                     </button>
                     <button
                       type="button"
@@ -1010,7 +1010,7 @@ export function ProfileView() {
                           : "text-zinc-500 hover:text-zinc-700"
                       )}
                     >
-                      CRDT Zero-Collision Merge
+                      Smart Merge (Combine Data)
                     </button>
                   </div>
                 </div>
@@ -1048,12 +1048,12 @@ export function ProfileView() {
                   {isRestoring ? (
                     <>
                       <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                      <span>Verifying SHA-256 &amp; Restoring...</span>
+                      <span>Verifying &amp; Restoring Data...</span>
                     </>
                   ) : (
                     <>
                       <Upload className="w-3.5 h-3.5" />
-                      <span>Select Backup File ({restoreMode === 'exact_replace' ? 'Exact' : 'CRDT Merge'})</span>
+                      <span>Select Backup File ({restoreMode === 'exact_replace' ? 'Full Overwrite' : 'Smart Merge'})</span>
                     </>
                   )}
                 </button>
@@ -1063,12 +1063,12 @@ export function ProfileView() {
             <div className="pt-2 border-t border-zinc-200/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] text-zinc-400 font-mono">
               <span className="flex items-center gap-1.5">
                 <HardDrive className="w-3 h-3 text-zinc-400" />
-                <span>Format: Sovereign Quantum Vault v3.0 (Peak CS Edition)</span>
+                <span>Data Vault: 100% Offline &amp; Private</span>
               </span>
               <span className="flex items-center gap-2">
-                <span>CRDT: OR-Set + LWW Register</span>
+                <span>Auto-Merge Protected</span>
                 <span>•</span>
-                <span>SHA-256 Validated</span>
+                <span>Integrity Verified</span>
               </span>
             </div>
           </GlassCard>

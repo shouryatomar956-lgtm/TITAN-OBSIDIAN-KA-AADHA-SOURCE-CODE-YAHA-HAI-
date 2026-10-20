@@ -965,8 +965,8 @@ class OfflineBackupEngine {
               username: profile?.username || parsed.manifest.userIdentifier || 'Athlete',
               exportedAt: parsed.manifest.exportedAt || new Date().toISOString(),
               message: mode === 'crdt_merge'
-                ? `Successfully performed CRDT Merge: Restored ${restoredKeysCount} records with 0 collisions!`
-                : `Successfully restored 100% exact snapshot (${restoredKeysCount} records) for ${profile?.username || 'Athlete'}!`,
+                ? `Successfully merged ${restoredKeysCount} records into your profile seamlessly!`
+                : `Successfully restored backup (${restoredKeysCount} records) for ${profile?.username || 'Athlete'}!`,
               mode,
               collisionsResolved,
               shaVerified

@@ -611,8 +611,8 @@ export const Dashboard = memo(function Dashboard() {
               </div>
 
               <div className="pt-4 border-t border-zinc-800/80 text-[10px] font-mono text-zinc-500 flex items-center justify-between">
-                <span>100% OFFLINE PWA</span>
-                <span className="text-emerald-400">LOCALFORAGE SYNC</span>
+                <span>100% PRIVATE &amp; OFFLINE</span>
+                <span className="text-emerald-400 font-bold">INSTANT OFFLINE SYNC</span>
               </div>
             </motion.aside>
           </>

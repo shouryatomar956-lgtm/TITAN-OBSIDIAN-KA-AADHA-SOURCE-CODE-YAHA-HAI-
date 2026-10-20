@@ -588,10 +588,10 @@ export const RepCounter = memo(function RepCounter() {
                 ? 'bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 border-cyan-400'
                 : 'bg-white/5 border-white/10 text-cyan-300 hover:bg-white/10'
             }`}
-            title="Toggle SOTA 133-Point Pose & 10,475 SMPL-X 3D Mesh Engine (WebGPU Accelerated)"
+            title="Toggle High-Precision 3D Body Mesh & Motion Tracking"
           >
             <Sparkles className="w-4 h-4 text-cyan-200 animate-pulse" />
-            <span>133-Pt SOTA Vision: {useMediaPipeMode ? 'ON' : 'OFF'}</span>
+            <span>3D Motion Vision: {useMediaPipeMode ? 'ON' : 'OFF'}</span>
           </button>
 
           {/* Voice Coach Switch */}
@@ -602,7 +602,7 @@ export const RepCounter = memo(function RepCounter() {
                 ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400 shadow-sm' 
                 : 'bg-white/5 border-white/10 text-white/50 hover:text-white'
             }`}
-            title="Toggle Web Speech Voice Coach"
+            title="Toggle Audio Voice Coach"
           >
             {voiceEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
             <span className="hidden sm:inline">{voiceEnabled ? 'Voice ON' : 'Muted'}</span>
